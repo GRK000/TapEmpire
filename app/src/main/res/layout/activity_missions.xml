@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📋 MISIONES DIARIAS"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/secondary"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvMissionInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Completa misiones para ganar recompensas"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tvCoins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💰 0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/coins_gold"
+            android:gravity="center"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/missionsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

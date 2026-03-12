@@ -1,0 +1,631 @@
+<resources>
+    <string name="app_name">Tap Empire</string>
+
+    <!-- Navigation -->
+    <string name="nav_tap">Tap</string>
+    <string name="nav_worlds">Mons</string>
+    <string name="nav_generators">Negocis</string>
+    <string name="nav_minigames">Jocs</string>
+    <string name="nav_more">Més</string>
+
+    <!-- Common -->
+    <string name="btn_great">Genial!</string>
+    <string name="btn_collect_reward">Cobrar Recompensa</string>
+    <string name="btn_back">Tornar</string>
+    <string name="btn_cancel">Cancel·lar</string>
+    <string name="btn_buy">Comprar</string>
+    <string name="btn_claim">Cobrar</string>
+    <string name="label_max">MAX</string>
+    <string name="label_per_sec">%1$s/seg</string>
+    <string name="label_coins">Monedes</string>
+    <string name="label_per_tap">/tap</string>
+    <string name="label_per_s">/s</string>
+    <string name="label_remaining">%1$d/%2$d restants</string>
+    <string name="label_daily_limit">Límit diari</string>
+    <string name="label_play">🎮 JUGAR</string>
+    <string name="label_level">Nv %1$d</string>
+    <string name="label_seconds">%1$ds</string>
+
+    <!-- Offline dialog -->
+    <string name="offline_title">😴 Benvingut de nou!</string>
+    <string name="offline_text">Mentre eres fora, el teu imperi ha generat:\n\n💰 %1$s monedes</string>
+
+    <!-- Achievement popup -->
+    <string name="achievement_title">%1$s Assoliment desbloquejat!</string>
+
+    <!-- Minigame reward -->
+    <string name="minigame_reward_title">🎮 Recompensa!</string>
+    <string name="minigame_reward_text">Has guanyat:\n\n💰 %1$s monedes</string>
+
+    <!-- Home screen -->
+    <string name="home_tap_button">TAP!</string>
+    <string name="home_combo">COMBO</string>
+
+    <!-- Generators screen -->
+    <string name="generators_title">🏭 Negocis</string>
+    <string name="generators_total_production">Producció total</string>
+    <string name="generators_need_coins">Necessites %1$s monedes totals</string>
+
+    <!-- Shop / Upgrades screen -->
+    <string name="shop_title">⚡ Millores</string>
+    <string name="shop_subtitle">Potencia la teva producció</string>
+    <string name="shop_level">Nv %1$d/%2$d</string>
+
+    <!-- Worlds screen -->
+    <string name="worlds_title">🌍 Mons</string>
+    <string name="worlds_subtitle">Explora el cosmos i desbloqueja nous mons</string>
+    <string name="worlds_active">ACTIU</string>
+    <string name="worlds_production">producció</string>
+    <string name="worlds_prestige_req">⭐ P%1$d</string>
+
+    <!-- Pets screen -->
+    <string name="pets_title">🐾 Mascotes</string>
+    <string name="pets_subtitle">Companys que potencien el teu imperi</string>
+    <string name="pets_feed">🍖 Alimentar</string>
+    <string name="pets_pet">💕 Acariciar</string>
+    <string name="pets_active">ACTIVA</string>
+    <string name="pets_bonus">Bonus: %1$s</string>
+
+    <!-- Mini Games screen -->
+    <string name="minigames_title">🎮 Mini Jocs</string>
+    <string name="minigames_subtitle">Juga per guanyar recompenses extra</string>
+    <string name="minigames_cooldown">⏱️ %1$dm %2$ds</string>
+
+    <!-- More screen -->
+    <string name="more_title">⚙️ Més</string>
+    <string name="more_shop">Botiga de Millores</string>
+    <string name="more_shop_desc">Potencia el teu tap i producció</string>
+    <string name="more_achievements">Assoliments</string>
+    <string name="more_achievements_desc">Els teus trofeus i recompenses</string>
+    <string name="more_prestige">Prestigi</string>
+    <string name="more_prestige_desc">Reinicia per bonificacions permanents</string>
+    <string name="more_missions">Missions Diàries</string>
+    <string name="more_missions_desc">Completa reptes per guanyar recompenses</string>
+    <string name="more_pets">Mascotes</string>
+    <string name="more_pets_desc">Companys amb bonificacions especials</string>
+    <string name="more_nursery">Cria</string>
+    <string name="more_stats">Estadístiques</string>
+    <string name="more_stats_desc">El teu imperi en xifres</string>
+    <string name="locked_until_world">🔒 Es desbloqueja a %1$s</string>
+
+    <!-- Nursery -->
+    <string name="nursery_title">🏠 Cria</string>
+    <string name="nursery_subtitle">Cuida els teus estimats companys</string>
+    <string name="nursery_empty">Encara no tens mascotes! Compra\'n una a la botiga.</string>
+    <string name="nursery_feed">Alimentar</string>
+    <string name="nursery_pet">Acariciar</string>
+    <string name="nursery_play">Jugar</string>
+    <string name="nursery_clean">Netejar</string>
+    <string name="nursery_rest">Descansar</string>
+    <string name="nursery_revive">Reviure</string>
+    <string name="nursery_diseases">Malalties</string>
+    <string name="nursery_health">Salut</string>
+    <string name="nursery_happiness">Felicitat</string>
+    <string name="nursery_hunger">Sacietat</string>
+    <string name="nursery_energy">Energia</string>
+    <string name="nursery_mental">Ment</string>
+    <string name="nursery_hygiene">Higiene</string>
+
+    <!-- Nursery tabs & breeding -->
+    <string name="nursery_tab_care">Cura</string>
+    <string name="nursery_tab_breeding">Cria</string>
+    <string name="nursery_tab_collection">Col·lecció</string>
+    <string name="nursery_welfare">Benestar del viver</string>
+    <string name="nursery_workers_assigned">Treballadors assignats</string>
+    <string name="nursery_collection_title">Col·lecció de Trets</string>
+    <string name="nursery_common_traits">Trets Comuns</string>
+    <string name="nursery_rare_traits">Trets Rars (Mutacions)</string>
+    <string name="nursery_combos">Combos de Trets</string>
+    <string name="nursery_breeding_stats">Estadístiques de Cria</string>
+    <string name="nursery_hybrids">Híbrids criats</string>
+    <string name="nursery_max_gen">Generació màxima</string>
+    <string name="nursery_rare_found">Trets rars trobats</string>
+    <string name="breeding_title">Laboratori de Cria</string>
+    <string name="breeding_description">Combina dues mascotes per crear una cria amb trets heretats. Cada mascota té 2 trets — la cria hereta 2 aleatoris de tots dos pares, amb possibilitat de mutació rara!</string>
+    <string name="breeding_cooldown">d\'espera</string>
+    <string name="breeding_mutation">mutació</string>
+    <string name="breeding_select_parents">Seleccionar Pares</string>
+    <string name="breeding_parent">Pare</string>
+    <string name="breeding_tap_to_select">Toca per seleccionar…</string>
+    <string name="breeding_preview">Vista prèvia de cria</string>
+    <string name="breeding_cost">Cost</string>
+    <string name="breeding_max_reached">Màxim de mascotes assolit!</string>
+    <string name="breeding_breed_btn">Criar!</string>
+    <string name="breeding_success">Nova mascota nascuda!</string>
+    <string name="breeding_traits">Trets</string>
+    <string name="breeding_incubating_title">Incubant</string>
+    <string name="breeding_incubating_msg">Temps d\'incubació</string>
+    <string name="breeding_ready_hatch">Llesta per néixer</string>
+    <string name="breeding_hatch_btn">Reclamar Mascota!</string>
+    <string name="breeding_remaining">restant</string>
+    <string name="breeding_traits_hidden">Trets revelats al néixer</string>
+
+    <!-- Prestige screen -->
+    <string name="prestige_title">⭐ Prestigi</string>
+    <string name="prestige_subtitle">Reinicia el teu progrés per bonificacions permanents</string>
+    <string name="prestige_current_level">Nivell actual: %1$d</string>
+    <string name="prestige_points">Punts de prestigi: %1$s</string>
+    <string name="prestige_multiplier">Multiplicador: x%1$s</string>
+    <string name="prestige_available">Disponible: +%1$s punts</string>
+    <string name="prestige_btn">⭐ PRESTIGIAR</string>
+    <string name="prestige_not_available">Necessites més monedes per prestigiar</string>
+    <string name="prestige_confirm_title">⭐ Confirmar Prestigi</string>
+    <string name="prestige_confirm_text">Perdràs totes les monedes i generadors, però guanyaràs punts de prestigi que potenciaran permanentment la teva producció.\n\nN\'estàs segur?</string>
+    <string name="prestige_confirm_yes">Sí, Prestigiar!</string>
+
+    <!-- Prestige benefits -->
+    <string name="prestige_benefits_title">✦ Beneficis del Prestigi</string>
+    <string name="prestige_benefit_1">✦ +5% multiplicador global per nivell</string>
+    <string name="prestige_benefit_2">✦ Desbloqueja mons avançats</string>
+    <string name="prestige_benefit_3">✦ Generadors més potents</string>
+    <string name="prestige_benefit_4">✦ Accés a mascotes llegendàries</string>
+
+    <!-- Missions screen -->
+    <string name="missions_title">📋 Missions Diàries</string>
+    <string name="missions_subtitle">Completa missions per recompenses extra</string>
+    <string name="missions_completed">Completada!</string>
+
+    <!-- Achievements screen -->
+    <string name="achievements_title">🏆 Assoliments</string>
+    <string name="achievements_completed">%1$d/%2$d completats</string>
+
+    <!-- Stats screen -->
+    <string name="stats_title">📊 Estadístiques</string>
+    <string name="stats_total_earned">Total guanyat</string>
+    <string name="stats_total_taps">Taps totals</string>
+    <string name="stats_per_tap">Per tap</string>
+    <string name="stats_per_second">Per segon</string>
+    <string name="stats_generators_bought">Generadors comprats</string>
+    <string name="stats_prestige_level">Nivell de prestigi</string>
+    <string name="stats_prestige_points">Punts de prestigi</string>
+    <string name="stats_worlds_unlocked">Mons desbloquejats</string>
+    <string name="stats_minigames_played">Minijocs jugats</string>
+    <string name="stats_events_completed">Esdeveniments completats</string>
+    <string name="stats_current_world">Món actual</string>
+    <string name="stats_active_pet">Mascota activa</string>
+    <string name="stats_none">Cap</string>
+
+    <!-- Tap Frenzy -->
+    <string name="frenzy_title">Tap Frenzy</string>
+    <string name="frenzy_subtitle">Toca el més ràpid possible!</string>
+    <string name="frenzy_taps">%1$d taps</string>
+    <string name="frenzy_result_amazing">🌟 MÀQUINA! 🌟</string>
+    <string name="frenzy_result_good">✨ Ràpid!</string>
+    <string name="frenzy_result_ok">👆 Segueix practicant</string>
+    <string name="frenzy_stats">%1$d taps en 10s</string>
+    <string name="frenzy_tps">%1$s taps/segon</string>
+
+    <!-- Memory Match -->
+    <string name="memory_title">Memory Match</string>
+    <string name="memory_subtitle">Troba els parells!</string>
+    <string name="memory_moves">Moviments: %1$d</string>
+    <string name="memory_result_perfect">🌟 MEMÒRIA PERFECTA! 🌟</string>
+    <string name="memory_result_good">✨ Completat!</string>
+    <string name="memory_result_timeout">⏰ Temps!</string>
+    <string name="memory_pairs">Parells: %1$d/%2$d</string>
+
+    <!-- Coin Rain -->
+    <string name="rain_title">Pluja de Monedes</string>
+    <string name="rain_subtitle">Toca les monedes! Evita les 💣</string>
+    <string name="rain_result_amazing">🌟 PLUJA D\'OR! 🌟</string>
+    <string name="rain_result_good">✨ Bon treball!</string>
+    <string name="rain_result_ok">💧 Segueix intentant-ho</string>
+    <string name="rain_score">Puntuació: %1$d</string>
+    <string name="rain_stats">Atrapades: %1$d • Perdudes: %2$d</string>
+
+    <!-- Boss Battle -->
+    <string name="boss_title">Batalla de Caps</string>
+    <string name="boss_subtitle">Toca el cap per fer mal!</string>
+    <string name="boss_damage">⚔️ Mal: %1$d</string>
+    <string name="boss_name">Bug Lord</string>
+    <string name="boss_enraged">(ENFURISMAT!)</string>
+    <string name="boss_hp">%1$d/%2$d HP</string>
+    <string name="boss_result_win">🌟 BOSS DERROTAT! 🌟</string>
+    <string name="boss_result_lose">⏰ Ha escapat!</string>
+    <string name="boss_total_damage">Mal total: %1$d</string>
+
+    <!-- Lucky Box -->
+    <string name="lucky_title">Caixa de la Sort</string>
+    <string name="lucky_subtitle">Tria una caixa!</string>
+    <string name="lucky_opening">Obrint…</string>
+    <string name="lucky_jackpot">💎 JACKPOT!</string>
+    <string name="lucky_good">💰 Bon premi!</string>
+    <string name="lucky_consolation">🎁 Consolació</string>
+    <string name="lucky_your_choice">LA TEVA ELECCIÓ</string>
+
+    <!-- Fortune Wheel -->
+    <string name="wheel_title">Ruleta de la Fortuna</string>
+    <string name="wheel_subtitle">Prova la teva sort!</string>
+    <string name="wheel_spin">GIRAR!</string>
+    <string name="wheel_spinning">🎡 Girant!</string>
+    <string name="wheel_result_jackpot">🌟 JACKPOT!! 🌟</string>
+    <string name="wheel_result_great">✨ Gran premi!</string>
+    <string name="wheel_result_good">👏 Bé!</string>
+    <string name="wheel_result_ok">👍 Decent</string>
+    <string name="wheel_result_bad">😅 Mala sort</string>
+    <string name="wheel_multiplier">Multiplicador: %1$s</string>
+
+    <!-- Star Catcher -->
+    <string name="star_subtitle">Atrapa les estrelles!</string>
+    <string name="star_result_amazing">🌟 MESTRE ESTEL·LAR! 🌟</string>
+    <string name="star_result_good">✨ Gran captura!</string>
+    <string name="star_result_ok">⭐ Segueix intentant-ho</string>
+
+    <!-- Cosmic Billiards -->
+    <string name="billiards_pocketed">Embocades: %1$d/10</string>
+    <string name="billiards_shots">Tirs: %1$d</string>
+    <string name="billiards_drag_hint">Arrossega des de la bola blanca</string>
+    <string name="billiards_result_perfect">🌟 PERFECTE! 🌟</string>
+    <string name="billiards_result_great">✨ Gran partida!</string>
+    <string name="billiards_result_good">👏 No està malament</string>
+    <string name="billiards_result_ok">🎱 Segueix practicant</string>
+    <string name="billiards_pocketed_stat">Boles embocades: %1$d / 10</string>
+    <string name="billiards_score">Puntuació: %1$d</string>
+
+    <!-- Asteroid Dodge -->
+    <string name="asteroid_subtitle">Esquiva asteroides i recull cristalls!</string>
+    <string name="asteroid_result_amazing">🌟 AS ESPACIAL! 🌟</string>
+    <string name="asteroid_result_good">✨ Gran vol!</string>
+    <string name="asteroid_result_ok">☄️ Segueix intentant-ho</string>
+
+    <!-- Gravity Slingshot -->
+    <string name="slingshot_drag_hint">👆 Arrossega en qualsevol direcció per llançar</string>
+    <string name="slingshot_result_amazing">🌟 MESTRE GRAVITATORI! 🌟</string>
+    <string name="slingshot_result_good">✨ Bons tirs!</string>
+    <string name="slingshot_result_ok">🪐 Segueix practicant</string>
+    <string name="slingshot_level">Nivell: %1$d</string>
+    <string name="slingshot_shots">Tirs: %1$d</string>
+    <string name="slingshot_score">Puntuació: %1$d pts</string>
+
+    <!-- Workers -->
+    <string name="workers_title">👷 Treballadors</string>
+    <string name="workers_tab_roster">Els Meus</string>
+    <string name="workers_tab_hire">Contractar</string>
+    <string name="workers_tab_summary">Resum</string>
+    <string name="workers_tab_collection">Col·lecció</string>
+    <string name="workers_empty">Encara no tens treballadors! Compra una Caixa de Treballadors per començar.</string>
+    <string name="workers_unassigned">🔹 Sense assignar</string>
+    <string name="workers_assign_to">Assignar a un negoci:</string>
+    <string name="workers_unassign">🔄 Desassignar</string>
+    <string name="workers_fire_title">⚠️ Acomiadar Treballador</string>
+    <string name="workers_fire_confirm">Segur que vols acomiadar %1$s? Aquesta acció no es pot desfer.</string>
+    <string name="workers_fire_btn">Acomiadar</string>
+    <string name="workers_hire_subtitle">Obre Caixes de Treballadors per aconseguir empleats amb habilitats i estadístiques úniques!</string>
+    <string name="workers_new_hire">✨ NOVA CONTRACTACIÓ! ✨</string>
+    <string name="workers_box_basic">Caixa Bàsica</string>
+    <string name="workers_box_basic_desc">Majoritàriament treballadors comuns</string>
+    <string name="workers_box_premium">Caixa Premium</string>
+    <string name="workers_box_premium_desc">Més probabilitat de rars i èpics</string>
+    <string name="workers_box_legendary">Caixa Llegendària</string>
+    <string name="workers_box_legendary_desc">Èpic o llegendari garantit!</string>
+    <string name="workers_summary_overview">Resum General</string>
+    <string name="workers_summary_total">Total de Treballadors</string>
+    <string name="workers_summary_assigned">Assignats</string>
+    <string name="workers_summary_salary">Salari Mensual</string>
+    <string name="workers_summary_mood">Estat d\'Ànim</string>
+    <string name="workers_summary_rarity">Desglossament per Raresa</string>
+    <string name="worker_mood_happy">Content</string>
+    <string name="worker_mood_neutral">Neutral</string>
+    <string name="worker_mood_angry">Enfadat</string>
+    <string name="worker_mood_on_strike">En Vaga</string>
+
+    <!-- Business Map -->
+    <string name="business_map_title">🗺️ Mapa de Negocis</string>
+
+    <!-- Filters -->
+    <string name="filter_all">Tots</string>
+    <string name="filter_assigned">Assignats</string>
+    <string name="filter_unassigned">Lliures</string>
+
+    <!-- Contracts -->
+    <string name="contracts_title">📋 Contractes</string>
+    <string name="contracts_create_new">Crear Nou Contracte</string>
+    <string name="contracts_create_title">Nova Plantilla de Contracte</string>
+    <string name="contracts_create_btn">Crear</string>
+    <string name="contracts_empty">Encara no hi ha contractes. Crea\'n un per començar a contractar treballadors!</string>
+    <string name="contract_name">Nom del Contracte</string>
+    <string name="contract_salary">Salari Mensual</string>
+    <string name="contract_schedule">Jornada</string>
+    <string name="contract_full_time">Completa</string>
+    <string name="contract_part_time">Mitja jornada</string>
+    <string name="contract_flexible">Flexible</string>
+    <string name="contract_category">Categoria</string>
+    <string name="contract_standard">Estàndard</string>
+    <string name="contract_premium">Premium</string>
+    <string name="contract_executive">Executiu</string>
+    <string name="contract_duration">Duració</string>
+    <string name="contract_months">mesos</string>
+    <string name="contract_strike_rights">Dret a Vaga</string>
+    <string name="contract_strike_yes">Pot fer vaga</string>
+    <string name="contract_no_strike">Sense vaga</string>
+    <string name="contracts_strike_alert">⚠️ Treballadors en Vaga!</string>
+    <string name="contracts_strike_count">%1$d treballadors estan en vaga</string>
+    <string name="contracts_strike_title">Resolució de Vaga</string>
+    <string name="contracts_strike_desc">%1$d treballadors es neguen a treballar. Ofereix-los un contracte millor per resoldre la vaga.</string>
+    <string name="contracts_strike_offer">Tria un contracte per oferir:</string>
+    <string name="contracts_strike_more">més…</string>
+    <string name="contracts_strike_resolve_all">Oferir a Tots</string>
+
+    <!-- Negotiation -->
+    <string name="negotiate_choose_contract">📋 Triar Contracte</string>
+    <string name="negotiate_select_template">Selecciona un contracte per oferir:</string>
+    <string name="negotiate_no_contracts">⚠️ No tens contractes! Crea\'n un primer al menú Contractes.</string>
+    <string name="negotiate_go_contracts">Ves a Més → Contractes per crear plantilles.</string>
+    <string name="negotiate_offer">🤝 Fer Oferta</string>
+    <string name="negotiate_chance">Probabilitat d\'acceptació</string>
+    <string name="negotiate_accepted">Contracte Acceptat!</string>
+    <string name="negotiate_welcome">Benvingut a l\'equip!</string>
+    <string name="negotiate_rejected">Contracte Rebutjat!</string>
+    <string name="negotiate_rejected_desc">El treballador no ha acceptat les condicions. Has perdut la inversió de la caixa.</string>
+    <string name="negotiate_retry">🔄 Provar Altre Contracte (1 oportunitat)</string>
+    <string name="negotiate_retry_title">Última Oportunitat!</string>
+    <string name="negotiate_give_up">Rendir-se</string>
+    <string name="negotiate_create_inline">+ Crear Nou Contracte Aquí</string>
+    <string name="negotiate_create_and_select">Crear i Seleccionar</string>
+    <string name="negotiate_recommended">Recomanat</string>
+
+    <!-- Worker Detail -->
+    <string name="detail_stats">📊 Estadístiques</string>
+    <string name="detail_productivity">Productivitat</string>
+    <string name="detail_experience">Experiència</string>
+    <string name="detail_years">anys</string>
+    <string name="detail_base_salary">Salari Base</string>
+    <string name="detail_mood">Estat d\'Ànim</string>
+    <string name="detail_personal">👤 Info Personal</string>
+    <string name="detail_marital">Estat Civil</string>
+    <string name="detail_children">Fills</string>
+    <string name="detail_class">Classe</string>
+    <string name="detail_contract">📋 Contracte</string>
+    <string name="detail_status">Estat</string>
+    <string name="detail_signed">Signat</string>
+    <string name="detail_no_contract">Sense contracte</string>
+    <string name="detail_assignment">📍 Assignació</string>
+    <string name="detail_workplace">Lloc de Treball</string>
+
+    <!-- Worker Collection -->
+    <string name="collection_title">Col·lecció de Treballadors</string>
+    <string name="collection_discovered">descoberts</string>
+    <string name="collection_classes">Classes Descobertes</string>
+    <string name="collection_rarities">Rareses Descobertes</string>
+    <string name="collection_catalog">Catàleg de Noms</string>
+
+    <!-- Worker Detail -->
+    <string name="detail_education">Estudis</string>
+
+    <!-- Tutorials -->
+    <string name="tutorial_got_it">Entesos!</string>
+    <string name="tutorial_welcome_title">Benvingut a Tap Empire!</string>
+    <string name="tutorial_welcome_body">Toca la moneda per guanyar diners!\n\n💰 Cada toc et dóna monedes\n🏭 Compra negocis per guanyar automàticament\n⬆️ Millora per augmentar la producció\n🌍 Desbloqueja nous mons a mesura que progresses\n\nComença a tocar i construeix el teu imperi!</string>
+    <string name="tutorial_generators_title">El Teu Primer Negoci!</string>
+    <string name="tutorial_generators_body">Genial! Has comprat el teu primer negoci.\n\n🏭 Els negocis produeixen monedes automàticament\n⬆️ Compra\'n més per augmentar la producció\n💡 Cada negoci té millores úniques\n\nContinua fent créixer el teu portafoli!</string>
+    <string name="tutorial_prestige_title">Prestigi Disponible!</string>
+    <string name="tutorial_prestige_body">Ara pots fer Prestigi!\n\n⭐ Reinicia el progrés per obtenir multiplicadors permanents\n📈 Cada prestigi et fa més fort\n🔄 Les monedes i negocis es reinicien, però conserves els bonus\n\nVes a Més → Prestigi quan estiguis preparat!</string>
+    <string name="tutorial_minigames_title">Minijocs Desbloquejats!</string>
+    <string name="tutorial_minigames_body">Has desbloquejat els minijocs!\n\n🎮 Juga per guanyar recompenses extra\n⏱️ Cada joc té un temps d\'espera entre partides\n🏆 Millor rendiment = recompenses més grans\n\nMira\'ls a la pestanya Jocs!</string>
+    <string name="tutorial_pets_title">Mascotes!</string>
+    <string name="tutorial_pets_body">Has aconseguit la teva primera mascota!\n\n🐾 Les mascotes donen bonus de producció\n❤️ Alimenta-les, juga amb elles i cuida-les\n💊 Vigila amb les malalties\n🏠 Visita el viver per gestionar les teves mascotes\n\nUna mascota feliç significa més monedes!</string>
+    <string name="tutorial_worlds_title">Nou Món!</string>
+    <string name="tutorial_worlds_body">Has viatjat a un nou món!\n\n🌍 Cada món té negocis únics\n✨ Diferents temàtiques i bonus\n💰 Mons superiors = guanys més grans\n\nExplora i conquesta tots els mons!</string>
+    <string name="tutorial_workers_title">Treballadors Desbloquejats!</string>
+    <string name="tutorial_workers_body">Has desbloquejat el Sistema de Treballadors!\n\n👷 Contracta treballadors de caixes aleatòries\n📋 Crea contractes per negociar condicions\n🤝 Els treballadors han d\'acceptar la teva oferta\n🎓 Cada treballador té estudis i habilitats úniques\n📍 Assigna\'ls a negocis per potenciar la producció\n✊ Manté\'ls contents o faran vaga!\n\nVes a Més → Treballadors per començar a contractar!</string>
+
+    <!-- Events system -->
+    <string name="events_title">Esdeveniments</string>
+    <string name="events_active">Esdeveniments Actius</string>
+    <string name="events_none">La galàxia està en calma… de moment.</string>
+    <string name="events_history">Historial d\'Esdeveniments</string>
+    <string name="events_choose">Tria la teva resposta:</string>
+    <string name="event_cat_global">GLOBAL</string>
+    <string name="event_cat_local">LOCAL</string>
+    <string name="event_cat_corporate">CORPORATIU</string>
+    <string name="stability_title">Estabilitat Galàctica</string>
+    <string name="stability_golden">Era Daurada</string>
+    <string name="stability_stable">Estable</string>
+    <string name="stability_unstable">Inestable</string>
+    <string name="stability_critical">Crític</string>
+    <string name="stability_chaos">Caos Total</string>
+    <string name="event_title_crisis">Crisi Econòmica</string>
+    <string name="event_title_boom">Boom Econòmic</string>
+    <string name="event_title_legal">Reforma Legal</string>
+    <string name="event_title_pandemic">Pandèmia</string>
+    <string name="event_title_golden">Edat d\'Or</string>
+    <string name="event_title_alien">Contacte Alienígena</string>
+    <string name="event_title_war">Guerra Galàctica</string>
+    <string name="event_title_trade">Acord Comercial</string>
+    <string name="event_title_climate">Desastre Climàtic</string>
+    <string name="event_title_market_crash">Esfondrament del Mercat</string>
+    <string name="event_title_festival">Festival Galàctic</string>
+    <string name="event_title_diplomatic">Incident Diplomàtic</string>
+    <string name="event_title_dark_matter">Onada de Matèria Fosca</string>
+    <string name="event_title_science">Descobriment Científic</string>
+    <string name="event_title_tech">Avenç Tecnològic</string>
+    <string name="event_title_resource">Escassetat de Recursos</string>
+    <string name="event_title_blackout">Apagada Energètica</string>
+    <string name="event_title_terraforming">Terraformació Exitosa</string>
+    <string name="event_title_debris">Brossa Espacial</string>
+    <string name="event_title_cyber">Ciberatac</string>
+    <string name="event_title_grant">Subvenció a la Innovació</string>
+    <string name="event_title_supply">Crisi de Subministrament</string>
+    <string name="event_title_mutant">Brot de Mutants</string>
+    <string name="event_title_strike">Vaga Sectorial</string>
+    <string name="event_title_competitor">Invasió Competidora</string>
+    <string name="event_title_union">Moviment Sindical</string>
+    <string name="event_title_welfare">Escàndol de Benestar Animal</string>
+    <string name="event_title_award">Empresa de l\'Any</string>
+    <string name="event_title_corruption">Escàndol de Corrupció</string>
+    <string name="event_title_tax">Auditoria Fiscal</string>
+    <string name="event_title_training">Formació de Treballadors</string>
+    <string name="event_title_espionage">Espionatge Corporatiu</string>
+    <string name="event_title_labor">Escassetat de Mà d\'Obra</string>
+    <string name="event_title_petcomp">Competició de Mascotes</string>
+    <string name="event_title_investor">Interès d\'Inversors</string>
+    <string name="event_desc_crisis">Els mercats s\'enfonsen a tota la galàxia. Els ingressos cauen i els treballadors estan inquiets.</string>
+    <string name="event_desc_boom">L\'economia galàctica està en auge! Aprofita l\'oportunitat.</string>
+    <string name="event_desc_legal">Noves lleis interplanetàries estan remodelant el panorama empresarial.</string>
+    <string name="event_desc_pandemic">Un virus misteriós s\'està propagant. Les teves operacions estan en risc.</string>
+    <string name="event_desc_golden">La pau i la prosperitat regnen. Tot prospera!</string>
+    <string name="event_desc_alien">Una civilització alienígena ha contactat. Com respondràs?</string>
+    <string name="event_desc_war">Les faccions galàctiques estan en guerra. El teu imperi està al foc creuat.</string>
+    <string name="event_desc_trade">S\'ha obert una nova ruta comercial. T\'esperen ofertes lucratives.</string>
+    <string name="event_desc_climate">Esdeveniments meteorològics extrems devasteran les teves operacions a tots els sectors.</string>
+    <string name="event_desc_market_crash">Els mercats financers s\'han esfondrat. Vendes de pànic arreu.</string>
+    <string name="event_desc_festival">Una celebració galàctica porta alegria i oportunitats per a tothom!</string>
+    <string name="event_desc_diplomatic">Un escàndol diplomàtic amenaça les relacions interplanetàries.</string>
+    <string name="event_desc_dark_matter">Una misteriosa onada de matèria fosca supercarrega tota la producció!</string>
+    <string name="event_desc_science">Els teus laboratoris han fet un descobriment revolucionari!</string>
+    <string name="event_desc_tech">Tecnologia revolucionària disponible. Actua ràpid!</string>
+    <string name="event_desc_resource">Els recursos crítics escassegen a tot el sector.</string>
+    <string name="event_desc_blackout">Una apagada massiva ha paralitzat les teves operacions. Producció aturada.</string>
+    <string name="event_desc_terraforming">Un nou planeta ha estat terraformat amb èxit! L\'expansió és possible.</string>
+    <string name="event_desc_debris">Un camp d\'asteroides amenaça la teva infraestructura orbital.</string>
+    <string name="event_desc_cyber">Hackers han vulnerat els teus sistemes. Dades i producció en risc.</string>
+    <string name="event_desc_grant">El Consell Galàctic ofereix una generosa subvenció a la innovació.</string>
+    <string name="event_desc_supply">Les cadenes de subministrament clau han col·lapsat. Materials escassos i cars.</string>
+    <string name="event_desc_mutant">Misterioses mutacions es propaguen entre les teves mascotes. Ciència o caos?</string>
+    <string name="event_desc_strike">Els treballadors de sectors clau s\'han marxat. La producció està aturada.</string>
+    <string name="event_desc_competitor">Una corporació rival ataca agressivament la teva quota de mercat.</string>
+    <string name="event_desc_union">Els treballadors s\'organitzen. La tensió creix al teu imperi.</string>
+    <string name="event_desc_welfare">Informes de negligència animal s\'han viralitzat. La teva reputació està en joc.</string>
+    <string name="event_desc_award">El teu imperi ha estat nominat al prestigiós premi galàctic!</string>
+    <string name="event_desc_corruption">Els auditors interns han descobert irregularitats als teus comptes.</string>
+    <string name="event_desc_tax">L\'Agència Tributària Galàctica està auditant les teves finances.</string>
+    <string name="event_desc_training">Ha sorgit una oportunitat per formar la teva plantilla.</string>
+    <string name="event_desc_espionage">S\'han detectat espies corporatius a la teva organització.</string>
+    <string name="event_desc_labor">No hi ha prou treballadors per cobrir els llocs. Operacions afectades.</string>
+    <string name="event_desc_petcomp">La Competició Galàctica de Mascotes és aquí! Hi participaràs?</string>
+    <string name="event_desc_investor">Un inversor adinerit està interessat en el teu imperi.</string>
+    <string name="event_crisis_cut">Retallar salaris</string>
+    <string name="event_crisis_loan">Demanar un préstec</string>
+    <string name="event_crisis_ignore">No fer res</string>
+    <string name="event_boom_invest">Invertir agressivament</string>
+    <string name="event_boom_save">Anar a la segura</string>
+    <string name="event_legal_comply">Complir les reformes</string>
+    <string name="event_legal_lobby">Fer lobby contra elles</string>
+    <string name="event_pandemic_quarantine">Quarantena total</string>
+    <string name="event_pandemic_ignore">Ignorar l\'amenaça</string>
+    <string name="event_alien_diplomacy">Diplomàcia oberta</string>
+    <string name="event_alien_exploit">Explotar la seva tecnologia</string>
+    <string name="event_alien_ignore">Ignorar-los</string>
+    <string name="event_science_patent">Patentar el descobriment</string>
+    <string name="event_science_open">Fer-lo de codi obert</string>
+    <string name="event_tech_implement">Implementar-lo ara</string>
+    <string name="event_tech_sell">Vendre la patent</string>
+    <string name="event_resource_import">Importar recursos</string>
+    <string name="event_resource_ration">Racionar subministraments</string>
+    <string name="event_strike_negotiate">Negociar amb treballadors</string>
+    <string name="event_strike_replace">Contractar substituts</string>
+    <string name="event_competitor_war">Guerra de preus</string>
+    <string name="event_competitor_ally">Formar aliança</string>
+    <string name="event_union_concede">Cedir a les demandes</string>
+    <string name="event_union_suppress">Suprimir el moviment</string>
+    <string name="event_welfare_reform">Reformar el viver</string>
+    <string name="event_welfare_pr">Llançar campanya de PR</string>
+    <string name="event_award_celebrate">Celebrar públicament</string>
+    <string name="event_award_humble">Mantenir la humilitat</string>
+    <string name="event_corrupt_investigate">Investigar a fons</string>
+    <string name="event_corrupt_cover">Encobrir-ho</string>
+    <string name="event_war_arms">Vendre armes</string>
+    <string name="event_war_neutral">Mantenir-se neutral</string>
+    <string name="event_war_diplomacy">Diplomàcia de pau</string>
+    <string name="event_trade_accept">Acceptar el tracte</string>
+    <string name="event_trade_renegotiate">Renegociar termes</string>
+    <string name="event_climate_rebuild">Reconstruir infraestructura</string>
+    <string name="event_climate_relocate">Reubicar operacions</string>
+    <string name="event_climate_adapt">Adaptar-se i resistir</string>
+    <string name="event_crash_buylow">Comprar a la baixa</string>
+    <string name="event_crash_liquidate">Liquidar actius</string>
+    <string name="event_crash_wait">Esperar</string>
+    <string name="event_festival_sponsor">Patrocinar l\'event</string>
+    <string name="event_festival_ignore">Passar de llarg</string>
+    <string name="event_diplo_apologize">Disculpar-se públicament</string>
+    <string name="event_diplo_deny">Negar-ho tot</string>
+    <string name="event_diplo_mediate">Mediar una solució</string>
+    <string name="event_blackout_generators">Activar generadors de reserva</string>
+    <string name="event_blackout_wait">Esperar reparacions</string>
+    <string name="event_terra_expand">Expandir operacions</string>
+    <string name="event_terra_sell">Vendre els drets</string>
+    <string name="event_debris_clean">Netejar l\'òrbita</string>
+    <string name="event_debris_shield">Desplegar escuts</string>
+    <string name="event_debris_ignore">Ignorar el risc</string>
+    <string name="event_cyber_firewall">Construir tallafocs</string>
+    <string name="event_cyber_counter">Contraatacar</string>
+    <string name="event_cyber_pay">Pagar rescat</string>
+    <string name="event_grant_research">Finançar investigació</string>
+    <string name="event_grant_infrastructure">Construir infraestructura</string>
+    <string name="event_supply_local">Proveir-se localment</string>
+    <string name="event_supply_stockpile">Acumular reserves</string>
+    <string name="event_supply_wait">Esperar la recuperació</string>
+    <string name="event_mutant_quarantine">Posar en quarantena</string>
+    <string name="event_mutant_study">Estudiar mutacions</string>
+    <string name="event_tax_comply">Pagar íntegrament</string>
+    <string name="event_tax_offshore">Usar paradisos fiscals</string>
+    <string name="event_tax_negotiate">Negociar acord</string>
+    <string name="event_training_full">Programa complet</string>
+    <string name="event_training_partial">Formació bàsica</string>
+    <string name="event_training_skip">Saltar formació</string>
+    <string name="event_spy_counterintel">Contraintel·ligència</string>
+    <string name="event_spy_doubleagent">Agent doble</string>
+    <string name="event_labor_raise">Pujar salaris</string>
+    <string name="event_labor_automate">Automatitzar processos</string>
+    <string name="event_petcomp_enter">Participar</string>
+    <string name="event_petcomp_host">Organitzar l\'event</string>
+    <string name="event_petcomp_skip">Passar</string>
+    <string name="event_investor_accept">Acceptar inversió</string>
+    <string name="event_investor_decline">Rebutjar oferta</string>
+    <string name="event_new_alert">⚡ NOU ESDEVENIMENT!</string>
+    <string name="event_tap_to_view">Toca per veure</string>
+    <string name="event_detail_effects">Efectes Actius</string>
+    <string name="event_detail_choice">Decisió Presa</string>
+    <string name="event_detail_resolved">Esdeveniment resolt automàticament</string>
+    <string name="event_detail_duration">Durada</string>
+    <string name="event_auto_resolved">⚠️ No has pres cap decisió — s\'ha aplicat la pitjor opció automàticament</string>
+    <string name="event_auto_resolved_title">Esdeveniment Expirat!</string>
+    <string name="event_auto_resolved_body">No has pres cap decisió per a \"%1$s\" a temps. S\'ha aplicat la pitjor opció possible com a penalització.</string>
+    <string name="event_auto_resolved_chosen">Opció seleccionada automàticament</string>
+    <string name="event_auto_resolved_ok">Entès</string>
+
+    <!-- Premium Shop / Monetization -->
+    <string name="premium_shop_title">Botiga Premium</string>
+    <string name="premium_gem_actions">Accions Ràpides amb Gemmes</string>
+    <string name="premium_auto_tap">Auto Tap</string>
+    <string name="premium_auto_tap_desc">1 hora de taps automàtics</string>
+    <string name="premium_instant_coins">Monedes Instantànies</string>
+    <string name="premium_instant_coins_desc">1 hora de producció al moment</string>
+    <string name="premium_whale_boost">Ultra Boost</string>
+    <string name="premium_whale_boost_desc">x1.5 producció durant 6 hores</string>
+    <string name="premium_packs">Packs i Ofertes</string>
+    <string name="premium_gems_label">Gemmes</string>
+    <string name="premium_boost_24h">Boost 24h</string>
+    <string name="premium_mega_coins">Mega Monedes</string>
+    <string name="premium_claim_gems">Reclamar +%d 💎</string>
+    <string name="premium_vip_next">Següent: %1$s %2$s — Falten %3$s</string>
+    <string name="premium_vip_max">🎉 Nivell VIP màxim assolit!</string>
+    <string name="premium_production">Producció</string>
+    <string name="premium_daily">Diari</string>
+    <string name="premium_boost_active">Boost Actiu: %s</string>
+    <string name="pack_starter_title">Pack Inicial</string>
+    <string name="pack_starter_desc">200 gemmes + x10 producció 24h + bonus de monedes</string>
+    <string name="pack_starter_badge">🔥 OFERTA ÚNICA — TEMPS LIMITAT!</string>
+    <string name="pack_gems_small_title">Bossa de Gemmes</string>
+    <string name="pack_gems_small_desc">100 gemmes</string>
+    <string name="pack_gems_med_title">Cofre de Gemmes</string>
+    <string name="pack_gems_med_desc">300 gemmes — Ideal per començar</string>
+    <string name="pack_gems_large_title">Volta de Gemmes</string>
+    <string name="pack_gems_large_desc">800 gemmes — Gran valor!</string>
+    <string name="pack_gems_mega_title">Tresor de Gemmes</string>
+    <string name="pack_gems_mega_desc">2.000 gemmes — Poder màxim</string>
+    <string name="pack_boost_2x_title">Doble Poder</string>
+    <string name="pack_boost_2x_desc">x2 producció durant 1 hora</string>
+    <string name="pack_boost_5x_title">Hiper Boost</string>
+    <string name="pack_boost_5x_desc">x5 producció durant 1 hora</string>
+    <string name="pack_boost_10x_title">Mega Overdrive</string>
+    <string name="pack_boost_10x_desc">x10 producció durant 30 minuts</string>
+    <string name="pack_value_silver_title">Pack Plata</string>
+    <string name="pack_value_silver_desc">400 gemmes + x3 boost durant 2 hores</string>
+    <string name="pack_value_gold_title">Pack Or</string>
+    <string name="pack_value_gold_desc">1.000 gemmes + x5 boost durant 4 hores</string>
+    <string name="pack_whale_ultra_title">Pack Ultra Balena</string>
+    <string name="pack_whale_ultra_desc">5.000 gemmes + x15 boost durant 12 hores</string>
+    <string name="pack_whale_omega_title">Pack Omega</string>
+    <string name="pack_whale_omega_desc">15.000 gemmes — La col·lecció definitiva</string>
+</resources>

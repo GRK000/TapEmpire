@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Header con stats principales -->
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/card_background"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Mundo actual -->
+        <TextView
+            android:id="@+id/tvCurrentWorld"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏠 Garage Startup"
+            android:textSize="14sp"
+            android:textColor="@color/secondary"
+            android:gravity="center" />
+
+        <!-- Coins principales -->
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💰 0"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/coins_gold"
+            android:gravity="center"
+            android:layout_marginTop="4dp" />
+
+        <!-- Stats secundarios en fila -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvPerTap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="👆 1/tap"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:background="@color/background_card_light" />
+
+            <TextView
+                android:id="@+id/tvPerSecond"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⚙️ 0/seg"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:background="@color/background_card_light" />
+
+            <TextView
+                android:id="@+id/tvPrestige"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⭐ x1.00"
+                android:textSize="12sp"
+                android:textColor="@color/prestige_cyan"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Banner de Evento Activo -->
+    <LinearLayout
+        android:id="@+id/eventBanner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/gen_ai"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerContainer">
+
+        <TextView
+            android:id="@+id/tvEventName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌟 Golden Hour 🌟"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvEventTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⏱️ 60s restantes"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Indicador de Combo -->
+    <LinearLayout
+        android:id="@+id/comboContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventBanner">
+
+        <TextView
+            android:id="@+id/tvComboText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔥 COMBO! 🔥"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvComboMultiplier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x5"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/coins_gold" />
+
+        <!-- Barra de tiempo del combo -->
+        <ProgressBar
+            android:id="@+id/comboProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="150dp"
+            android:layout_height="6dp"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/progress_bar_background"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Indicador de tap flotante -->
+    <TextView
+        android:id="@+id/tvTapIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/coins_gold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/btnTap"
+        app:layout_constraintEnd_toEndOf="@id/btnTap"
+        app:layout_constraintStart_toStartOf="@id/btnTap" />
+
+    <!-- Flash de impacto visual -->
+    <ImageView
+        android:id="@+id/tapFlash"
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:src="@drawable/tap_button_glow"
+        android:visibility="invisible"
+        android:alpha="0"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintTop_toBottomOf="@id/comboContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Botón principal de TAP -->
+    <ImageButton
+        android:id="@+id/btnTap"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:background="@drawable/tap_button_glow"
+        android:contentDescription="Tap button"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintTop_toBottomOf="@id/comboContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Texto dentro del botón de tap -->
+    <TextView
+        android:id="@+id/tvTapText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TAP!"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnTap"
+        app:layout_constraintEnd_toEndOf="@id/btnTap"
+        app:layout_constraintStart_toStartOf="@id/btnTap"
+        app:layout_constraintTop_toTopOf="@id/btnTap" />
+
+    <!-- Mascota flotante -->
+    <LinearLayout
+        android:id="@+id/petContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@drawable/card_background"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerContainer"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/tvPetEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🐱"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvPetMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="😊"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvPetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Robo-Cat"
+            android:textSize="9sp"
+            android:textColor="@color/text_secondary"
+            android:maxWidth="60dp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <!-- Banner de logro -->
+    <LinearLayout
+        android:id="@+id/achievementBanner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/success"
+        android:padding="10dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav">
+
+        <TextView
+            android:id="@+id/tvAchievementText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🏆 ¡Logro desbloqueado!"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Navegación inferior -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/background_card"
+        app:itemIconTint="@color/secondary"
+        app:itemTextColor="@color/text_secondary"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

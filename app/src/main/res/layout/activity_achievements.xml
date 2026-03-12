@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    tools:context=".AchievementsActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏆 LOGROS"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/coins_gold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvAchievementCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0/10 completados"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Lista de logros -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/achievementsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

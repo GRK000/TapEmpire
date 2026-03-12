@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_garage_scene"
+    android:fillViewport="true"
+    tools:context=".PrestigeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_premium"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:letterSpacing="0.1"
+                android:text="⭐ PRESTIGIO"
+                android:textColor="#00BCD4"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvCurrentLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Nivel Actual: 0"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvCurrentMultiplier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:text="Multiplicador: x1.00"
+                android:textColor="#4CAF50"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Info Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/card_glass"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="¿Qué es el Prestigio?"
+                android:textColor="#00D9FF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="4dp"
+                android:text="El prestigio reinicia tu progreso pero te da un multiplicador permanente de ganancias. Cuanto más avances antes de prestigiar, mayor será el bonus."
+                android:textColor="#B0FFFFFF"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Next Prestige Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/card_glass"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Próximo Prestigio"
+                android:textColor="#FFD700"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvNextMultiplier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-black"
+                android:text="+0.00x"
+                android:textColor="#4CAF50"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/tvCoinsNeeded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:text="Monedas totales: 0"
+                android:textColor="#90FFFFFF"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnPrestige"
+                android:layout_width="200dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_gold"
+                android:fontFamily="sans-serif-black"
+                android:text="⭐ PRESTIGIAR"
+                android:textAllCaps="false"
+                android:textColor="#1A1A2E"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Warning -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="⚠️ El prestigio reiniciará: monedas, generadores y mejoras"
+            android:textColor="#FFC107"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</ScrollView>

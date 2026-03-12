@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/generator_item_background"
+    android:padding="12dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="6dp"
+    android:gravity="center_vertical">
+
+    <!-- Icono/Emoji -->
+    <TextView
+        android:id="@+id/tvEmoji"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="🏆"
+        android:textSize="28sp"
+        android:gravity="center" />
+
+    <!-- Info del logro -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Steps"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Haz 100 taps"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary" />
+
+        <!-- Barra de progreso -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_bar_background" />
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50/100"
+            android:textSize="10sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="2dp" />
+
+    </LinearLayout>
+
+    <!-- Recompensa -->
+    <TextView
+        android:id="@+id/tvReward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="💰 50"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/coins_gold" />
+
+</LinearLayout>

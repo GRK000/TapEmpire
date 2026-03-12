@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_garage_scene"
+    android:orientation="vertical"
+    tools:context=".ShopActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_glass"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:text="⚡ MEJORAS"
+            android:textColor="#7C4DFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="Potencia tu tap y producción"
+            android:textColor="#90FFFFFF"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvCoins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="💰 0"
+            android:textColor="#FFD700"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- Upgrades List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/upgradesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp" />
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Tokyo Tech - Neon Cyberpunk Theme -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="180"
+                android:startColor="#0D0015"
+                android:centerColor="#1A0A2E"
+                android:endColor="#2D1B4E" />
+        </shape>
+    </item>
+
+    <!-- Neon pink glow top -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="400dp"
+                android:centerX="30%"
+                android:centerY="10%"
+                android:startColor="#40FF006E"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Neon blue glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="350dp"
+                android:centerX="70%"
+                android:centerY="25%"
+                android:startColor="#3000D4FF"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Bottom neon strip -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="90"
+                android:startColor="#50FF4081"
+                android:centerColor="#20E040FB"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Scattered neon dots simulation -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="150dp"
+                android:centerX="15%"
+                android:centerY="70%"
+                android:startColor="#20FF006E"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="120dp"
+                android:centerX="85%"
+                android:centerY="55%"
+                android:startColor="#2000D4FF"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="100dp"
+                android:centerX="50%"
+                android:centerY="80%"
+                android:startColor="#15E040FB"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+</layer-list>

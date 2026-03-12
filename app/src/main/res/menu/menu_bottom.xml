@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Tap"/>
+    <item
+        android:id="@+id/nav_worlds"
+        android:icon="@android:drawable/ic_menu_mapmode"
+        android:title="Mundos"/>
+    <item
+        android:id="@+id/nav_generators"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:title="Negocios"/>
+    <item
+        android:id="@+id/nav_minigames"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="Juegos"/>
+    <item
+        android:id="@+id/nav_more"
+        android:icon="@android:drawable/ic_menu_more"
+        android:title="Más"/>
+</menu>

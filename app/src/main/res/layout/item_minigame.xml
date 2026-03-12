@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/card_background"
+    android:padding="20dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="8dp">
+
+    <!-- Cabecera del minijuego -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvEmoji"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="🎡"
+            android:textSize="40sp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruleta de la Fortuna"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gira y gana premios increíbles"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/tvPlaysRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎯 3/3 partidas disponibles"
+                android:textSize="11sp"
+                android:textColor="@color/success"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Status y Cooldown -->
+    <TextView
+        android:id="@+id/tvCooldown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="12sp"
+        android:textColor="@color/warning"
+        android:gravity="center"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botón de jugar -->
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="🎮 JUGAR"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/upgrade_button_background"
+        android:layout_marginTop="12dp" />
+
+</LinearLayout>

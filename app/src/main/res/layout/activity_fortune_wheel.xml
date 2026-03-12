@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎡 RULETA DE LA FORTUNA 🎡"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/coins_gold"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tvCoins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="💰 0"
+        android:textSize="18sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="8dp" />
+
+    <!-- Contenedor de la ruleta -->
+    <FrameLayout
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="20dp">
+
+        <!-- La ruleta que gira -->
+        <ImageView
+            android:id="@+id/wheelImage"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:src="@drawable/fortune_wheel" />
+
+        <!-- Indicador/Flecha (no gira) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:text="▼"
+            android:textSize="40sp"
+            android:textColor="@color/accent"
+            android:layout_marginTop="-5dp" />
+
+        <!-- Centro de la ruleta -->
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/wheel_center"
+            android:gravity="center"
+            android:text="💎"
+            android:textSize="28sp" />
+    </FrameLayout>
+
+    <!-- Resultado -->
+    <LinearLayout
+        android:id="@+id/resultContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tvResultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎉 ¡GANASTE!"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/coins_gold" />
+
+        <TextView
+            android:id="@+id/tvResultPrize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💰 +10,000 coins"
+            android:textSize="22sp"
+            android:textColor="@color/success"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Botón de girar -->
+    <Button
+        android:id="@+id/btnSpin"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="🎰 GIRAR"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/upgrade_button_background"
+        android:layout_marginTop="20dp" />
+
+    <!-- Botón volver -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:text="← Volver"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="15dp" />
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Juego">
+
+        <!-- New Compose Activity (launcher) -->
+        <activity
+            android:name=".ui.ComposeMainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Juego">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Legacy Activities (kept for reference, no longer launched) -->
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".ShopActivity" android:exported="false" />
+        <activity android:name=".GeneratorsActivity" android:exported="false" />
+        <activity android:name=".AchievementsActivity" android:exported="false" />
+        <activity android:name=".PrestigeActivity" android:exported="false" />
+        <activity android:name=".WorldsActivity" android:exported="false" />
+        <activity android:name=".MiniGamesActivity" android:exported="false" />
+        <activity android:name=".MoreActivity" android:exported="false" />
+        <activity android:name=".MissionsActivity" android:exported="false" />
+        <activity android:name=".PetsActivity" android:exported="false" />
+        <activity android:name=".FortuneWheelActivity" android:exported="false" />
+        <activity android:name=".BusinessMapActivity" android:exported="false" />
+    </application>
+
+</manifest>

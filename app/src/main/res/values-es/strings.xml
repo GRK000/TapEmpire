@@ -1,0 +1,631 @@
+<resources>
+    <string name="app_name">Tap Empire</string>
+
+    <!-- Navigation -->
+    <string name="nav_tap">Tap</string>
+    <string name="nav_worlds">Mundos</string>
+    <string name="nav_generators">Negocios</string>
+    <string name="nav_minigames">Juegos</string>
+    <string name="nav_more">Más</string>
+
+    <!-- Common -->
+    <string name="btn_great">¡Genial!</string>
+    <string name="btn_collect_reward">Cobrar Recompensa</string>
+    <string name="btn_back">Volver</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_buy">Comprar</string>
+    <string name="btn_claim">Cobrar</string>
+    <string name="label_max">MAX</string>
+    <string name="label_per_sec">%1$s/seg</string>
+    <string name="label_coins">Monedas</string>
+    <string name="label_per_tap">/tap</string>
+    <string name="label_per_s">/s</string>
+    <string name="label_remaining">%1$d/%2$d restantes</string>
+    <string name="label_daily_limit">Límite diario</string>
+    <string name="label_play">🎮 JUGAR</string>
+    <string name="label_level">Nv %1$d</string>
+    <string name="label_seconds">%1$ds</string>
+
+    <!-- Offline dialog -->
+    <string name="offline_title">😴 ¡Bienvenido de vuelta!</string>
+    <string name="offline_text">Mientras estuviste fuera, tu imperio generó:\n\n💰 %1$s monedas</string>
+
+    <!-- Achievement popup -->
+    <string name="achievement_title">%1$s ¡Logro desbloqueado!</string>
+
+    <!-- Minigame reward -->
+    <string name="minigame_reward_title">🎮 ¡Recompensa!</string>
+    <string name="minigame_reward_text">Has ganado:\n\n💰 %1$s monedas</string>
+
+    <!-- Home screen -->
+    <string name="home_tap_button">¡TAP!</string>
+    <string name="home_combo">COMBO</string>
+
+    <!-- Generators screen -->
+    <string name="generators_title">🏭 Negocios</string>
+    <string name="generators_total_production">Producción total</string>
+    <string name="generators_need_coins">Necesitas %1$s monedas totales</string>
+
+    <!-- Shop / Upgrades screen -->
+    <string name="shop_title">⚡ Mejoras</string>
+    <string name="shop_subtitle">Potencia tu producción</string>
+    <string name="shop_level">Nv %1$d/%2$d</string>
+
+    <!-- Worlds screen -->
+    <string name="worlds_title">🌍 Mundos</string>
+    <string name="worlds_subtitle">Explora el cosmos y desbloquea nuevos mundos</string>
+    <string name="worlds_active">ACTIVO</string>
+    <string name="worlds_production">producción</string>
+    <string name="worlds_prestige_req">⭐ P%1$d</string>
+
+    <!-- Pets screen -->
+    <string name="pets_title">🐾 Mascotas</string>
+    <string name="pets_subtitle">Compañeros que potencian tu imperio</string>
+    <string name="pets_feed">🍖 Alimentar</string>
+    <string name="pets_pet">💕 Acariciar</string>
+    <string name="pets_active">ACTIVA</string>
+    <string name="pets_bonus">Bonus: %1$s</string>
+
+    <!-- Mini Games screen -->
+    <string name="minigames_title">🎮 Mini Juegos</string>
+    <string name="minigames_subtitle">Juega para ganar recompensas extra</string>
+    <string name="minigames_cooldown">⏱️ %1$dm %2$ds</string>
+
+    <!-- More screen -->
+    <string name="more_title">⚙️ Más</string>
+    <string name="more_shop">Tienda de Mejoras</string>
+    <string name="more_shop_desc">Potencia tu tap y producción</string>
+    <string name="more_achievements">Logros</string>
+    <string name="more_achievements_desc">Tus trofeos y recompensas</string>
+    <string name="more_prestige">Prestigio</string>
+    <string name="more_prestige_desc">Reinicia para bonificaciones permanentes</string>
+    <string name="more_missions">Misiones Diarias</string>
+    <string name="more_missions_desc">Completa desafíos para ganar recompensas</string>
+    <string name="more_pets">Mascotas</string>
+    <string name="more_pets_desc">Compañeros con bonificaciones especiales</string>
+    <string name="more_nursery">Criadero</string>
+    <string name="more_stats">Estadísticas</string>
+    <string name="more_stats_desc">Tu imperio en números</string>
+    <string name="locked_until_world">🔒 Se desbloquea en %1$s</string>
+
+    <!-- Nursery -->
+    <string name="nursery_title">🏠 Criadero</string>
+    <string name="nursery_subtitle">Cuida a tus queridos compañeros</string>
+    <string name="nursery_empty">¡Aún no tienes mascotas! Compra una en la tienda.</string>
+    <string name="nursery_feed">Alimentar</string>
+    <string name="nursery_pet">Acariciar</string>
+    <string name="nursery_play">Jugar</string>
+    <string name="nursery_clean">Limpiar</string>
+    <string name="nursery_rest">Descansar</string>
+    <string name="nursery_revive">Revivir</string>
+    <string name="nursery_diseases">Enfermedades</string>
+    <string name="nursery_health">Salud</string>
+    <string name="nursery_happiness">Felicidad</string>
+    <string name="nursery_hunger">Saciedad</string>
+    <string name="nursery_energy">Energía</string>
+    <string name="nursery_mental">Mente</string>
+    <string name="nursery_hygiene">Higiene</string>
+
+    <!-- Nursery tabs & breeding -->
+    <string name="nursery_tab_care">Cuidado</string>
+    <string name="nursery_tab_breeding">Cría</string>
+    <string name="nursery_tab_collection">Colección</string>
+    <string name="nursery_welfare">Bienestar del criadero</string>
+    <string name="nursery_workers_assigned">Trabajadores asignados</string>
+    <string name="nursery_collection_title">Colección de Rasgos</string>
+    <string name="nursery_common_traits">Rasgos Comunes</string>
+    <string name="nursery_rare_traits">Rasgos Raros (Mutaciones)</string>
+    <string name="nursery_combos">Combos de Rasgos</string>
+    <string name="nursery_breeding_stats">Estadísticas de Cría</string>
+    <string name="nursery_hybrids">Híbridos criados</string>
+    <string name="nursery_max_gen">Generación máxima</string>
+    <string name="nursery_rare_found">Rasgos raros encontrados</string>
+    <string name="breeding_title">Laboratorio de Cría</string>
+    <string name="breeding_description">Combina dos mascotas para crear una cría con rasgos heredados. Cada mascota tiene 2 rasgos — la cría hereda 2 aleatorios de ambos padres, ¡con posibilidad de mutación rara!</string>
+    <string name="breeding_cooldown">de espera</string>
+    <string name="breeding_mutation">mutación</string>
+    <string name="breeding_select_parents">Seleccionar Padres</string>
+    <string name="breeding_parent">Padre</string>
+    <string name="breeding_tap_to_select">Toca para seleccionar…</string>
+    <string name="breeding_preview">Vista previa de cría</string>
+    <string name="breeding_cost">Coste</string>
+    <string name="breeding_max_reached">¡Máximo de mascotas alcanzado!</string>
+    <string name="breeding_breed_btn">¡Criar!</string>
+    <string name="breeding_success">¡Nueva mascota nacida!</string>
+    <string name="breeding_traits">Rasgos</string>
+    <string name="breeding_incubating_title">Incubando</string>
+    <string name="breeding_incubating_msg">Tiempo de incubación</string>
+    <string name="breeding_ready_hatch">Lista para nacer</string>
+    <string name="breeding_hatch_btn">¡Reclamar Mascota!</string>
+    <string name="breeding_remaining">restante</string>
+    <string name="breeding_traits_hidden">Rasgos revelados al nacer</string>
+
+    <!-- Prestige screen -->
+    <string name="prestige_title">⭐ Prestigio</string>
+    <string name="prestige_subtitle">Reinicia tu progreso para bonificaciones permanentes</string>
+    <string name="prestige_current_level">Nivel actual: %1$d</string>
+    <string name="prestige_points">Puntos de prestigio: %1$s</string>
+    <string name="prestige_multiplier">Multiplicador: x%1$s</string>
+    <string name="prestige_available">Disponible: +%1$s puntos</string>
+    <string name="prestige_btn">⭐ PRESTIGIAR</string>
+    <string name="prestige_not_available">Necesitas más monedas para prestigiar</string>
+    <string name="prestige_confirm_title">⭐ Confirmar Prestigio</string>
+    <string name="prestige_confirm_text">Perderás todas tus monedas y generadores, pero ganarás puntos de prestigio que potenciarán permanentemente tu producción.\n\n¿Estás seguro?</string>
+    <string name="prestige_confirm_yes">¡Sí, Prestigiar!</string>
+
+    <!-- Prestige benefits -->
+    <string name="prestige_benefits_title">✦ Beneficios del Prestigio</string>
+    <string name="prestige_benefit_1">✦ +5% multiplicador global por nivel</string>
+    <string name="prestige_benefit_2">✦ Desbloquea mundos avanzados</string>
+    <string name="prestige_benefit_3">✦ Generadores más potentes</string>
+    <string name="prestige_benefit_4">✦ Acceso a mascotas legendarias</string>
+
+    <!-- Missions screen -->
+    <string name="missions_title">📋 Misiones Diarias</string>
+    <string name="missions_subtitle">Completa misiones para recompensas extra</string>
+    <string name="missions_completed">¡Completada!</string>
+
+    <!-- Achievements screen -->
+    <string name="achievements_title">🏆 Logros</string>
+    <string name="achievements_completed">%1$d/%2$d completados</string>
+
+    <!-- Stats screen -->
+    <string name="stats_title">📊 Estadísticas</string>
+    <string name="stats_total_earned">Total ganado</string>
+    <string name="stats_total_taps">Taps totales</string>
+    <string name="stats_per_tap">Por tap</string>
+    <string name="stats_per_second">Por segundo</string>
+    <string name="stats_generators_bought">Generadores comprados</string>
+    <string name="stats_prestige_level">Nivel de prestigio</string>
+    <string name="stats_prestige_points">Puntos de prestigio</string>
+    <string name="stats_worlds_unlocked">Mundos desbloqueados</string>
+    <string name="stats_minigames_played">Minijuegos jugados</string>
+    <string name="stats_events_completed">Eventos completados</string>
+    <string name="stats_current_world">Mundo actual</string>
+    <string name="stats_active_pet">Mascota activa</string>
+    <string name="stats_none">Ninguna</string>
+
+    <!-- Tap Frenzy -->
+    <string name="frenzy_title">Tap Frenzy</string>
+    <string name="frenzy_subtitle">¡Toca lo más rápido posible!</string>
+    <string name="frenzy_taps">%1$d taps</string>
+    <string name="frenzy_result_amazing">🌟 ¡MÁQUINA! 🌟</string>
+    <string name="frenzy_result_good">✨ ¡Rápido!</string>
+    <string name="frenzy_result_ok">👆 Sigue practicando</string>
+    <string name="frenzy_stats">%1$d taps en 10s</string>
+    <string name="frenzy_tps">%1$s taps/segundo</string>
+
+    <!-- Memory Match -->
+    <string name="memory_title">Memory Match</string>
+    <string name="memory_subtitle">¡Encuentra los pares!</string>
+    <string name="memory_moves">Movimientos: %1$d</string>
+    <string name="memory_result_perfect">🌟 ¡MEMORIA PERFECTA! 🌟</string>
+    <string name="memory_result_good">✨ ¡Completado!</string>
+    <string name="memory_result_timeout">⏰ ¡Tiempo!</string>
+    <string name="memory_pairs">Pares: %1$d/%2$d</string>
+
+    <!-- Coin Rain -->
+    <string name="rain_title">Lluvia de Monedas</string>
+    <string name="rain_subtitle">¡Toca las monedas! Evita las 💣</string>
+    <string name="rain_result_amazing">🌟 ¡LLUVIA DE ORO! 🌟</string>
+    <string name="rain_result_good">✨ ¡Buen trabajo!</string>
+    <string name="rain_result_ok">💧 Sigue intentando</string>
+    <string name="rain_score">Puntuación: %1$d</string>
+    <string name="rain_stats">Atrapadas: %1$d • Perdidas: %2$d</string>
+
+    <!-- Boss Battle -->
+    <string name="boss_title">Batalla de Jefes</string>
+    <string name="boss_subtitle">¡Toca al jefe para hacer daño!</string>
+    <string name="boss_damage">⚔️ Daño: %1$d</string>
+    <string name="boss_name">Bug Lord</string>
+    <string name="boss_enraged">(¡ENFURECIDO!)</string>
+    <string name="boss_hp">%1$d/%2$d HP</string>
+    <string name="boss_result_win">🌟 ¡BOSS DERROTADO! 🌟</string>
+    <string name="boss_result_lose">⏰ ¡Se escapó!</string>
+    <string name="boss_total_damage">Daño total: %1$d</string>
+
+    <!-- Lucky Box -->
+    <string name="lucky_title">Caja de la Suerte</string>
+    <string name="lucky_subtitle">¡Elige una caja!</string>
+    <string name="lucky_opening">Abriendo…</string>
+    <string name="lucky_jackpot">💎 ¡JACKPOT!</string>
+    <string name="lucky_good">💰 ¡Buen premio!</string>
+    <string name="lucky_consolation">🎁 Consolación</string>
+    <string name="lucky_your_choice">TU ELECCIÓN</string>
+
+    <!-- Fortune Wheel -->
+    <string name="wheel_title">Ruleta de la Fortuna</string>
+    <string name="wheel_subtitle">¡Prueba tu suerte!</string>
+    <string name="wheel_spin">¡GIRAR!</string>
+    <string name="wheel_spinning">🎡 ¡Girando!</string>
+    <string name="wheel_result_jackpot">🌟 ¡¡JACKPOT!! 🌟</string>
+    <string name="wheel_result_great">✨ ¡Gran premio!</string>
+    <string name="wheel_result_good">👏 ¡Bien!</string>
+    <string name="wheel_result_ok">👍 Decente</string>
+    <string name="wheel_result_bad">😅 Mala suerte</string>
+    <string name="wheel_multiplier">Multiplicador: %1$s</string>
+
+    <!-- Star Catcher -->
+    <string name="star_subtitle">¡Atrapa las estrellas!</string>
+    <string name="star_result_amazing">🌟 ¡MAESTRO ESTELAR! 🌟</string>
+    <string name="star_result_good">✨ ¡Gran captura!</string>
+    <string name="star_result_ok">⭐ Sigue intentando</string>
+
+    <!-- Cosmic Billiards -->
+    <string name="billiards_pocketed">Metidas: %1$d/10</string>
+    <string name="billiards_shots">Tiros: %1$d</string>
+    <string name="billiards_drag_hint">Arrastra desde la bola blanca</string>
+    <string name="billiards_result_perfect">🌟 ¡PERFECTO! 🌟</string>
+    <string name="billiards_result_great">✨ ¡Gran partida!</string>
+    <string name="billiards_result_good">👏 Nada mal</string>
+    <string name="billiards_result_ok">🎱 Sigue practicando</string>
+    <string name="billiards_pocketed_stat">Bolas metidas: %1$d / 10</string>
+    <string name="billiards_score">Puntuación: %1$d</string>
+
+    <!-- Asteroid Dodge -->
+    <string name="asteroid_subtitle">¡Esquiva asteroides y recoge cristales!</string>
+    <string name="asteroid_result_amazing">🌟 ¡AS ESPACIAL! 🌟</string>
+    <string name="asteroid_result_good">✨ ¡Gran vuelo!</string>
+    <string name="asteroid_result_ok">☄️ Sigue intentando</string>
+
+    <!-- Gravity Slingshot -->
+    <string name="slingshot_drag_hint">👆 Arrastra en cualquier dirección para lanzar</string>
+    <string name="slingshot_result_amazing">🌟 ¡MAESTRO GRAVITATORIO! 🌟</string>
+    <string name="slingshot_result_good">✨ ¡Buenos tiros!</string>
+    <string name="slingshot_result_ok">🪐 Sigue practicando</string>
+    <string name="slingshot_level">Nivel: %1$d</string>
+    <string name="slingshot_shots">Tiros: %1$d</string>
+    <string name="slingshot_score">Puntuación: %1$d pts</string>
+
+    <!-- Workers -->
+    <string name="workers_title">👷 Trabajadores</string>
+    <string name="workers_tab_roster">Mis Trabajadores</string>
+    <string name="workers_tab_hire">Contratar</string>
+    <string name="workers_tab_summary">Resumen</string>
+    <string name="workers_tab_collection">Colección</string>
+    <string name="workers_empty">¡Aún no tienes trabajadores! Compra una Caja de Trabajadores para empezar.</string>
+    <string name="workers_unassigned">🔹 Sin asignar</string>
+    <string name="workers_assign_to">Asignar a un negocio:</string>
+    <string name="workers_unassign">🔄 Desasignar</string>
+    <string name="workers_fire_title">⚠️ Despedir Trabajador</string>
+    <string name="workers_fire_confirm">¿Seguro que quieres despedir a %1$s? Esta acción no se puede deshacer.</string>
+    <string name="workers_fire_btn">Despedir</string>
+    <string name="workers_hire_subtitle">¡Abre Cajas de Trabajadores para conseguir empleados con habilidades y estadísticas únicas!</string>
+    <string name="workers_new_hire">✨ ¡NUEVA CONTRATACIÓN! ✨</string>
+    <string name="workers_box_basic">Caja Básica</string>
+    <string name="workers_box_basic_desc">Mayormente trabajadores comunes</string>
+    <string name="workers_box_premium">Caja Premium</string>
+    <string name="workers_box_premium_desc">Más probabilidad de raros y épicos</string>
+    <string name="workers_box_legendary">Caja Legendaria</string>
+    <string name="workers_box_legendary_desc">¡Épico o legendario garantizado!</string>
+    <string name="workers_summary_overview">Resumen General</string>
+    <string name="workers_summary_total">Total de Trabajadores</string>
+    <string name="workers_summary_assigned">Asignados</string>
+    <string name="workers_summary_salary">Salario Mensual</string>
+    <string name="workers_summary_mood">Estado de Ánimo</string>
+    <string name="workers_summary_rarity">Desglose por Rareza</string>
+    <string name="worker_mood_happy">Contento</string>
+    <string name="worker_mood_neutral">Neutral</string>
+    <string name="worker_mood_angry">Enfadado</string>
+    <string name="worker_mood_on_strike">En Huelga</string>
+
+    <!-- Business Map -->
+    <string name="business_map_title">🗺️ Mapa de Negocios</string>
+
+    <!-- Filters -->
+    <string name="filter_all">Todos</string>
+    <string name="filter_assigned">Asignados</string>
+    <string name="filter_unassigned">Libres</string>
+
+    <!-- Contracts -->
+    <string name="contracts_title">📋 Contratos</string>
+    <string name="contracts_create_new">Crear Nuevo Contrato</string>
+    <string name="contracts_create_title">Nueva Plantilla de Contrato</string>
+    <string name="contracts_create_btn">Crear</string>
+    <string name="contracts_empty">Aún no hay contratos. ¡Crea uno para empezar a contratar trabajadores!</string>
+    <string name="contract_name">Nombre del Contrato</string>
+    <string name="contract_salary">Salario Mensual</string>
+    <string name="contract_schedule">Jornada</string>
+    <string name="contract_full_time">Completa</string>
+    <string name="contract_part_time">Media jornada</string>
+    <string name="contract_flexible">Flexible</string>
+    <string name="contract_category">Categoría</string>
+    <string name="contract_standard">Estándar</string>
+    <string name="contract_premium">Premium</string>
+    <string name="contract_executive">Ejecutivo</string>
+    <string name="contract_duration">Duración</string>
+    <string name="contract_months">meses</string>
+    <string name="contract_strike_rights">Derecho a Huelga</string>
+    <string name="contract_strike_yes">Puede hacer huelga</string>
+    <string name="contract_no_strike">Sin huelga</string>
+    <string name="contracts_strike_alert">⚠️ ¡Trabajadores en Huelga!</string>
+    <string name="contracts_strike_count">%1$d trabajadores están en huelga</string>
+    <string name="contracts_strike_title">Resolución de Huelga</string>
+    <string name="contracts_strike_desc">%1$d trabajadores se niegan a trabajar. Ofréceles un contrato mejor para resolver la huelga.</string>
+    <string name="contracts_strike_offer">Elige un contrato para ofrecer:</string>
+    <string name="contracts_strike_more">más…</string>
+    <string name="contracts_strike_resolve_all">Ofrecer a Todos</string>
+
+    <!-- Negotiation -->
+    <string name="negotiate_choose_contract">📋 Elegir Contrato</string>
+    <string name="negotiate_select_template">Selecciona un contrato para ofrecer:</string>
+    <string name="negotiate_no_contracts">⚠️ ¡No tienes contratos! Crea uno primero en el menú Contratos.</string>
+    <string name="negotiate_go_contracts">Ve a Más → Contratos para crear plantillas.</string>
+    <string name="negotiate_offer">🤝 Hacer Oferta</string>
+    <string name="negotiate_chance">Probabilidad de aceptación</string>
+    <string name="negotiate_accepted">¡Contrato Aceptado!</string>
+    <string name="negotiate_welcome">¡Bienvenido al equipo!</string>
+    <string name="negotiate_rejected">¡Contrato Rechazado!</string>
+    <string name="negotiate_rejected_desc">El trabajador no aceptó las condiciones. Has perdido tu inversión en la caja.</string>
+    <string name="negotiate_retry">🔄 Probar Otro Contrato (1 oportunidad)</string>
+    <string name="negotiate_retry_title">¡Última Oportunidad!</string>
+    <string name="negotiate_give_up">Rendirse</string>
+    <string name="negotiate_create_inline">+ Crear Nuevo Contrato Aquí</string>
+    <string name="negotiate_create_and_select">Crear y Seleccionar</string>
+    <string name="negotiate_recommended">Recomendado</string>
+
+    <!-- Worker Detail -->
+    <string name="detail_stats">📊 Estadísticas</string>
+    <string name="detail_productivity">Productividad</string>
+    <string name="detail_experience">Experiencia</string>
+    <string name="detail_years">años</string>
+    <string name="detail_base_salary">Salario Base</string>
+    <string name="detail_mood">Estado de Ánimo</string>
+    <string name="detail_personal">👤 Info Personal</string>
+    <string name="detail_marital">Estado Civil</string>
+    <string name="detail_children">Hijos</string>
+    <string name="detail_class">Clase</string>
+    <string name="detail_contract">📋 Contrato</string>
+    <string name="detail_status">Estado</string>
+    <string name="detail_signed">Firmado</string>
+    <string name="detail_no_contract">Sin contrato</string>
+    <string name="detail_assignment">📍 Asignación</string>
+    <string name="detail_workplace">Puesto de Trabajo</string>
+
+    <!-- Worker Collection -->
+    <string name="collection_title">Colección de Trabajadores</string>
+    <string name="collection_discovered">descubiertos</string>
+    <string name="collection_classes">Clases Descubiertas</string>
+    <string name="collection_rarities">Rarezas Descubiertas</string>
+    <string name="collection_catalog">Catálogo de Nombres</string>
+
+    <!-- Worker Detail -->
+    <string name="detail_education">Estudios</string>
+
+    <!-- Tutorials -->
+    <string name="tutorial_got_it">¡Entendido!</string>
+    <string name="tutorial_welcome_title">¡Bienvenido a Tap Empire!</string>
+    <string name="tutorial_welcome_body">¡Toca la moneda para ganar dinero!\n\n💰 Cada toque te da monedas\n🏭 Compra negocios para ganar automáticamente\n⬆️ Mejora para aumentar tu producción\n🌍 Desbloquea nuevos mundos conforme progresas\n\n¡Empieza a tocar y construye tu imperio!</string>
+    <string name="tutorial_generators_title">¡Tu Primer Negocio!</string>
+    <string name="tutorial_generators_body">¡Genial! Has comprado tu primer negocio.\n\n🏭 Los negocios producen monedas automáticamente\n⬆️ Compra más para aumentar la producción\n💡 Cada negocio tiene mejoras únicas\n\n¡Sigue haciendo crecer tu portafolio!</string>
+    <string name="tutorial_prestige_title">¡Prestigio Disponible!</string>
+    <string name="tutorial_prestige_body">¡Ahora puedes hacer Prestigio!\n\n⭐ Reinicia tu progreso para obtener multiplicadores permanentes\n📈 Cada prestigio te hace más fuerte\n🔄 Tus monedas y negocios se reinician, pero conservas los bonos de prestigio\n\n¡Ve a Más → Prestigio cuando estés listo!</string>
+    <string name="tutorial_minigames_title">¡Minijuegos Desbloqueados!</string>
+    <string name="tutorial_minigames_body">¡Has desbloqueado los minijuegos!\n\n🎮 Juega para ganar recompensas extra\n⏱️ Cada juego tiene un cooldown entre partidas\n🏆 Mejor rendimiento = mayores recompensas\n\n¡Échales un vistazo en la pestaña Juegos!</string>
+    <string name="tutorial_pets_title">¡Mascotas!</string>
+    <string name="tutorial_pets_body">¡Has conseguido tu primera mascota!\n\n🐾 Las mascotas dan bonos de producción\n❤️ Aliméntalas, juega con ellas y cuídalas\n💊 Cuidado con las enfermedades\n🏠 Visita el criadero para gestionar tus mascotas\n\n¡Una mascota feliz significa más monedas!</string>
+    <string name="tutorial_worlds_title">¡Nuevo Mundo!</string>
+    <string name="tutorial_worlds_body">¡Has viajado a un nuevo mundo!\n\n🌍 Cada mundo tiene negocios únicos\n✨ Diferentes temáticas y bonos\n💰 Mundos superiores = mayores ganancias\n\n¡Explora y conquista todos los mundos!</string>
+    <string name="tutorial_workers_title">¡Trabajadores Desbloqueados!</string>
+    <string name="tutorial_workers_body">¡Has desbloqueado el Sistema de Trabajadores!\n\n👷 Contrata trabajadores de cajas aleatorias\n📋 Crea contratos para negociar condiciones\n🤝 Los trabajadores deben aceptar tu oferta\n🎓 Cada trabajador tiene estudios y habilidades únicas\n📍 Asígnalos a negocios para potenciar la producción\n✊ ¡Mantenlos contentos o irán a huelga!\n\n¡Ve a Más → Trabajadores para empezar a contratar!</string>
+
+    <!-- Events system -->
+    <string name="events_title">Eventos</string>
+    <string name="events_active">Eventos Activos</string>
+    <string name="events_none">La galaxia está en calma… por ahora.</string>
+    <string name="events_history">Historial de Eventos</string>
+    <string name="events_choose">Elige tu respuesta:</string>
+    <string name="event_cat_global">GLOBAL</string>
+    <string name="event_cat_local">LOCAL</string>
+    <string name="event_cat_corporate">CORPORATIVO</string>
+    <string name="stability_title">Estabilidad Galáctica</string>
+    <string name="stability_golden">Era Dorada</string>
+    <string name="stability_stable">Estable</string>
+    <string name="stability_unstable">Inestable</string>
+    <string name="stability_critical">Crítico</string>
+    <string name="stability_chaos">Caos Total</string>
+    <string name="event_title_crisis">Crisis Económica</string>
+    <string name="event_title_boom">Boom Económico</string>
+    <string name="event_title_legal">Reforma Legal</string>
+    <string name="event_title_pandemic">Pandemia</string>
+    <string name="event_title_golden">Edad de Oro</string>
+    <string name="event_title_alien">Contacto Alienígena</string>
+    <string name="event_title_war">Guerra Galáctica</string>
+    <string name="event_title_trade">Acuerdo Comercial</string>
+    <string name="event_title_climate">Desastre Climático</string>
+    <string name="event_title_market_crash">Desplome del Mercado</string>
+    <string name="event_title_festival">Festival Galáctico</string>
+    <string name="event_title_diplomatic">Incidente Diplomático</string>
+    <string name="event_title_dark_matter">Oleada de Materia Oscura</string>
+    <string name="event_title_science">Descubrimiento Científico</string>
+    <string name="event_title_tech">Avance Tecnológico</string>
+    <string name="event_title_resource">Escasez de Recursos</string>
+    <string name="event_title_blackout">Apagón Energético</string>
+    <string name="event_title_terraforming">Terraformación Exitosa</string>
+    <string name="event_title_debris">Basura Espacial</string>
+    <string name="event_title_cyber">Ciberataque</string>
+    <string name="event_title_grant">Subvención a la Innovación</string>
+    <string name="event_title_supply">Crisis de Suministro</string>
+    <string name="event_title_mutant">Brote de Mutantes</string>
+    <string name="event_title_strike">Huelga Sectorial</string>
+    <string name="event_title_competitor">Invasión Competidora</string>
+    <string name="event_title_union">Movimiento Sindical</string>
+    <string name="event_title_welfare">Escándalo de Bienestar Animal</string>
+    <string name="event_title_award">Empresa del Año</string>
+    <string name="event_title_corruption">Escándalo de Corrupción</string>
+    <string name="event_title_tax">Auditoría Fiscal</string>
+    <string name="event_title_training">Formación de Trabajadores</string>
+    <string name="event_title_espionage">Espionaje Corporativo</string>
+    <string name="event_title_labor">Escasez de Mano de Obra</string>
+    <string name="event_title_petcomp">Competición de Mascotas</string>
+    <string name="event_title_investor">Interés de Inversores</string>
+    <string name="event_desc_crisis">Los mercados se desploman en toda la galaxia. Los ingresos caen y los trabajadores están inquietos.</string>
+    <string name="event_desc_boom">¡La economía galáctica está en auge! Aprovecha la oportunidad.</string>
+    <string name="event_desc_legal">Nuevas leyes interplanetarias están remodelando el panorama empresarial.</string>
+    <string name="event_desc_pandemic">Un virus misterioso se está propagando. Tus operaciones están en riesgo.</string>
+    <string name="event_desc_golden">La paz y la prosperidad reinan. ¡Todo prospera!</string>
+    <string name="event_desc_alien">Una civilización alienígena ha contactado. ¿Cómo responderás?</string>
+    <string name="event_desc_war">Las facciones galácticas están en guerra. Tu imperio está en el fuego cruzado.</string>
+    <string name="event_desc_trade">Se ha abierto una nueva ruta comercial. Te esperan ofertas lucrativas.</string>
+    <string name="event_desc_climate">Eventos meteorológicos extremos devastan tus operaciones en todos los sectores.</string>
+    <string name="event_desc_market_crash">Los mercados financieros se han derrumbado. Ventas de pánico por doquier.</string>
+    <string name="event_desc_festival">¡Una celebración galáctica trae alegría y oportunidades para todos!</string>
+    <string name="event_desc_diplomatic">Un escándalo diplomático amenaza las relaciones interplanetarias.</string>
+    <string name="event_desc_dark_matter">¡Una misteriosa ola de materia oscura supercarga toda la producción!</string>
+    <string name="event_desc_science">¡Tus laboratorios han hecho un descubrimiento revolucionario!</string>
+    <string name="event_desc_tech">Tecnología revolucionaria disponible. ¡Actúa rápido!</string>
+    <string name="event_desc_resource">Los recursos críticos escasean en todo el sector.</string>
+    <string name="event_desc_blackout">Un apagón masivo ha paralizado tus operaciones. Producción detenida.</string>
+    <string name="event_desc_terraforming">¡Un nuevo planeta ha sido terraformado con éxito! Es posible expandirse.</string>
+    <string name="event_desc_debris">Un campo de asteroides amenaza tu infraestructura orbital.</string>
+    <string name="event_desc_cyber">Hackers han vulnerado tus sistemas. Datos y producción en riesgo.</string>
+    <string name="event_desc_grant">El Consejo Galáctico ofrece una generosa subvención a la innovación.</string>
+    <string name="event_desc_supply">Las cadenas de suministro clave han colapsado. Materiales escasos y caros.</string>
+    <string name="event_desc_mutant">Misteriosas mutaciones se propagan entre tus mascotas. ¿Ciencia o caos?</string>
+    <string name="event_desc_strike">Los trabajadores de sectores clave se han ido. La producción está parada.</string>
+    <string name="event_desc_competitor">Una corporación rival ataca agresivamente tu cuota de mercado.</string>
+    <string name="event_desc_union">Los trabajadores se organizan. La tensión crece en tu imperio.</string>
+    <string name="event_desc_welfare">Informes de negligencia animal se han viralizado. Tu reputación está en juego.</string>
+    <string name="event_desc_award">¡Tu imperio ha sido nominado al prestigioso premio galáctico!</string>
+    <string name="event_desc_corruption">Los auditores internos han descubierto irregularidades en tus cuentas.</string>
+    <string name="event_desc_tax">La Agencia Tributaria Galáctica está auditando tus finanzas.</string>
+    <string name="event_desc_training">Ha surgido una oportunidad para formar a tu plantilla.</string>
+    <string name="event_desc_espionage">Se han detectado espías corporativos en tu organización.</string>
+    <string name="event_desc_labor">No hay suficientes trabajadores para cubrir los puestos. Operaciones afectadas.</string>
+    <string name="event_desc_petcomp">¡La Competición Galáctica de Mascotas está aquí! ¿Participarás?</string>
+    <string name="event_desc_investor">Un inversor adinerado está interesado en tu imperio.</string>
+    <string name="event_crisis_cut">Recortar salarios</string>
+    <string name="event_crisis_loan">Pedir un préstamo</string>
+    <string name="event_crisis_ignore">No hacer nada</string>
+    <string name="event_boom_invest">Invertir agresivamente</string>
+    <string name="event_boom_save">Ir a lo seguro</string>
+    <string name="event_legal_comply">Cumplir las reformas</string>
+    <string name="event_legal_lobby">Hacer lobby contra ellas</string>
+    <string name="event_pandemic_quarantine">Cuarentena total</string>
+    <string name="event_pandemic_ignore">Ignorar la amenaza</string>
+    <string name="event_alien_diplomacy">Diplomacia abierta</string>
+    <string name="event_alien_exploit">Explotar su tecnología</string>
+    <string name="event_alien_ignore">Ignorarlos</string>
+    <string name="event_science_patent">Patentar el descubrimiento</string>
+    <string name="event_science_open">Hacerlo de código abierto</string>
+    <string name="event_tech_implement">Implementarlo ahora</string>
+    <string name="event_tech_sell">Vender la patente</string>
+    <string name="event_resource_import">Importar recursos</string>
+    <string name="event_resource_ration">Racionar suministros</string>
+    <string name="event_strike_negotiate">Negociar con trabajadores</string>
+    <string name="event_strike_replace">Contratar reemplazos</string>
+    <string name="event_competitor_war">Guerra de precios</string>
+    <string name="event_competitor_ally">Formar alianza</string>
+    <string name="event_union_concede">Ceder a las demandas</string>
+    <string name="event_union_suppress">Suprimir el movimiento</string>
+    <string name="event_welfare_reform">Reformar el criadero</string>
+    <string name="event_welfare_pr">Lanzar campaña de PR</string>
+    <string name="event_award_celebrate">Celebrar públicamente</string>
+    <string name="event_award_humble">Mantener la humildad</string>
+    <string name="event_corrupt_investigate">Investigar a fondo</string>
+    <string name="event_corrupt_cover">Encubrirlo</string>
+    <string name="event_war_arms">Vender armas</string>
+    <string name="event_war_neutral">Mantenerse neutral</string>
+    <string name="event_war_diplomacy">Diplomacia de paz</string>
+    <string name="event_trade_accept">Aceptar el trato</string>
+    <string name="event_trade_renegotiate">Renegociar términos</string>
+    <string name="event_climate_rebuild">Reconstruir infraestructura</string>
+    <string name="event_climate_relocate">Reubicar operaciones</string>
+    <string name="event_climate_adapt">Adaptarse y resistir</string>
+    <string name="event_crash_buylow">Comprar en la caída</string>
+    <string name="event_crash_liquidate">Liquidar activos</string>
+    <string name="event_crash_wait">Esperar</string>
+    <string name="event_festival_sponsor">Patrocinar el evento</string>
+    <string name="event_festival_ignore">Pasar de largo</string>
+    <string name="event_diplo_apologize">Disculparse públicamente</string>
+    <string name="event_diplo_deny">Negar todo</string>
+    <string name="event_diplo_mediate">Mediar una solución</string>
+    <string name="event_blackout_generators">Activar generadores de respaldo</string>
+    <string name="event_blackout_wait">Esperar reparaciones</string>
+    <string name="event_terra_expand">Expandir operaciones</string>
+    <string name="event_terra_sell">Vender los derechos</string>
+    <string name="event_debris_clean">Limpiar la órbita</string>
+    <string name="event_debris_shield">Desplegar escudos</string>
+    <string name="event_debris_ignore">Ignorar el riesgo</string>
+    <string name="event_cyber_firewall">Construir firewall</string>
+    <string name="event_cyber_counter">Contraatacar</string>
+    <string name="event_cyber_pay">Pagar rescate</string>
+    <string name="event_grant_research">Financiar investigación</string>
+    <string name="event_grant_infrastructure">Construir infraestructura</string>
+    <string name="event_supply_local">Abastecerse localmente</string>
+    <string name="event_supply_stockpile">Acumular reservas</string>
+    <string name="event_supply_wait">Esperar la recuperación</string>
+    <string name="event_mutant_quarantine">Poner en cuarentena</string>
+    <string name="event_mutant_study">Estudiar mutaciones</string>
+    <string name="event_tax_comply">Pagar íntegramente</string>
+    <string name="event_tax_offshore">Usar paraísos fiscales</string>
+    <string name="event_tax_negotiate">Negociar acuerdo</string>
+    <string name="event_training_full">Programa completo</string>
+    <string name="event_training_partial">Formación básica</string>
+    <string name="event_training_skip">Saltar formación</string>
+    <string name="event_spy_counterintel">Contrainteligencia</string>
+    <string name="event_spy_doubleagent">Agente doble</string>
+    <string name="event_labor_raise">Subir salarios</string>
+    <string name="event_labor_automate">Automatizar procesos</string>
+    <string name="event_petcomp_enter">Participar</string>
+    <string name="event_petcomp_host">Organizar el evento</string>
+    <string name="event_petcomp_skip">Pasar</string>
+    <string name="event_investor_accept">Aceptar inversión</string>
+    <string name="event_investor_decline">Rechazar oferta</string>
+    <string name="event_new_alert">⚡ ¡NUEVO EVENTO!</string>
+    <string name="event_tap_to_view">Toca para ver</string>
+    <string name="event_detail_effects">Efectos Activos</string>
+    <string name="event_detail_choice">Decisión Tomada</string>
+    <string name="event_detail_resolved">Evento resuelto automáticamente</string>
+    <string name="event_detail_duration">Duración</string>
+    <string name="event_auto_resolved">⚠️ No tomaste ninguna decisión — se aplicó la peor opción automáticamente</string>
+    <string name="event_auto_resolved_title">¡Evento Expirado!</string>
+    <string name="event_auto_resolved_body">No tomaste una decisión para \"%1$s\" a tiempo. Se ha aplicado la peor opción posible como penalización.</string>
+    <string name="event_auto_resolved_chosen">Opción seleccionada automáticamente</string>
+    <string name="event_auto_resolved_ok">Entendido</string>
+
+    <!-- Premium Shop / Monetization -->
+    <string name="premium_shop_title">Tienda Premium</string>
+    <string name="premium_gem_actions">Acciones Rápidas con Gemas</string>
+    <string name="premium_auto_tap">Auto Tap</string>
+    <string name="premium_auto_tap_desc">1 hora de taps automáticos</string>
+    <string name="premium_instant_coins">Monedas Instantáneas</string>
+    <string name="premium_instant_coins_desc">1 hora de producción al instante</string>
+    <string name="premium_whale_boost">Ultra Boost</string>
+    <string name="premium_whale_boost_desc">x1.5 producción durante 6 horas</string>
+    <string name="premium_packs">Packs y Ofertas</string>
+    <string name="premium_gems_label">Gemas</string>
+    <string name="premium_boost_24h">Boost 24h</string>
+    <string name="premium_mega_coins">Mega Monedas</string>
+    <string name="premium_claim_gems">Reclamar +%d 💎</string>
+    <string name="premium_vip_next">Siguiente: %1$s %2$s — Faltan %3$s</string>
+    <string name="premium_vip_max">🎉 ¡Nivel VIP máximo alcanzado!</string>
+    <string name="premium_production">Producción</string>
+    <string name="premium_daily">Diario</string>
+    <string name="premium_boost_active">Boost Activo: %s</string>
+    <string name="pack_starter_title">Pack Inicial</string>
+    <string name="pack_starter_desc">200 gemas + x10 producción 24h + bonus de monedas</string>
+    <string name="pack_starter_badge">🔥 ¡OFERTA ÚNICA — TIEMPO LIMITADO!</string>
+    <string name="pack_gems_small_title">Bolsa de Gemas</string>
+    <string name="pack_gems_small_desc">100 gemas</string>
+    <string name="pack_gems_med_title">Cofre de Gemas</string>
+    <string name="pack_gems_med_desc">300 gemas — Ideal para empezar</string>
+    <string name="pack_gems_large_title">Bóveda de Gemas</string>
+    <string name="pack_gems_large_desc">800 gemas — ¡Gran valor!</string>
+    <string name="pack_gems_mega_title">Tesoro de Gemas</string>
+    <string name="pack_gems_mega_desc">2.000 gemas — Poder máximo</string>
+    <string name="pack_boost_2x_title">Doble Poder</string>
+    <string name="pack_boost_2x_desc">x2 producción durante 1 hora</string>
+    <string name="pack_boost_5x_title">Hiper Boost</string>
+    <string name="pack_boost_5x_desc">x5 producción durante 1 hora</string>
+    <string name="pack_boost_10x_title">Mega Overdrive</string>
+    <string name="pack_boost_10x_desc">x10 producción durante 30 minutos</string>
+    <string name="pack_value_silver_title">Pack Plata</string>
+    <string name="pack_value_silver_desc">400 gemas + x3 boost durante 2 horas</string>
+    <string name="pack_value_gold_title">Pack Oro</string>
+    <string name="pack_value_gold_desc">1.000 gemas + x5 boost durante 4 horas</string>
+    <string name="pack_whale_ultra_title">Pack Ultra Ballena</string>
+    <string name="pack_whale_ultra_desc">5.000 gemas + x15 boost durante 12 horas</string>
+    <string name="pack_whale_omega_title">Pack Omega</string>
+    <string name="pack_whale_omega_desc">15.000 gemas — La colección definitiva</string>
+</resources>

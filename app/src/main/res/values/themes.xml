@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Juego" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/secondary</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+    </style>
+
+    <style name="Theme.Juego" parent="Base.Theme.Juego" />
+
+    <!-- Button Styles -->
+    <style name="TapEmpireButton" parent="Widget.Material3.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <style name="TapEmpireButtonSecondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">@color/secondary</item>
+        <item name="strokeColor">@color/secondary</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <!-- Card Style -->
+    <style name="TapEmpireCard">
+        <item name="android:background">@drawable/card_background</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+</resources>

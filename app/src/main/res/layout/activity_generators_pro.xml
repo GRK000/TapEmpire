@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_garage_scene"
+    android:orientation="vertical"
+    tools:context=".GeneratorsActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_glass"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:text="🏢 NEGOCIOS"
+            android:textColor="#00D9FF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvCoinsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="💰 0"
+            android:textColor="#FFD700"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tvProductionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="⚙️ 0/seg"
+            android:textColor="#4CAF50"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnViewMap"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_primary"
+            android:fontFamily="sans-serif-medium"
+            android:paddingHorizontal="24dp"
+            android:text="🗺️ Ver Mapa"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Generator List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/generatorsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp" />
+
+</LinearLayout>

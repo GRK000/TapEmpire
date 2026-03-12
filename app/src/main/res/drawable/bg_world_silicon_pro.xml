@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Silicon Valley - Tech/Green Theme -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="#0A1628"
+                android:centerColor="#0D2137"
+                android:endColor="#0F2D3D" />
+        </shape>
+    </item>
+
+    <!-- Matrix-like glow from top -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="500dp"
+                android:centerX="50%"
+                android:centerY="0%"
+                android:startColor="#2000BFA5"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Side accents -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="0"
+                android:startColor="#1500BFA5"
+                android:centerColor="#00000000"
+                android:endColor="#1500BFA5" />
+        </shape>
+    </item>
+
+    <!-- Bottom tech glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="90"
+                android:startColor="#3000E676"
+                android:centerColor="#1000BFA5"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Circuit pattern simulation -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="300dp"
+                android:centerX="20%"
+                android:centerY="60%"
+                android:startColor="#0800E676"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="250dp"
+                android:centerX="80%"
+                android:centerY="40%"
+                android:startColor="#0800BFA5"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+</layer-list>

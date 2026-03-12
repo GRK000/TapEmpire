@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_garage_scene"
+    android:orientation="vertical"
+    tools:context=".MissionsActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_glass"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:text="📋 MISIONES DIARIAS"
+            android:textColor="#FF9800"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvResetTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="⏱️ Reinicio en: 12:00:00"
+            android:textColor="#90FFFFFF"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Missions List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/missionsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp" />
+
+</LinearLayout>

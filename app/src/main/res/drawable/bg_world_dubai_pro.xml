@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Dubai Future - Golden Luxury Theme -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="160"
+                android:startColor="#1A0F00"
+                android:centerColor="#2D1A00"
+                android:endColor="#3D2400" />
+        </shape>
+    </item>
+
+    <!-- Golden sun glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="450dp"
+                android:centerX="50%"
+                android:centerY="15%"
+                android:startColor="#40FFD700"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Warm ambient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="500dp"
+                android:centerX="50%"
+                android:centerY="100%"
+                android:startColor="#25FF8C00"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Sand/desert texture simulation -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="45"
+                android:startColor="#08FFD700"
+                android:centerColor="#00000000"
+                android:endColor="#08FFA000" />
+        </shape>
+    </item>
+
+    <!-- Luxury accents -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="200dp"
+                android:centerX="10%"
+                android:centerY="50%"
+                android:startColor="#15FFD700"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="180dp"
+                android:centerX="90%"
+                android:centerY="60%"
+                android:startColor="#15FFC107"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Top vignette -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="270"
+                android:startColor="#40000000"
+                android:centerColor="#00000000"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+</layer-list>

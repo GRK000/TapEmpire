@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Mars Colony - Red Martian Theme -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="180"
+                android:startColor="#1A0500"
+                android:centerColor="#2D0A05"
+                android:endColor="#3D1510" />
+        </shape>
+    </item>
+
+    <!-- Mars atmosphere glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="600dp"
+                android:centerX="50%"
+                android:centerY="0%"
+                android:startColor="#30FF5722"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Dust storm effect -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="400dp"
+                android:centerX="30%"
+                android:centerY="40%"
+                android:startColor="#15FF8A65"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="350dp"
+                android:centerX="70%"
+                android:centerY="60%"
+                android:startColor="#12FF7043"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Colony lights -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="90"
+                android:startColor="#25FF5722"
+                android:centerColor="#10FF8A65"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Crater shadows -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="150dp"
+                android:centerX="20%"
+                android:centerY="75%"
+                android:startColor="#20000000"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="100dp"
+                android:centerX="75%"
+                android:centerY="85%"
+                android:startColor="#15000000"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+</layer-list>

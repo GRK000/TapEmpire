@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- ScrollView horizontal y vertical para el mapa -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/mapContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:minWidth="800dp"
+                android:minHeight="1200dp">
+
+                <!-- El contenido del mapa se genera dinámicamente -->
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <!-- Header flotante -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#CC1A1A2E"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🗺️ MAPA DE TU IMPERIO"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/coins_gold"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvTotalProduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️ 0/seg"
+                android:textSize="14sp"
+                android:textColor="@color/success" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  •  "
+                android:textColor="@color/text_secondary" />
+
+            <TextView
+                android:id="@+id/tvCoins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💰 0"
+                android:textSize="14sp"
+                android:textColor="@color/coins_gold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Botón volver -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="20dp"
+        android:text="← Volver"
+        android:textColor="@color/white"
+        android:background="@drawable/card_background"
+        android:paddingHorizontal="30dp" />
+
+</FrameLayout>

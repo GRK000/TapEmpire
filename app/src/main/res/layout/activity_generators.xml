@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    tools:context=".GeneratorsActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏢 NEGOCIOS"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/secondary"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvCoinsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💰 0"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/coins_gold"
+            android:gravity="center"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvProductionHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️ Producción: 0/seg"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnViewMap"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="🗺️ Ver Mapa"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/upgrade_button_background"
+            android:layout_gravity="center"
+            android:paddingHorizontal="20dp"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Lista de generadores -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/generatorsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

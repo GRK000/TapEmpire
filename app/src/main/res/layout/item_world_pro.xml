@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="8dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_premium"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- World Icon -->
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/icon_circle_bg">
+
+                <TextView
+                    android:id="@+id/tvEmoji"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="🏠"
+                    android:textSize="36sp" />
+            </FrameLayout>
+
+            <!-- World Info -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="GARAGE STARTUP"
+                    android:textAllCaps="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:letterSpacing="0.05" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Donde todo comienza"
+                    android:textColor="#90FFFFFF"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvMultiplier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="⚡ x1.25 producción"
+                    android:textColor="#00D9FF"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Action Button -->
+            <Button
+                android:id="@+id/btnAction"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:background="@drawable/btn_success"
+                android:fontFamily="sans-serif-medium"
+                android:minWidth="90dp"
+                android:paddingHorizontal="14dp"
+                android:text="ACTIVO"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Bonuses -->
+        <TextView
+            android:id="@+id/tvBonuses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:paddingStart="84dp"
+            android:paddingEnd="0dp"
+            android:text="✨ Tap Power +10%"
+            android:textColor="#FFD700"
+            android:textSize="11sp" />
+
+        <!-- Requirements -->
+        <TextView
+            android:id="@+id/tvRequirements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif"
+            android:paddingStart="84dp"
+            android:paddingEnd="0dp"
+            android:textColor="#FFC107"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

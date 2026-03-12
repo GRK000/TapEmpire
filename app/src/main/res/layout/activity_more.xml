@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MoreActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📋 MÁS OPCIONES"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/secondary"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Mapa de Negocios -->
+    <LinearLayout
+        android:id="@+id/btnBusinessMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="🗺️"
+            android:textSize="32sp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mapa de tu Imperio"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visualiza tus negocios"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="24sp"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+
+    <!-- Mejoras -->
+    <LinearLayout
+        android:id="@+id/btnUpgrades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="⚡"
+            android:textSize="32sp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mejoras"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Potencia tu tap y producción"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="24sp"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+
+    <!-- Misiones Diarias -->
+    <LinearLayout
+        android:id="@+id/btnMissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="📋"
+            android:textSize="32sp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Misiones Diarias"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvMissionStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/3 completadas"
+                android:textSize="12sp"
+                android:textColor="@color/success" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="24sp"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+
+    <!-- Mascotas -->
+    <LinearLayout
+        android:id="@+id/btnPets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="🐱"
+            android:textSize="32sp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mascotas"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvPetStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compañeros con bonus"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="24sp"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+
+    <!-- Logros -->
+    <LinearLayout
+        android:id="@+id/btnAchievements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="🏆"
+            android:textSize="32sp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logros"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvAchievementStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/12 desbloqueados"
+                android:textSize="12sp"
+                android:textColor="@color/coins_gold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="24sp"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+
+    <!-- Prestigio -->
+    <LinearLayout
+        android:id="@+id/btnPrestige"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="⭐"
+            android:textSize="32sp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prestigio"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvPrestigeStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nivel 0 - x1.00"
+                android:textSize="12sp"
+                android:textColor="@color/prestige_cyan" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="24sp"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+
+    <!-- Estadísticas -->
+    <LinearLayout
+        android:id="@+id/btnStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="📊"
+            android:textSize="32sp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estadísticas"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tu progreso detallado"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="24sp"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+
+</LinearLayout>

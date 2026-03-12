@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="160"
+                android:startColor="#0D0D1A"
+                android:centerColor="#1A1A2E"
+                android:endColor="#16213E" />
+        </shape>
+    </item>
+
+    <!-- Grid pattern overlay -->
+    <item android:top="0dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="400dp"
+                android:centerX="50%"
+                android:centerY="30%"
+                android:startColor="#20394867"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Bottom glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="90"
+                android:startColor="#30536DFE"
+                android:centerColor="#00000000"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Top vignette -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="600dp"
+                android:centerX="50%"
+                android:centerY="0%"
+                android:startColor="#00000000"
+                android:endColor="#40000000" />
+        </shape>
+    </item>
+</layer-list>

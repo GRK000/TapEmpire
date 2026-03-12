@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pulse ring 1 -->
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="160dp"
+                android:startColor="#00000000"
+                android:centerColor="#207C4DFF"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Pulse ring 2 -->
+    <item android:top="20dp" android:left="20dp" android:right="20dp" android:bottom="20dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="120dp"
+                android:startColor="#00000000"
+                android:centerColor="#30536DFE"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Inner glow -->
+    <item android:top="40dp" android:left="40dp" android:right="40dp" android:bottom="40dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="80dp"
+                android:startColor="#50FFFFFF"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+</layer-list>

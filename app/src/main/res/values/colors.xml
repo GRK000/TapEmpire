@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Tap Empire Theme - Cyberpunk/Tech -->
+    <color name="primary">#6C63FF</color>
+    <color name="primary_dark">#5A52D5</color>
+    <color name="primary_light">#9D97FF</color>
+    <color name="secondary">#00D9FF</color>
+    <color name="accent">#FF6B6B</color>
+
+    <!-- Backgrounds -->
+    <color name="background_dark">#0F0F1A</color>
+    <color name="background_card">#1A1A2E</color>
+    <color name="background_card_light">#252540</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B8B8D1</color>
+    <color name="text_accent">#00D9FF</color>
+
+    <!-- Currency Colors -->
+    <color name="coins_gold">#FFD700</color>
+    <color name="gems_purple">#E040FB</color>
+    <color name="prestige_cyan">#00BCD4</color>
+
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FFC107</color>
+    <color name="error">#F44336</color>
+    <color name="disabled">#555555</color>
+
+    <!-- Generator Colors (por tipo de negocio) -->
+    <color name="gen_startup">#7C4DFF</color>
+    <color name="gen_server">#00BFA5</color>
+    <color name="gen_ai">#FF4081</color>
+    <color name="gen_blockchain">#FFD740</color>
+    <color name="gen_quantum">#00E5FF</color>
+
+    <!-- Gradients (start/end) -->
+    <color name="gradient_purple_start">#667eea</color>
+    <color name="gradient_purple_end">#764ba2</color>
+    <color name="gradient_gold_start">#f093fb</color>
+    <color name="gradient_gold_end">#f5576c</color>
+</resources>

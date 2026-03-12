@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    tools:context=".PrestigeActivity">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⭐ PRESTIGIO ⭐"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/prestige_cyan"
+        android:gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reinicia tu progreso a cambio de bonificaciones permanentes"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:gravity="center"
+        android:layout_marginTop="8dp" />
+
+    <!-- Stats Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="20dp"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tu progreso actual"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvCurrentLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/prestige_cyan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nivel Prestigio"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/background_card_light" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvCurrentMultiplier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="x1.00"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/coins_gold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Multiplicador"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Prestige Available Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="20dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Al hacer prestigio obtendrás:"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvPointsAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⭐ +0 Puntos de Prestigio"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/prestige_cyan"
+            android:gravity="center"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvNewMultiplier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo multiplicador: x1.05"
+            android:textSize="14sp"
+            android:textColor="@color/success"
+            android:gravity="center"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tvRequirement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Necesitas: 1M coins totales"
+            android:textSize="12sp"
+            android:textColor="@color/warning"
+            android:gravity="center"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+    <!-- Botón de Prestigio -->
+    <Button
+        android:id="@+id/btnPrestige"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="⭐ HACER PRESTIGIO ⭐"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/upgrade_button_background"
+        android:layout_marginTop="24dp" />
+
+    <!-- Advertencia -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⚠️ Perderás todas tus coins, generadores y mejoras.\nLos logros se mantienen."
+        android:textSize="11sp"
+        android:textColor="@color/warning"
+        android:gravity="center"
+        android:layout_marginTop="12dp" />
+
+    <!-- Info sobre beneficios -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💡 Beneficios del Prestigio"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/secondary"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• +5% a toda la producción por nivel\n• +5% a las ganancias por tap\n• Desbloquea contenido exclusivo"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+</LinearLayout>
