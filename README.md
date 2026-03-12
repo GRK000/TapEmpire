@@ -196,14 +196,7 @@ app/
 
 ### Build
 
-
-```powershell
-Set-Location "C:\Users\gorka\AndroidStudioProjects\Juego"
-.\gradlew.bat assembleDebug
-.\gradlew.bat installDebug
-```
-
-O simplemente abrir el proyecto en Android Studio y ejecutar el módulo `app`.
+Simplemente abrir el proyecto en Android Studio y ejecutar el módulo `app`.
 
 ---
 
