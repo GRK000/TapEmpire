@@ -41,6 +41,13 @@ fun BossBattleScreen(
     var hitEffects by remember { mutableStateOf(listOf<HitFx>()) }
     var bossShake by remember { mutableFloatStateOf(0f) }
     var bossPhase by remember { mutableIntStateOf(0) } // 0=normal, 1=rage
+    // Punto débil: núcleo móvil que hace x5 de daño al acertarlo
+    var areaW by remember { mutableFloatStateOf(0f) }
+    var areaH by remember { mutableFloatStateOf(0f) }
+    var weakX by remember { mutableFloatStateOf(-1f) }
+    var weakY by remember { mutableFloatStateOf(-1f) }
+    var weakNextMove by remember { mutableLongStateOf(0L) }
+    var weakHits by remember { mutableIntStateOf(0) }
 
     LaunchedEffect(Unit) {
         for (i in 3 downTo 1) { countdown = i; delay(800) }
@@ -50,6 +57,12 @@ fun BossBattleScreen(
             timeLeft = (20f - (System.currentTimeMillis() - start) / 1000f).coerceAtLeast(0f)
             if (timeLeft <= 0f || bossHp <= 0) { phase = 2; break }
             if (bossHp < bossMaxHp / 3) bossPhase = 1
+            // Reposicionar el punto débil (más rápido en fase de furia)
+            if (areaW > 0 && System.currentTimeMillis() >= weakNextMove) {
+                weakX = areaW * (0.15f + Random.nextFloat() * 0.7f)
+                weakY = areaH * (0.15f + Random.nextFloat() * 0.7f)
+                weakNextMove = System.currentTimeMillis() + (if (bossPhase == 1) 1300L else 2000L)
+            }
             // Boss shake decay
             if (bossShake > 0) bossShake *= 0.85f
             // Hit effects decay
@@ -121,28 +134,52 @@ fun BossBattleScreen(
                             .pointerInput(Unit) {
                                 detectTapGestures { offset ->
                                     val dmg = (1 + combo / 3).coerceAtMost(5)
-                                    val crit = Random.nextFloat() < 0.15f
-                                    val totalDmg = if (crit) dmg * 3 else dmg
+                                    // Acertar el núcleo = golpe certero x5 garantizado
+                                    val dx = offset.x - weakX
+                                    val dy = offset.y - weakY
+                                    val coreHit = weakX >= 0 && dx * dx + dy * dy < 90f * 90f
+                                    val crit = coreHit || Random.nextFloat() < 0.15f
+                                    val totalDmg = if (coreHit) dmg * 5 else if (crit) dmg * 3 else dmg
                                     bossHp = (bossHp - totalDmg).coerceAtLeast(0)
                                     playerDmg += totalDmg
                                     combo++
-                                    bossShake = 8f
+                                    bossShake = if (coreHit) 14f else 8f
+                                    if (coreHit) {
+                                        weakHits++
+                                        // El núcleo huye al ser golpeado
+                                        weakX = areaW * (0.15f + Random.nextFloat() * 0.7f)
+                                        weakY = areaH * (0.15f + Random.nextFloat() * 0.7f)
+                                        weakNextMove = System.currentTimeMillis() + 2000L
+                                    }
                                     hitEffects = hitEffects + HitFx(
                                         offset.x, offset.y,
-                                        if (crit) "💥$totalDmg" else "-$totalDmg",
-                                        if (crit) CoinGold else NeonRed
+                                        if (coreHit) "💠$totalDmg" else if (crit) "💥$totalDmg" else "-$totalDmg",
+                                        if (coreHit) NeonCyan else if (crit) CoinGold else NeonRed
                                     )
                                 }
                             },
                         contentAlignment = Alignment.Center
                     ) {
                         Canvas(Modifier.fillMaxSize()) {
+                            areaW = size.width; areaH = size.height
                             hitEffects.forEach { fx ->
                                 drawCircle(
                                     fx.color.copy(alpha = fx.life * 0.3f),
                                     radius = 30f * (1f - fx.life) + 10f,
                                     center = Offset(fx.x, fx.y)
                                 )
+                            }
+                            // Núcleo expuesto: anillo pulsante
+                            if (weakX >= 0) {
+                                val pulse = ((System.currentTimeMillis() % 600L) / 600f)
+                                drawCircle(
+                                    NeonCyan.copy(alpha = 0.5f - pulse * 0.3f),
+                                    radius = 50f + pulse * 30f,
+                                    center = Offset(weakX, weakY),
+                                    style = androidx.compose.ui.graphics.drawscope.Stroke(5f)
+                                )
+                                drawCircle(NeonCyan.copy(alpha = 0.7f), 14f, Offset(weakX, weakY))
+                                drawCircle(Color.White.copy(alpha = 0.9f), 6f, Offset(weakX, weakY))
                             }
                         }
 
@@ -178,7 +215,8 @@ fun BossBattleScreen(
                         )
                         Spacer(Modifier.height(16.dp))
                         Text(stringResource(R.string.boss_total_damage, playerDmg), fontSize = 20.sp, fontWeight = FontWeight.Bold, color = CoinGold)
-                        if (killed) Text("Tiempo: ${(20 - timeLeft.toInt())}s", fontSize = 14.sp, color = NeonCyan)
+                        if (weakHits > 0) Text(stringResource(R.string.boss_core_hits, weakHits), fontSize = 14.sp, color = NeonCyan)
+                        if (killed) Text(stringResource(R.string.boss_time, 20 - timeLeft.toInt()), fontSize = 14.sp, color = NeonCyan)
                         Spacer(Modifier.height(32.dp))
                         Button(onClick = { onGameComplete(perf) },
                             colors = ButtonDefaults.buttonColors(containerColor = NeonPurple),

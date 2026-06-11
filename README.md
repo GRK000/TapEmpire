@@ -88,8 +88,11 @@ Actualmente el juego incluye:
 - **misiones diarias**
 - sistema amplio de **logros**
 
+### Final de juego
+- **El Cierre del Pacto**: al desbloquear Nexus Prime se abre el duelo final de valoraciones contra VexCorp; superarla permite cerrar la apuesta, ver el desenlace de la historia y ganar el **Sello del Fundador** (×2 permanente a todo)
+
 ### Sistemas jugables
-- **minijuegos jugables** (ej. Cosmic Billiards, Gravity Slingshot, Memory Match, Coin Rain)
+- **8 minijuegos** seleccionados por calidad (ej. Cosmic Billiards, Gravity Slingshot, Boss Battle con núcleo débil móvil, Coin Rain con modo Fiebre)
 - **sistema laboral** con trabajadores por rareza, sueldos y huelgas
 - **contratos personalizables**
 - **eventos dinámicos** con decisiones
@@ -248,9 +251,13 @@ Tap Empire ha sido mi forma de explorar todo eso en un proyecto real.
 
 El juego es completamente funcional y sigue evolucionando.
 
+La lógica de dominio tiene **tests unitarios JVM** (`app/src/test/`): economía de
+generadores e hitos, genética de cría, Legado de Aurora, Pacto, prestigio y formato
+de números.
+
 Las próximas áreas de trabajo son:
 
-- balance económico
+- audio (efectos y música por mundo)
 - analytics
-- testing de progresión
-- integración completa de monetización
+- integración completa de monetización (Google Play Billing)
+- cloud save

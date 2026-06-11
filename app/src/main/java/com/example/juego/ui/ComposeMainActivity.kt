@@ -138,7 +138,7 @@ fun TapEmpireApp(
             text = {
                 Column {
                     Text(ach.name, fontWeight = FontWeight.Bold, color = TextPrimary, fontSize = 18.sp)
-                    Text(ach.description, color = TextSecondary)
+                    Text(achievementDescription(ach), color = TextSecondary)
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
                         "💰 +${GameState.fmt(ach.reward)}",
@@ -461,6 +461,9 @@ fun TapEmpireApp(
             composable("legacy") {
                 LegacyScreen(viewModel = gameViewModel, uiState = uiState)
             }
+            composable("pact") {
+                PactScreen(viewModel = gameViewModel, uiState = uiState)
+            }
             composable("business_map") {
                 BusinessMapScreen(viewModel = gameViewModel, uiState = uiState)
             }
@@ -530,19 +533,6 @@ fun TapEmpireApp(
                     }
                 )
             }
-            composable("minigame_tap_frenzy") {
-                val idx = gameViewModel.activeMiniGameIndex.collectAsStateWithLifecycle()
-                TapFrenzyScreen(
-                    onGameComplete = { perf ->
-                        gameViewModel.collectMiniGameReward(idx.value, perf)
-                        navController.popBackStack()
-                    },
-                    onCancel = {
-                        gameViewModel.cancelMiniGame()
-                        navController.popBackStack()
-                    }
-                )
-            }
             composable("minigame_memory_match") {
                 val idx = gameViewModel.activeMiniGameIndex.collectAsStateWithLifecycle()
                 MemoryMatchScreen(
@@ -572,19 +562,6 @@ fun TapEmpireApp(
             composable("minigame_boss_battle") {
                 val idx = gameViewModel.activeMiniGameIndex.collectAsStateWithLifecycle()
                 BossBattleScreen(
-                    onGameComplete = { perf ->
-                        gameViewModel.collectMiniGameReward(idx.value, perf)
-                        navController.popBackStack()
-                    },
-                    onCancel = {
-                        gameViewModel.cancelMiniGame()
-                        navController.popBackStack()
-                    }
-                )
-            }
-            composable("minigame_lucky_box") {
-                val idx = gameViewModel.activeMiniGameIndex.collectAsStateWithLifecycle()
-                LuckyBoxScreen(
                     onGameComplete = { perf ->
                         gameViewModel.collectMiniGameReward(idx.value, perf)
                         navController.popBackStack()

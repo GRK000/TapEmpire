@@ -127,7 +127,7 @@ fun ActivePetCard(
                     color = TextPrimary
                 )
                 Text(
-                    text = "${pet.statusEmoji} ${pet.mood.description} • Lv.${pet.level}",
+                    text = "${pet.statusEmoji} ${petMoodName(pet.mood)} • Lv.${pet.level}",
                     fontSize = 12.sp,
                     color = TextSecondary
                 )

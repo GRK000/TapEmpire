@@ -169,32 +169,6 @@
     <string name="achievements_title">🏆 Achievements</string>
     <string name="achievements_completed">%1$d/%2$d completed</string>
 
-    <!-- Stats screen -->
-    <string name="stats_title">📊 Statistics</string>
-    <string name="stats_total_earned">Total earned</string>
-    <string name="stats_total_taps">Total taps</string>
-    <string name="stats_per_tap">Per tap</string>
-    <string name="stats_per_second">Per second</string>
-    <string name="stats_generators_bought">Generators bought</string>
-    <string name="stats_prestige_level">Prestige level</string>
-    <string name="stats_prestige_points">Prestige points</string>
-    <string name="stats_worlds_unlocked">Worlds unlocked</string>
-    <string name="stats_minigames_played">Minigames played</string>
-    <string name="stats_events_completed">Events completed</string>
-    <string name="stats_current_world">Current world</string>
-    <string name="stats_active_pet">Active pet</string>
-    <string name="stats_none">None</string>
-
-    <!-- Tap Frenzy -->
-    <string name="frenzy_title">Tap Frenzy</string>
-    <string name="frenzy_subtitle">Tap as fast as you can!</string>
-    <string name="frenzy_taps">%1$d taps</string>
-    <string name="frenzy_result_amazing">🌟 MACHINE! 🌟</string>
-    <string name="frenzy_result_good">✨ Fast!</string>
-    <string name="frenzy_result_ok">👆 Keep practicing</string>
-    <string name="frenzy_stats">%1$d taps in 10s</string>
-    <string name="frenzy_tps">%1$s taps/second</string>
-
     <!-- Memory Match -->
     <string name="memory_title">Memory Match</string>
     <string name="memory_subtitle">Find the matching pairs!</string>
@@ -223,15 +197,6 @@
     <string name="boss_result_win">🌟 BOSS DEFEATED! 🌟</string>
     <string name="boss_result_lose">⏰ It escaped!</string>
     <string name="boss_total_damage">Total damage: %1$d</string>
-
-    <!-- Lucky Box -->
-    <string name="lucky_title">Lucky Box</string>
-    <string name="lucky_subtitle">Pick a box!</string>
-    <string name="lucky_opening">Opening…</string>
-    <string name="lucky_jackpot">💎 JACKPOT!</string>
-    <string name="lucky_good">💰 Nice prize!</string>
-    <string name="lucky_consolation">🎁 Consolation</string>
-    <string name="lucky_your_choice">YOUR CHOICE</string>
 
     <!-- Fortune Wheel -->
     <string name="wheel_title">Fortune Wheel</string>
@@ -744,4 +709,156 @@
     <string name="streak_reward">💰 +%1$s coins</string>
     <string name="streak_gems">💎 +%1$d gems</string>
     <string name="streak_hint">«An empire isn\'t built in one day. It is built EVERY day.» Come back tomorrow: the reward keeps growing.</string>
+
+    <!-- Minigame catalog -->
+    <string name="mg_fortune_wheel_name">Fortune Wheel</string>
+    <string name="mg_fortune_wheel_desc">Spin and win incredible prizes</string>
+    <string name="mg_memory_match_name">Memory Match</string>
+    <string name="mg_memory_match_desc">Find the matching tech icon pairs</string>
+    <string name="mg_coin_rain_name">Coin Rain</string>
+    <string name="mg_coin_rain_desc">Catch coins, dodge bombs — chain catches for FEVER</string>
+    <string name="mg_boss_battle_name">Boss Battle</string>
+    <string name="mg_boss_battle_desc">Defeat the giant bug — strike its core for ×5</string>
+    <string name="mg_cosmic_billiards_name">Cosmic Billiards</string>
+    <string name="mg_cosmic_billiards_desc">Launch cosmic orbs against stars</string>
+    <string name="mg_asteroid_dodge_name">Asteroid Dodge</string>
+    <string name="mg_asteroid_dodge_desc">Dodge asteroids and collect crystals</string>
+    <string name="mg_star_catcher_name">Star Catcher</string>
+    <string name="mg_star_catcher_desc">Catch shooting stars before they vanish</string>
+    <string name="mg_gravity_slingshot_name">Gravity Slingshot</string>
+    <string name="mg_gravity_slingshot_desc">Use planetary gravity to reach the target</string>
+    <string name="boss_core_hits">💠 Core hits: %1$d</string>
+    <string name="boss_time">Time: %1$ds</string>
+    <string name="rain_fever">🔥 FEVER ×2</string>
+    <string name="more_business_map">Business Map</string>
+
+    <!-- The Closing of the Wager (endgame) -->
+    <string name="pact_title">The Founders\' Wager</string>
+    <string name="pact_subtitle">Nexus Prime — your empire against VexCorp, in front of the whole galaxy</string>
+    <string name="pact_your_empire">Your empire</string>
+    <string name="pact_progress_label">Duel progress: %1$d%%</string>
+    <string name="pact_progress_hint">Your valuation is the total coins earned in this era (without prestiging). Surpass VexCorp and the Galactic Auditor will certify your victory.</string>
+    <string name="pact_taunt_far">Is that your empire? I have seen vending machines with better revenue.</string>
+    <string name="pact_taunt_mid">You are starting to show up on my reports, heir. Enjoy it while it lasts.</string>
+    <string name="pact_taunt_close">Stop. Climbing. NOW. Name your price. Everyone has one. AURORA HAD ONE.</string>
+    <string name="pact_ready_title">⚖️ Your valuation surpasses VexCorp</string>
+    <string name="pact_ready_body">The Galactic Auditor is ready to certify the result. One signature, and everything Vex took comes back. He is watching from the top floor. Make him watch.</string>
+    <string name="pact_close_button">CLOSE THE WAGER</string>
+    <string name="pact_won_title">The Wager is settled</string>
+    <string name="pact_won_body">The galaxy watched Magnus Vex sign. Every market, every name, every door he took — returned. The empire is yours, heir. Aurora\'s name is yours to carry.</string>
+    <string name="pact_seal_active">👑 Founder\'s Seal active: ×2 to everything, forever</string>
+
+    <string name="story_ch12_title">The Gates of Nexus</string>
+    <string name="story_ch12_p1">Nexus Prime. The market at the center of everything. The VexCorp tower scrapes the void itself, and every screen on its facade shows the same face. Tonight, for the first time in decades, that face is not smiling.</string>
+    <string name="story_ch12_p2">«So you made it to my doorstep. Aurora never got this far — I made sure of it. Very well, heir. Article 1 of the Wager: surpass my valuation, certified by the Galactic Auditor, and everything I built on her bones is yours. You will not. But please… try. I have missed having an opponent.»</string>
+    <string name="story_ch12_p3">This is it. The final clause. Your valuation — every coin earned in this era, without invoking the Phoenix — must surpass VexCorp\'s. He cannot reset you while the Auditor watches. It is a fair fight now. Which means he has already lost something.</string>
+    <string name="story_ch12_p4">Open THE WAGER from the menu to watch the duel: your tower against his. Everything counts — taps, businesses, chimeras, workers, comets. When your number passes his… close it. I will be there. Aurora, in her way, will be too.</string>
+
+    <string name="story_ch13_title">The Closing of the Wager</string>
+    <string name="story_ch13_p1">The Galactic Auditor projects two numbers above Nexus Prime, visible from three systems away. The galaxy holds its breath. And then — for the first time in forty years — the red number is the smaller one.</string>
+    <string name="story_ch13_p2">«Objection! Clause 88-C, market integrity—» The Auditor denies it. «Then clause 112, force majeure—» Denied. «Then…» For a long moment, Magnus Vex, the man who owned half the galaxy, says nothing at all. «…Then it is done. Forty years, and it is done in an afternoon.»</string>
+    <string name="story_ch13_p3">Signature verified. Transfer complete. Heir… there is one more file. Aurora locked it behind this exact moment. She recorded it the night she left. I have… never been able to open it. Playing it now.</string>
+    <string name="story_ch13_p4">«If you are hearing this, you did it. Let me tell you a secret: the wager was never about the money. I wrote it so that someday, someone would force Magnus to sit still and watch what we were supposed to build TOGETHER. Take care of them — the workers, the creatures, all of it. And tell Magnus… his coffee is still the worst in the galaxy, and I still kept his first coin too.»</string>
+    <string name="story_ch13_p5">«…She kept it? Heh. Of course she kept it.» He sets the keys to Nexus Prime on the table like they weigh nothing, and everything. «You know the worst part, heir? It was never the company I wanted back.» At the door, he stops. «Run it better than I did. She always said you would.»</string>
+    <string name="story_ch13_p6">The Founder\'s Seal burns gold on every contract of your empire: ×2 to everything, forever. The Wager is closed. The work is not — empires are built every day, and you are a Vance now. The galaxy is watching. Make it worth watching.</string>
+
+    <!-- Stats -->
+    <string name="stats_title">Statistics</string>
+    <string name="stats_tab_global">Global</string>
+    <string name="stats_tab_prestige">Prestige</string>
+    <string name="stats_total_earned_all">Total earned (all time)</string>
+    <string name="stats_total_taps_all">Total taps (all time)</string>
+    <string name="stats_crits_all">Critical hits (all time)</string>
+    <string name="stats_generators_all">Businesses bought (all time)</string>
+    <string name="stats_total_prestiges">Total prestiges</string>
+    <string name="stats_prestige_level">Prestige level</string>
+    <string name="stats_worlds_unlocked">Worlds unlocked</string>
+    <string name="stats_achievements">Achievements</string>
+    <string name="stats_pets_owned">Chimeras owned</string>
+    <string name="stats_minigames_played">Minigames played</string>
+    <string name="stats_comets_caught">Golden comets caught</string>
+    <string name="stats_coins_this_run">Coins earned (this era)</string>
+    <string name="stats_current_coins">Current coins</string>
+    <string name="stats_taps_this_run">Taps (this era)</string>
+    <string name="stats_per_tap">Per tap</string>
+    <string name="stats_per_second">Per second</string>
+    <string name="stats_generators_bought">Businesses bought</string>
+    <string name="stats_current_world">Current world</string>
+    <string name="stats_prestige_multiplier">Prestige multiplier</string>
+    <string name="stats_crit_chance">Critical chance</string>
+    <string name="stats_crit_multiplier">Critical multiplier</string>
+    <string name="stats_active_pet">Active chimera</string>
+    <string name="stats_none">None</string>
+
+    <!-- Pet moods -->
+    <string name="mood_ecstatic">Ecstatic!</string>
+    <string name="mood_happy">Happy</string>
+    <string name="mood_normal">Normal</string>
+    <string name="mood_sad">Sad</string>
+    <string name="mood_depressed">Depressed</string>
+    <string name="mood_angry">Angry</string>
+    <string name="mood_sick">Sick</string>
+    <string name="mood_dying">Dying</string>
+
+    <!-- Achievement descriptions -->
+    <string name="ach_taps_100">Tap 100 times</string>
+    <string name="ach_taps_1000">Tap 1,000 times</string>
+    <string name="ach_taps_10000">Tap 10,000 times</string>
+    <string name="ach_taps_100000">Tap 100,000 times</string>
+    <string name="ach_taps_500000">Tap 500,000 times</string>
+    <string name="ach_taps_1m">Tap 1,000,000 times</string>
+    <string name="ach_coins_1000">Earn 1,000 total coins</string>
+    <string name="ach_coins_100000">Earn 100,000 total coins</string>
+    <string name="ach_coins_1m">Earn 1,000,000 total coins</string>
+    <string name="ach_coins_1b">Earn 1,000,000,000 total coins</string>
+    <string name="ach_coins_1t">Earn 1,000,000,000,000 coins</string>
+    <string name="ach_coins_1qa">Earn 1Qa coins</string>
+    <string name="ach_prod_100">Produce 100/sec</string>
+    <string name="ach_prod_10000">Produce 10,000/sec</string>
+    <string name="ach_prod_1m">Produce 1,000,000/sec</string>
+    <string name="ach_prod_1b">Produce 1,000,000,000/sec</string>
+    <string name="ach_prestige_1">Reach Prestige 1</string>
+    <string name="ach_prestige_3">Reach Prestige 3</string>
+    <string name="ach_prestige_5">Reach Prestige 5</string>
+    <string name="ach_prestige_10">Reach Prestige 10</string>
+    <string name="ach_combo_25">Reach a 25x combo</string>
+    <string name="ach_worlds_3">Unlock 3 worlds</string>
+    <string name="ach_worlds_6">Unlock 6 worlds</string>
+    <string name="ach_worlds_10">Unlock every world</string>
+    <string name="ach_workers_1">Hire your first worker</string>
+    <string name="ach_workers_5">Hire 5 workers</string>
+    <string name="ach_workers_15">Hire 15 workers</string>
+    <string name="ach_workers_30">Hire 30 workers</string>
+    <string name="ach_workers_50">Hire 50 workers</string>
+    <string name="ach_workers_100">Hire 100 workers</string>
+    <string name="ach_strike_1">Resolve your first strike</string>
+    <string name="ach_strike_5">Resolve 5 strikes</string>
+    <string name="ach_strike_20">Resolve 20 strikes</string>
+    <string name="ach_strike_50">Resolve 50 strikes</string>
+    <string name="ach_contracts_1">Create your first contract</string>
+    <string name="ach_contracts_5">Create 5 contracts</string>
+    <string name="ach_contracts_15">Create 15 different contracts</string>
+    <string name="ach_pets_1">Adopt your first chimera</string>
+    <string name="ach_pets_3">Own 3 chimeras</string>
+    <string name="ach_pets_5">Own 5 chimeras</string>
+    <string name="ach_pets_10">Own 10 chimeras</string>
+    <string name="ach_pets_max">Own the maximum of chimeras (15)</string>
+    <string name="ach_breed_1">Breed your first chimera</string>
+    <string name="ach_breed_5">Breed 5 chimeras</string>
+    <string name="ach_breed_15">Breed 15 chimeras</string>
+    <string name="ach_breed_30">Breed 30 chimeras</string>
+    <string name="ach_breed_50">Breed 50 chimeras</string>
+    <string name="ach_mutant_1">Get your first rare mutation</string>
+    <string name="ach_mutant_3">Get 3 rare mutations</string>
+    <string name="ach_mutant_5">Get 5 rare mutations</string>
+    <string name="ach_mutant_10">Get 10 rare mutations</string>
+    <string name="ach_gen_2">Breed a generation 2 hybrid</string>
+    <string name="ach_gen_3">Breed a generation 3 hybrid</string>
+    <string name="ach_gen_5">Breed a generation 5 hybrid</string>
+    <string name="ach_gen_10">Breed a generation 10 hybrid</string>
+    <string name="ach_welfare_90">Reach 90% sanctuary welfare</string>
+    <string name="ach_welfare_100">Reach 100% sanctuary welfare</string>
+    <string name="ach_traits_5">Discover 5 different traits</string>
+    <string name="ach_traits_10">Discover 10 different traits</string>
+    <string name="ach_traits_all">Discover every trait (15)</string>
 </resources>

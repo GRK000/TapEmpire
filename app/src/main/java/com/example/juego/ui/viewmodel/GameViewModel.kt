@@ -242,6 +242,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
                 // Progressive tutorial triggers (only check if not already shown)
                 try {
                     if ("prestige_available" !in shownTutorials && state.canPrestige()) showTutorialOnce("prestige_available")
+                    if ("nexus_unlocked" !in shownTutorials && state.isNexusUnlocked) showTutorialOnce("nexus_unlocked")
                     if ("minigames" !in shownTutorials && state.miniGames?.isNotEmpty() == true && state.totalMiniGamesPlayed > 0) showTutorialOnce("minigames")
                     if ("pets" !in shownTutorials && state.pets?.any { it.isOwned } == true) showTutorialOnce("pets")
                 } catch (_: Exception) { /* state not fully initialized yet */ }
@@ -430,6 +431,20 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
         state.performPrestige()
         showTutorialOnce("first_prestige")
         refreshUiState()
+    }
+
+    /**
+     * Cierra el Pacto de los Fundadores: la victoria final sobre Vex.
+     * Activa el Sello del Fundador (x2 permanente) y el capítulo final.
+     */
+    fun closePact(): Boolean {
+        val success = state.closePact()
+        if (success) {
+            showTutorialOnce("pact_won")
+            refreshUiState()
+            saveState()
+        }
+        return success
     }
 
     /** Compra una mejora permanente del Legado de Aurora con Renombre */
@@ -725,6 +740,10 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
             activeGameEvents = state.activeGameEvents.filter { it.isActive }.toList(),
             eventHistory = state.eventHistory.toList(),
             maxComboReached = state.maxComboReached,
+            nexusUnlocked = state.isNexusUnlocked,
+            pactProgress = state.pactProgress,
+            canClosePact = state.canClosePact(),
+            pactWon = state.isPactWon,
             legacyLevels = GameState.LEGACY_IDS.associateWith { state.getLegacyLevel(it) },
             legacyCosts = GameState.LEGACY_IDS.associateWith { state.getLegacyCost(it) },
             goldenBoostMultiplier = state.goldenProductionBoostNow,
@@ -821,6 +840,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
                 put("miniGames", JSONArray().apply {
                     for (game in state.miniGames) {
                         put(JSONObject().apply {
+                            put("type", game.type.name)
                             put("timesPlayedToday", game.timesPlayedToday)
                             put("cooldownEndTime", game.cooldownEndTime)
                         })
@@ -947,6 +967,9 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
                 put("totalStrikesResolved", state.totalStrikesResolved)
                 put("maxComboReached", state.maxComboReached)
                 put("totalGoldenCometsTapped", state.totalGoldenCometsTapped)
+
+                // El Pacto
+                put("pactWon", state.isPactWon)
 
                 // Legado de Aurora (mejoras permanentes)
                 put("legacyLevels", JSONObject().apply {
@@ -1088,12 +1111,15 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
 
             json.optJSONArray("miniGames")?.let { arr ->
                 val games = state.miniGames
-                for (i in 0 until minOf(arr.length(), games.size)) {
+                val byType = games.associateBy { it.type.name }
+                for (i in 0 until arr.length()) {
                     val obj = arr.getJSONObject(i)
-                    games[i].timesPlayedToday = obj.optInt("timesPlayedToday", 0)
+                    // Saves nuevos llevan el tipo; los antiguos caen al índice
+                    val game = byType[obj.optString("type", "")] ?: games.getOrNull(i) ?: continue
+                    game.timesPlayedToday = obj.optInt("timesPlayedToday", 0)
                     val cooldownEnd = obj.optLong("cooldownEndTime", 0)
                     if (cooldownEnd > System.currentTimeMillis()) {
-                        games[i].cooldownEndTime = cooldownEnd
+                        game.cooldownEndTime = cooldownEnd
                     }
                 }
             }
@@ -1239,6 +1265,9 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
             state.totalStrikesResolved = json.optInt("totalStrikesResolved", 0)
             state.maxComboReached = json.optInt("maxComboReached", 0)
             state.totalGoldenCometsTapped = json.optInt("totalGoldenCometsTapped", 0)
+
+            // El Pacto
+            state.isPactWon = json.optBoolean("pactWon", false)
 
             // Legado de Aurora
             json.optJSONObject("legacyLevels")?.let { legacy ->
@@ -1460,6 +1489,11 @@ data class GameUiState(
     val activeGameEvents: List<GameEvent> = emptyList(),
     val eventHistory: List<GameEvent> = emptyList(),
     val maxComboReached: Int = 0,
+    // El Cierre del Pacto (final de juego)
+    val nexusUnlocked: Boolean = false,
+    val pactProgress: Double = 0.0,
+    val canClosePact: Boolean = false,
+    val pactWon: Boolean = false,
     // Legado de Aurora (id → nivel / coste del siguiente nivel)
     val legacyLevels: Map<String, Int> = emptyMap(),
     val legacyCosts: Map<String, Double> = emptyMap(),
