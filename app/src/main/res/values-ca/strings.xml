@@ -638,4 +638,75 @@
 
     <!-- Fites de generadors -->
     <string name="milestone_label">Fita %1$d/%2$d → ×2</string>
+
+    <!-- ============ HISTÒRIA: El Pacte dels Fundadors ============ -->
+    <string name="story_speaker_narrator">Narrador</string>
+    <string name="story_speaker_lia">LIA</string>
+    <string name="story_speaker_vex">Magnus Vex</string>
+    <string name="story_speaker_aurora">Aurora Vance</string>
+    <string name="story_chapter_label">Capítol %1$d</string>
+    <string name="story_continue">Continuar</string>
+    <string name="story_finish">A construir</string>
+    <string name="story_skip">Saltar</string>
+    <string name="story_chronicle_title">La Crònica</string>
+    <string name="story_chronicle_subtitle">El Pacte dels Fundadors — cada capítol que has viscut</string>
+    <string name="story_chapter_locked">Capítol segellat</string>
+    <string name="story_chapter_replay">Toca per rellegir-lo</string>
+
+    <string name="story_ch1_title">L\'Herència</string>
+    <string name="story_ch1_p1">Un garatge rovellat a la vora de la galàxia. Una clau, una moneda antiga i un xip. És tot el que Aurora Vance —la llegendària fundadora de Vance &amp; Vex— va deixar al seu hereu.\n\nÉs tot el que et va deixar a tu.</string>
+    <string name="story_ch1_p2">Connexió establerta. Soc LIA, la intel·ligència de l\'Aurora. Abans de desaparèixer, la meva creadora va signar un pacte amb el seu antic soci, Magnus Vex, l\'home que li va robar la companyia: si el seu hereu construeix un imperi que superi VexCorp, ell tornarà tot el que va prendre.</string>
+    <string name="story_ch1_p3">Aquesta moneda que tens a la mà va ser la primera que van guanyar junts. L\'Aurora la va encantar amb un eco de fortuna: cada cop que la toquis, repetirà la seva primera venda.\n\nToca-la. Toca-la moltes vegades.</string>
+    <string name="story_ch1_p4">Cada toc encunya monedes. Els tocs encadenats creen COMBOS, i de vegades aconseguiràs un ECO PERFECTE: un crític. Amb els guanys reconstruirem la xarxa de negocis de l\'Aurora.\n\nEn Vex creu que això és una broma. Fem que se li ennuegui.</string>
+
+    <string name="story_ch2_title">La Primera Panerola</string>
+    <string name="story_ch2_p1">El teu primer negoci torna a obrir les portes. El senyal arriba a Nexus Prime en mil·lisegons. Al capdamunt de la torre VexCorp, algú somriu.</string>
+    <string name="story_ch2_p2">«Vaja, vaja. La panerola del garatge s\'ha comprat un negoci. Saps quants com tu he aixafat? Gaudeix de la teva parada de llimonada, hereu. El Pacte expira quan jo ho digui.»</string>
+    <string name="story_ch2_p3">Ignora\'l. Cada negoci produeix monedes per segon, fins i tot mentre dorms — una cosa que en Vex prohibeix fer als seus propis empleats. Acumula unitats: a cada fita (10, 25, 50…) el mercat recorda el cognom Vance i la producció ES DUPLICA.</string>
+
+    <string name="story_ch3_title">La Reconquesta</string>
+    <string name="story_ch3_p1">L\'Aurora va aixecar deu mercats, des d\'aquest Garatge fins a Nexus Prime. En Vex els controla tots. Cada món que desbloquegis és territori que li arrenques de les mans davant de tota la galàxia.</string>
+    <string name="story_ch3_p2">«Expandint-nos? Adorable. Aquests mercats porten el meu nom a cada fanal. Et deixaré jugar-hi… fins que prendre-te\'ls faci més mal.»</string>
+    <string name="story_ch3_p3">Cada món multiplica la teva producció i desbloqueja negocis exclusius. L\'últim és Nexus Prime: la mateixa torre d\'en Vex. Allà es decidirà el Pacte.</string>
+
+    <string name="story_ch4_title">Els Desafiaments Vex</string>
+    <string name="story_ch4_p1">Totes les pantalles de la galàxia s\'encenen alhora. ELS DESAFIAMENTS VEX: l\'espectacle on el magnat humilia els seus rivals en directe.\n\nEl convidat d\'aquesta nit: tu.</string>
+    <string name="story_ch4_p2">«He pensat que la galàxia mereix riure una estona. Accepta els meus desafiaments, hereu. Quan perdis, et veuran bilions. I quan guanyis… bah. No guanyaràs.»</string>
+    <string name="story_ch4_p3">Cada victòria surt directament de la seva butxaca: els premis els paga VexCorp. El regulador galàctic limita els intents diaris — fes-los servir tots. Humiliar-lo al seu propi circ no té preu. Bé, sí que en té: i el cobres tu.</string>
+
+    <string name="story_ch5_title">Els Desertors</string>
+    <string name="story_ch5_p1">A VexCorp no hi ha empleats: hi ha «Unitats de Rendiment». El descans es penalitza. Les mascotes estan prohibides. I aquesta nit, en un hangar clandestí, desenes d\'ells esperen conèixer l\'hereu de l\'Aurora.</string>
+    <string name="story_ch5_p2">Les fires d\'ocupació clandestines et permeten contractar desertors de VexCorp. Venen amb la seva experiència, el seu talent… i les seves cicatrius. Tracta\'ls millor que en Vex. No és difícil: el llistó és sota terra.</string>
+    <string name="story_ch5_p3">Assigna treballadors als teus negocis per multiplicar la producció. Negocia contractes de veritat: sou, jornada, dret a vaga. Paga\'ls puntualment — o et faran el que la mateixa Aurora va fer una vegada dins de VexCorp: organitzar la primera vaga de la seva història.</string>
+
+    <string name="story_ch6_title">El Refugi</string>
+    <string name="story_ch6_p1">T\'he d\'explicar una cosa. VexCorp té una divisió anomenada Projecte Quimera: dissenyen criatures còsmiques com a productes de luxe… amb obsolescència programada. L\'Aurora va robar la primera ventrada i va fundar El Refugi.</string>
+    <string name="story_ch6_p2">La criatura et mira des del seu transportí. Al costat, un número de sèrie de VexCorp ratllat amb pintura daurada. A sota, amb la lletra de l\'Aurora: «Ja no ets un producte.»</string>
+    <string name="story_ch6_p3">Cada quimera que adoptes finança el rescat de la següent. Alimenta-les, juga-hi, cura-les: una quimera feliç potencia tot el teu imperi. I recorda: els teus treballadors van desertar per com en Vex tracta els éssers vius. Si descuides el Refugi, perdran la fe en tu.</string>
+
+    <string name="story_ch7_title">Genoma Lliure</string>
+    <string name="story_ch7_p1">Fascinant. En llibertat, les quimeres fan una cosa que els laboratoris d\'en Vex mai no van aconseguir: barrejar els seus llinatges. La teva nova cria heretarà trets de tots dos pares — veuràs el cos de l\'un i els trets de l\'altre.</string>
+    <string name="story_ch7_p2">La incubació triga temps real. I de vegades es desperta un gen que VexCorp va suprimir: una MUTACIÓ RARA, amb dons que ni l\'Aurora va arribar a documentar. Cada generació nascuda lliure és la prova vivent que en Vex s\'equivocava.</string>
+    <string name="story_ch7_p3">«Estàs CRIANT les meves quimeres? Això és propietat intel·lectual de VexCorp, hereu. Els meus advocats ja estan redactant la demanda. Els meus científics, en canvi, volen saber com dimonis ho has fet.»</string>
+
+    <string name="story_ch8_title">La Clàusula del Fènix</string>
+    <string name="story_ch8_p1">El teu imperi ja apareix als índexs galàctics. A Nexus Prime ja no riu ningú. I llavors arriba el document, amb capçalera daurada i segell legal: CLÀUSULA DEL FÈNIX — LLESTA PER INVOCAR.</string>
+    <string name="story_ch8_p2">«Creies que el Pacte era net? Llegeix la lletra petita, hereu: quan la teva valoració amenaci la meva, puc reiniciar el mercat sencer. Els teus negocis, les teves monedes, el teu progrés: cendres. I puc fer-ho una altra vegada. I una altra. L\'Aurora ho va signar. Per què somreia? Mai no ho vaig entendre.»</string>
+    <string name="story_ch8_p3">Jo sí que ho entenc. L\'Aurora va signar perquè la clàusula té un defecte: esborra els números, però NO POT ESBORRAR LA REPUTACIÓ. Cada renaixement conserva el teu Renom, i el mercat et rebrà produint més que abans.</string>
+    <string name="story_ch8_p4">Això és el PRESTIGI: deixar que en Vex cremi el teu imperi per renéixer més fort. Conserves el teu Renom (un multiplicador permanent), les teves quimeres i la teva plantilla. Cada cop que invoqui la clàusula li costarà més i et frenarà menys. La seva arma es desgasta. La teva s\'esmola.</string>
+
+    <string name="story_ch9_title">Cendres i Renom</string>
+    <string name="story_ch9_p1">El mercat sencer parpelleja i es reinicia. On ahir hi havia un imperi, avui hi ha un garatge. Però els titulars no parlen del reinici: parlen que l\'hereu de l\'Aurora ha obligat Magnus Vex a disparar la seva arma definitiva.\n\nI encara ets aquí.</string>
+    <string name="story_ch9_p2">Record desbloquejat — Aurora Vance, fa 12 anys: «Algun dia en Magnus cremarà tot el que construeixis. Deixa\'l. Els imperis són coses que s\'incendien, petit. Els noms, no. Construeix un nom.»</string>
+    <string name="story_ch9_p3">El teu Renom ja treballa: produeixes més que ahir a aquesta mateixa hora. A dalt de la torre, en Vex ha deixat de somriure.\n\nFem-ho una altra vegada.</string>
+
+    <string name="story_ch10_title">Guerra Bruta</string>
+    <string name="story_ch10_p1">Els mercats tremolen sense avís. Una crisi massa oportuna, una apagada massa precisa. El segell de VexCorp no apareix enlloc — i aquesta és exactament la seva signatura.</string>
+    <string name="story_ch10_p2">En Vex no pot tocar el Pacte, però pot inclinar el tauler: sabotatges, auditories, ciberatacs. La bona notícia: els vells aliats de l\'Aurora també mouen fils. Bonances, festivals, subvencions… no tot l\'inesperat és enemic.</string>
+    <string name="story_ch10_p3">Cada esdeveniment et donarà OPCIONS amb conseqüències en producció, plantilla o estabilitat. Si no tries, el destí triarà per tu — i el destí té contracte amb VexCorp. Vigila l\'estabilitat galàctica: mesura qui va guanyant aquest pols.</string>
+
+    <string name="story_ch11_title">L\'Amulet</string>
+    <string name="story_ch11_p1">Una cosa daurada creua el cel i, per un instant, totes les teves màquines produeixen a l\'uníson. L\'has tocat.\n\nI t\'ha tornat la salutació.</string>
+    <string name="story_ch11_p2">Anàlisi… impossible. Això era l\'amulet de la sort de l\'Aurora. El portava el dia que va fundar l\'empresa i va jurar que se l\'enduria «més enllà de la Vora». Pel que sembla, encara és en òrbita. I pel que sembla… et coneix.</string>
+    <string name="story_ch11_p3">Quan el cometa daurat creui la teva pantalla, CAÇA\'L: deixa anar ecos de la sort de l\'Aurora — frenesís de producció, pluges de monedes, fragments estel·lars. No és ciència. No m\'importa.\n\nTu no deixis de mirar el cel.</string>
 </resources>

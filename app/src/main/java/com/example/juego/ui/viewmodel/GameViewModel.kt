@@ -69,12 +69,17 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     // Track which tutorials have been shown
     private val shownTutorials = mutableSetOf<String>()
 
+    // Capítulos de historia desbloqueados (para La Crónica)
+    private val _unlockedStoryKeys = MutableStateFlow<Set<String>>(emptySet())
+    val unlockedStoryKeys: StateFlow<Set<String>> = _unlockedStoryKeys.asStateFlow()
+
     fun dismissTutorial() { _tutorialToShow.value = null }
 
     private fun showTutorialOnce(key: String) {
         if (key !in shownTutorials) {
             shownTutorials.add(key)
             _tutorialToShow.value = key
+            _unlockedStoryKeys.value = shownTutorials.toSet()
             // Persist
             prefs.edit().putStringSet("shown_tutorials", shownTutorials).apply()
         }
@@ -94,6 +99,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     init {
         // Load shown tutorials from prefs
         prefs.getStringSet("shown_tutorials", emptySet())?.let { shownTutorials.addAll(it) }
+        _unlockedStoryKeys.value = shownTutorials.toSet()
         loadState()
         checkOfflineEarnings()
         startGameLoop()
@@ -147,6 +153,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
             }
         }
         _cometReward.value = reward
+        showTutorialOnce("comet_caught")
         refreshUiState()
         saveState()
     }
@@ -180,6 +187,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
                 val newEvent = state.checkEventTriggers()
                 if (newEvent != null) {
                     _eventNotification.value = newEvent
+                    showTutorialOnce("first_event")
                 }
 
                 // Check for auto-resolved events (player didn't choose)
@@ -332,7 +340,10 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
 
     fun breedPets(index1: Int, index2: Int): Pet? {
         val offspring = state.breedPets(index1, index2)
-        if (offspring != null) refreshUiState()
+        if (offspring != null) {
+            showTutorialOnce("first_breeding")
+            refreshUiState()
+        }
         return offspring
     }
 
@@ -376,6 +387,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
 
     fun performPrestige() {
         state.performPrestige()
+        showTutorialOnce("first_prestige")
         refreshUiState()
     }
 

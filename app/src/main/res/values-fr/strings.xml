@@ -638,4 +638,75 @@
 
     <!-- Paliers de générateurs -->
     <string name="milestone_label">Palier %1$d/%2$d → ×2</string>
+
+    <!-- ============ HISTOIRE : Le Pacte des Fondateurs ============ -->
+    <string name="story_speaker_narrator">Narrateur</string>
+    <string name="story_speaker_lia">LIA</string>
+    <string name="story_speaker_vex">Magnus Vex</string>
+    <string name="story_speaker_aurora">Aurora Vance</string>
+    <string name="story_chapter_label">Chapitre %1$d</string>
+    <string name="story_continue">Continuer</string>
+    <string name="story_finish">Au travail</string>
+    <string name="story_skip">Passer</string>
+    <string name="story_chronicle_title">La Chronique</string>
+    <string name="story_chronicle_subtitle">Le Pacte des Fondateurs — chaque chapitre que tu as vécu</string>
+    <string name="story_chapter_locked">Chapitre scellé</string>
+    <string name="story_chapter_replay">Touche pour le relire</string>
+
+    <string name="story_ch1_title">L\'Héritage</string>
+    <string name="story_ch1_p1">Un garage rouillé au bord de la galaxie. Une clé, une vieille pièce et une puce. C\'est tout ce qu\'Aurora Vance — la légendaire fondatrice de Vance &amp; Vex — a laissé à son héritier.\n\nC\'est tout ce qu\'elle t\'a laissé.</string>
+    <string name="story_ch1_p2">Connexion établie. Je suis LIA, l\'intelligence d\'Aurora. Avant de disparaître, ma créatrice a signé un pacte avec son ancien associé, Magnus Vex, l\'homme qui lui a volé la compagnie : si son héritier bâtit un empire qui dépasse VexCorp, il rendra tout ce qu\'il a pris.</string>
+    <string name="story_ch1_p3">Cette pièce dans ta main est la première qu\'ils ont gagnée ensemble. Aurora l\'a enchantée d\'un écho de fortune : chaque fois que tu la touches, elle rejoue sa toute première vente.\n\nTouche-la. Touche-la encore et encore.</string>
+    <string name="story_ch1_p4">Chaque touche frappe des pièces. Les touches enchaînées créent des COMBOS, et parfois tu réussiras un ÉCHO PARFAIT : un critique. Avec ces gains, nous reconstruirons le réseau d\'affaires d\'Aurora.\n\nVex croit que c\'est une blague. Faisons-le s\'étouffer avec.</string>
+
+    <string name="story_ch2_title">Le Premier Cafard</string>
+    <string name="story_ch2_p1">Ta première affaire rouvre ses portes. Le signal atteint Nexus Prime en quelques millisecondes. Au sommet de la tour VexCorp, quelqu\'un sourit.</string>
+    <string name="story_ch2_p2">« Tiens, tiens. Le cafard du garage s\'est acheté un commerce. Sais-tu combien de gens comme toi j\'ai écrasés ? Profite de ton stand de limonade, héritier. Le Pacte expire quand je le dis. »</string>
+    <string name="story_ch2_p3">Ignore-le. Chaque affaire produit des pièces par seconde, même pendant ton sommeil — chose que Vex interdit à ses propres employés. Accumule des unités : à chaque palier (10, 25, 50…) le marché se souvient du nom Vance et la production DOUBLE.</string>
+
+    <string name="story_ch3_title">La Reconquête</string>
+    <string name="story_ch3_p1">Aurora a bâti dix marchés, de ce Garage jusqu\'à Nexus Prime. Vex les contrôle tous. Chaque monde que tu débloques est un territoire que tu lui arraches des mains devant toute la galaxie.</string>
+    <string name="story_ch3_p2">« On s\'étend ? Adorable. Ces marchés portent mon nom sur chaque lampadaire. Je te laisserai y jouer… jusqu\'à ce que te les reprendre fasse plus mal. »</string>
+    <string name="story_ch3_p3">Chaque monde multiplie ta production et débloque des commerces exclusifs. Le dernier est Nexus Prime : la propre tour de Vex. C\'est là que le Pacte se jouera.</string>
+
+    <string name="story_ch4_title">Les Défis Vex</string>
+    <string name="story_ch4_p1">Tous les écrans de la galaxie s\'allument en même temps. LES DÉFIS VEX : le spectacle où le magnat humilie ses rivaux en direct.\n\nL\'invité de ce soir : toi.</string>
+    <string name="story_ch4_p2">« Je me suis dit que la galaxie méritait de rire un peu. Accepte mes défis, héritier. Quand tu perdras, des milliards te regarderont. Et quand tu gagneras… bah. Tu ne gagneras pas. »</string>
+    <string name="story_ch4_p3">Chaque victoire sort directement de sa poche : les prix sont payés par VexCorp. Le régulateur galactique limite les essais quotidiens — utilise-les tous. L\'humilier dans son propre cirque n\'a pas de prix. Enfin, si : et c\'est toi qui l\'encaisses.</string>
+
+    <string name="story_ch5_title">Les Déserteurs</string>
+    <string name="story_ch5_p1">Chez VexCorp, il n\'y a pas d\'employés : il y a des « Unités de Rendement ». Le repos est pénalisé. Les animaux sont interdits. Et ce soir, dans un hangar clandestin, des dizaines d\'entre eux attendent de rencontrer l\'héritier d\'Aurora.</string>
+    <string name="story_ch5_p2">Les foires à l\'emploi clandestines te permettent de recruter des déserteurs de VexCorp. Ils arrivent avec leur expérience, leur talent… et leurs cicatrices. Traite-les mieux que Vex. Ce n\'est pas difficile : la barre est sous terre.</string>
+    <string name="story_ch5_p3">Affecte des travailleurs à tes commerces pour multiplier la production. Négocie de vrais contrats : salaire, horaires, droit de grève. Paie-les à temps — ou ils te feront ce qu\'Aurora elle-même a fait un jour au sein de VexCorp : organiser la première grève de son histoire.</string>
+
+    <string name="story_ch6_title">Le Refuge</string>
+    <string name="story_ch6_p1">Je dois te dire quelque chose. VexCorp possède une division appelée Projet Chimère : ils conçoivent des créatures cosmiques comme des produits de luxe… à obsolescence programmée. Aurora a volé la première portée et fondé Le Refuge.</string>
+    <string name="story_ch6_p2">La créature te regarde depuis sa caisse de transport. Sur le flanc, un numéro de série VexCorp barré à la peinture dorée. En dessous, de la main d\'Aurora : « Tu n\'es plus un produit. »</string>
+    <string name="story_ch6_p3">Chaque chimère que tu adoptes finance le sauvetage de la suivante. Nourris-les, joue avec elles, soigne-les : une chimère heureuse renforce tout ton empire. Et souviens-toi : tes travailleurs ont déserté à cause de la façon dont Vex traite les êtres vivants. Néglige le Refuge et ils perdront foi en toi.</string>
+
+    <string name="story_ch7_title">Génome Libre</string>
+    <string name="story_ch7_p1">Fascinant. En liberté, les chimères font ce que les laboratoires de Vex n\'ont jamais réussi : mélanger leurs lignées. Ton nouveau-né héritera des traits de ses deux parents — tu verras le corps de l\'un et les traits de l\'autre.</string>
+    <string name="story_ch7_p2">L\'incubation prend du temps réel. Et parfois, un gène que VexCorp avait supprimé se réveille : une MUTATION RARE, aux dons que même Aurora n\'a pas documentés. Chaque génération née libre est la preuve vivante que Vex avait tort.</string>
+    <string name="story_ch7_p3">« Tu fais REPRODUIRE mes chimères ? C\'est de la propriété intellectuelle de VexCorp, héritier. Mes avocats rédigent déjà la plainte. Mes scientifiques, eux, veulent savoir comment diable tu as fait. »</string>
+
+    <string name="story_ch8_title">La Clause du Phénix</string>
+    <string name="story_ch8_p1">Ton empire figure désormais dans les indices galactiques. Plus personne ne rit à Nexus Prime. Et puis le document arrive, en-tête doré et sceau légal : CLAUSE DU PHÉNIX — PRÊTE À INVOQUER.</string>
+    <string name="story_ch8_p2">« Tu croyais que le Pacte était propre ? Lis les petites lignes, héritier : quand ta valorisation menace la mienne, je peux réinitialiser le marché entier. Tes commerces, tes pièces, tes progrès : des cendres. Et je peux recommencer. Encore et encore. Aurora l\'a signé. Pourquoi souriait-elle ? Je n\'ai jamais compris. »</string>
+    <string name="story_ch8_p3">Moi, je comprends. Aurora a signé parce que la clause a un défaut : elle efface les chiffres, mais elle NE PEUT PAS EFFACER LA RÉPUTATION. Chaque renaissance conserve ton Renom, et le marché t\'accueillera en produisant plus qu\'avant.</string>
+    <string name="story_ch8_p4">C\'est ça, le PRESTIGE : laisser Vex brûler ton empire pour renaître plus fort. Tu gardes ton Renom (un multiplicateur permanent), tes chimères et ton personnel. Chaque fois qu\'il invoque la clause, ça lui coûte plus cher et te freine moins. Son arme s\'use. La tienne s\'aiguise.</string>
+
+    <string name="story_ch9_title">Cendres et Renom</string>
+    <string name="story_ch9_p1">Le marché entier clignote et se réinitialise. Là où hier se dressait un empire, il y a aujourd\'hui un garage. Mais les gros titres ne parlent pas de la réinitialisation : ils racontent que l\'héritier d\'Aurora a forcé Magnus Vex à dégainer son arme ultime.\n\nEt tu es toujours là.</string>
+    <string name="story_ch9_p2">Souvenir débloqué — Aurora Vance, il y a 12 ans : « Un jour, Magnus brûlera tout ce que tu construiras. Laisse-le faire. Les empires sont des choses qui prennent feu, petit. Pas les noms. Construis un nom. »</string>
+    <string name="story_ch9_p3">Ton Renom travaille déjà : tu produis plus qu\'hier à la même heure. En haut de la tour, Vex a cessé de sourire.\n\nRecommençons.</string>
+
+    <string name="story_ch10_title">Guerre Sale</string>
+    <string name="story_ch10_p1">Les marchés tremblent sans prévenir. Une crise un peu trop opportune, une panne un peu trop précise. Le sceau de VexCorp n\'apparaît nulle part — et c\'est exactement sa signature.</string>
+    <string name="story_ch10_p2">Vex ne peut pas toucher au Pacte, mais il peut pencher l\'échiquier : sabotages, audits, cyberattaques. La bonne nouvelle : les vieux alliés d\'Aurora tirent aussi des ficelles. Booms, festivals, subventions… tout l\'inattendu n\'est pas ennemi.</string>
+    <string name="story_ch10_p3">Chaque événement t\'offrira des CHOIX avec des conséquences sur la production, le personnel ou la stabilité. Si tu ne choisis pas, le destin choisira pour toi — et le destin a un contrat avec VexCorp. Surveille la stabilité galactique : elle mesure qui gagne ce bras de fer.</string>
+
+    <string name="story_ch11_title">L\'Amulette</string>
+    <string name="story_ch11_p1">Quelque chose de doré traverse le ciel et, l\'espace d\'un battement, toutes tes machines produisent à l\'unisson. Tu l\'as touché.\n\nEt il t\'a rendu ton salut.</string>
+    <string name="story_ch11_p2">Analyse… impossible. C\'était l\'amulette porte-bonheur d\'Aurora. Elle la portait le jour de la fondation et avait juré de l\'emporter « au-delà du Bord ». Apparemment, elle est toujours en orbite. Et apparemment… elle te connaît.</string>
+    <string name="story_ch11_p3">Quand la comète dorée traverse ton écran, ATTRAPE-LA : elle libère des échos de la chance d\'Aurora — frénésies de production, pluies de pièces, fragments stellaires. Ce n\'est pas de la science. Je m\'en moque.\n\nToi — ne cesse jamais de regarder le ciel.</string>
 </resources>

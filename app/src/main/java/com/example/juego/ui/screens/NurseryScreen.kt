@@ -27,6 +27,7 @@ import com.example.juego.Pet
 import com.example.juego.R
 import com.example.juego.ui.components.AnimatedBackground
 import com.example.juego.ui.components.GlassCard
+import com.example.juego.ui.components.PetAvatar
 import com.example.juego.ui.components.getPetArchetype
 import com.example.juego.ui.theme.*
 import com.example.juego.ui.viewmodel.GameUiState
@@ -172,7 +173,7 @@ fun NurseryCareTab(viewModel: GameViewModel, uiState: GameUiState) {
         ) {
             itemsIndexed(ownedPets) { _, (globalIndex, pet) ->
                 NurseryPetCard(
-                    pet = pet, globalIndex = globalIndex,
+                    pet = pet, allPets = uiState.pets, globalIndex = globalIndex,
                     isActive = pet == uiState.activePet,
                     coins = uiState.coins, viewModel = viewModel
                 )
@@ -273,9 +274,9 @@ fun NurseryBreedingTab(viewModel: GameViewModel, uiState: GameUiState) {
 
                         // Show parent traits
                         Row(horizontalArrangement = Arrangement.SpaceEvenly, modifier = Modifier.fillMaxWidth()) {
-                            TraitPreview(p1.type.emoji, p1.traits)
+                            TraitPreview(p1, uiState.pets, p1.traits)
                             Text("❤️", fontSize = 20.sp)
-                            TraitPreview(p2.type.emoji, p2.traits)
+                            TraitPreview(p2, uiState.pets, p2.traits)
                         }
 
                         Spacer(Modifier.height(8.dp))
@@ -476,9 +477,9 @@ fun BreedingParentSelector(
 }
 
 @Composable
-fun TraitPreview(emoji: String, traits: List<Pet.PetTrait>) {
+fun TraitPreview(pet: Pet, allPets: List<Pet>, traits: List<Pet.PetTrait>) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(emoji, fontSize = 28.sp)
+        PetAvatar(pet = pet, allPets = allPets, size = 44.dp)
         traits.forEach { t ->
             Text("${t.emoji} ${t.name}", fontSize = 10.sp,
                 color = if (t.rare) CoinGold else TextSecondary)
@@ -665,6 +666,7 @@ fun TraitGrid(traits: List<Pet.PetTrait>, discovered: Set<Pet.PetTrait>) {
 @Composable
 fun NurseryPetCard(
     pet: Pet,
+    allPets: List<Pet> = emptyList(),
     globalIndex: Int,
     isActive: Boolean,
     coins: Double,
@@ -724,19 +726,6 @@ fun NurseryPetCard(
                             Offset(cx, cy)
                         )
 
-                        if (pet.isAlive) {
-                            // Pet emoji centered (we draw a colored orb as body silhouette)
-                            drawCircle(archetype.primaryColor.copy(alpha = 0.35f), s * 0.55f, Offset(cx, cy))
-                            drawCircle(archetype.secondaryColor.copy(alpha = 0.25f), s * 0.35f, Offset(cx, cy - s * 0.2f))
-                            // Eye sparkles
-                            val eyeA = 0.4f + sin(time * 2f) * 0.2f
-                            drawCircle(Color.White.copy(alpha = eyeA), s * 0.06f, Offset(cx - s * 0.12f, cy - s * 0.15f))
-                            drawCircle(Color.White.copy(alpha = eyeA), s * 0.06f, Offset(cx + s * 0.12f, cy - s * 0.15f))
-                        } else {
-                            // Dead - ghostly
-                            drawCircle(Color.Gray.copy(alpha = 0.2f), s * 0.5f, Offset(cx, cy))
-                        }
-
                         // Floating particles around
                         for (i in 0..4) {
                             val a = time + i * 1.25f
@@ -748,15 +737,16 @@ fun NurseryPetCard(
                         }
                     }
 
-                    // Emoji overlay
+                    // Avatar único de la quimera (los híbridos mezclan a sus padres)
                     Box(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(
-                            text = if (pet.isAlive) pet.type.emoji else if (pet.isGhost) "👻" else "💀",
-                            fontSize = 32.sp
-                        )
+                        if (pet.isAlive || pet.isGhost) {
+                            PetAvatar(pet = pet, allPets = allPets, size = 72.dp)
+                        } else {
+                            Text(text = "💀", fontSize = 32.sp)
+                        }
                     }
                 }
 

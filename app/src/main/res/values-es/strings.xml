@@ -638,4 +638,75 @@
 
     <!-- Hitos de generadores -->
     <string name="milestone_label">Hito %1$d/%2$d → ×2</string>
+
+    <!-- ============ HISTORIA: El Pacto de los Fundadores ============ -->
+    <string name="story_speaker_narrator">Narrador</string>
+    <string name="story_speaker_lia">LIA</string>
+    <string name="story_speaker_vex">Magnus Vex</string>
+    <string name="story_speaker_aurora">Aurora Vance</string>
+    <string name="story_chapter_label">Capítulo %1$d</string>
+    <string name="story_continue">Continuar</string>
+    <string name="story_finish">A construir</string>
+    <string name="story_skip">Saltar</string>
+    <string name="story_chronicle_title">La Crónica</string>
+    <string name="story_chronicle_subtitle">El Pacto de los Fundadores — cada capítulo que has vivido</string>
+    <string name="story_chapter_locked">Capítulo sellado</string>
+    <string name="story_chapter_replay">Toca para releerlo</string>
+
+    <string name="story_ch1_title">La Herencia</string>
+    <string name="story_ch1_p1">Un garaje oxidado en el borde de la galaxia. Una llave, una moneda antigua y un chip. Es todo lo que Aurora Vance —la legendaria fundadora de Vance &amp; Vex— dejó a su heredero.\n\nEs todo lo que te dejó a ti.</string>
+    <string name="story_ch1_p2">Conexión establecida. Soy LIA, la inteligencia de Aurora. Antes de desaparecer, mi creadora firmó un pacto con su antiguo socio, Magnus Vex, el hombre que le robó la compañía: si su heredero construye un imperio que supere a VexCorp, él devolverá todo lo que tomó.</string>
+    <string name="story_ch1_p3">Esa moneda que tienes en la mano fue la primera que ganaron juntos. Aurora la encantó con un eco de fortuna: cada vez que la toques, repetirá su primera venta.\n\nTócala. Tócala muchas veces.</string>
+    <string name="story_ch1_p4">Cada toque acuña monedas. Los toques encadenados crean COMBOS, y a veces lograrás un ECO PERFECTO: un crítico. Con lo ganado reconstruiremos la red de negocios de Aurora.\n\nVex cree que esto es una broma. Hagamos que se atragante con ella.</string>
+
+    <string name="story_ch2_title">La Primera Cucaracha</string>
+    <string name="story_ch2_p1">Tu primer negocio vuelve a abrir sus puertas. La señal llega a Nexus Prime en milisegundos. En lo alto de la torre VexCorp, alguien sonríe.</string>
+    <string name="story_ch2_p2">«Vaya, vaya. La cucaracha del garaje se ha comprado un negocio. ¿Sabes a cuántos como tú he aplastado? Disfruta de tu puesto de limonada, heredero. El Pacto expira cuando yo lo diga.»</string>
+    <string name="story_ch2_p3">Ignórale. Cada negocio produce monedas por segundo, incluso mientras duermes — algo que Vex prohíbe hacer a sus propios empleados. Acumula unidades: en cada hito (10, 25, 50…) el mercado recuerda el apellido Vance y la producción SE DUPLICA.</string>
+
+    <string name="story_ch3_title">La Reconquista</string>
+    <string name="story_ch3_p1">Aurora levantó diez mercados, desde este Garaje hasta Nexus Prime. Vex los controla todos. Cada mundo que desbloquees es territorio que le arrancas de las manos delante de toda la galaxia.</string>
+    <string name="story_ch3_p2">«¿Expandiéndonos? Adorable. Esos mercados llevan mi nombre en cada farola. Te dejaré jugar en ellos… hasta que quitártelos duela más.»</string>
+    <string name="story_ch3_p3">Cada mundo multiplica tu producción y desbloquea negocios exclusivos. El último es Nexus Prime: la propia torre de Vex. Ahí se decidirá el Pacto.</string>
+
+    <string name="story_ch4_title">Los Desafíos Vex</string>
+    <string name="story_ch4_p1">Todas las pantallas de la galaxia se encienden a la vez. LOS DESAFÍOS VEX: el espectáculo donde el magnate humilla a sus rivales en directo.\n\nEl invitado de esta noche: tú.</string>
+    <string name="story_ch4_p2">«He pensado que la galaxia merece reírse un rato. Acepta mis desafíos, heredero. Cuando pierdas, te verán billones. Y cuando ganes… bah. No vas a ganar.»</string>
+    <string name="story_ch4_p3">Cada victoria sale directamente de su bolsillo: los premios los paga VexCorp. El regulador galáctico limita los intentos diarios — úsalos todos. Humillarle en su propio circo no tiene precio. Bueno, sí lo tiene: y lo cobras tú.</string>
+
+    <string name="story_ch5_title">Los Desertores</string>
+    <string name="story_ch5_p1">En VexCorp no hay empleados: hay «Unidades de Rendimiento». El descanso se penaliza. Las mascotas están prohibidas. Y esta noche, en un hangar clandestino, decenas de ellos esperan conocer al heredero de Aurora.</string>
+    <string name="story_ch5_p2">Las ferias de empleo clandestinas te permiten contratar desertores de VexCorp. Vienen con su experiencia, su talento… y sus cicatrices. Trátalos mejor que Vex. No es difícil: el listón está bajo tierra.</string>
+    <string name="story_ch5_p3">Asigna trabajadores a tus negocios para multiplicar la producción. Negocia contratos de verdad: sueldo, jornada, derecho a huelga. Págales puntualmente — o te harán lo que la propia Aurora hizo una vez dentro de VexCorp: organizar la primera huelga de su historia.</string>
+
+    <string name="story_ch6_title">El Refugio</string>
+    <string name="story_ch6_p1">Tengo que contarte algo. VexCorp tiene una división llamada Proyecto Quimera: diseñan criaturas cósmicas como productos de lujo… con obsolescencia programada. Aurora robó la primera camada y fundó El Refugio.</string>
+    <string name="story_ch6_p2">La criatura te mira desde su transportín. En el costado, un número de serie de VexCorp tachado con pintura dorada. Debajo, con la letra de Aurora: «Ya no eres un producto.»</string>
+    <string name="story_ch6_p3">Cada quimera que adoptas financia el rescate de la siguiente. Aliméntalas, juega con ellas, cúralas: una quimera feliz potencia tu imperio entero. Y recuerda: tus trabajadores desertaron por cómo Vex trata a los seres vivos. Si descuidas el Refugio, perderán la fe en ti.</string>
+
+    <string name="story_ch7_title">Genoma Libre</string>
+    <string name="story_ch7_p1">Fascinante. En libertad, las quimeras hacen algo que los laboratorios de Vex nunca consiguieron: mezclar sus linajes. Tu nueva cría heredará rasgos de ambos padres — verás el cuerpo de uno y los rasgos del otro.</string>
+    <string name="story_ch7_p2">La incubación lleva tiempo real. Y a veces despierta un gen que VexCorp suprimió: una MUTACIÓN RARA, con dones que ni Aurora llegó a documentar. Cada generación nacida libre es la prueba viviente de que Vex se equivocaba.</string>
+    <string name="story_ch7_p3">«¿Estás CRIANDO mis quimeras? Eso es propiedad intelectual de VexCorp, heredero. Mis abogados ya están redactando la demanda. Mis científicos, en cambio, quieren saber cómo demonios lo has hecho.»</string>
+
+    <string name="story_ch8_title">La Cláusula del Fénix</string>
+    <string name="story_ch8_p1">Tu imperio ya aparece en los índices galácticos. En Nexus Prime ya nadie se ríe. Y entonces llega el documento, con membrete dorado y sello legal: CLÁUSULA DEL FÉNIX — LISTA PARA INVOCAR.</string>
+    <string name="story_ch8_p2">«¿Creías que el Pacto era limpio? Lee la letra pequeña, heredero: cuando tu valoración amenace la mía, puedo reiniciar el mercado entero. Tus negocios, tus monedas, tu progreso: cenizas. Y puedo hacerlo otra vez. Y otra. Aurora lo firmó. ¿Por qué sonreía? Nunca lo entendí.»</string>
+    <string name="story_ch8_p3">Yo sí lo entiendo. Aurora firmó porque la cláusula tiene un defecto: borra los números, pero NO PUEDE BORRAR LA REPUTACIÓN. Cada renacimiento conserva tu Renombre, y el mercado te recibirá produciendo más que antes.</string>
+    <string name="story_ch8_p4">Eso es el PRESTIGIO: dejar que Vex queme tu imperio para renacer más fuerte. Conservas tu Renombre (un multiplicador permanente), tus quimeras y tu plantilla. Cada vez que invoque la cláusula le costará más y te frenará menos. Su arma se desgasta. La tuya se afila.</string>
+
+    <string name="story_ch9_title">Cenizas y Renombre</string>
+    <string name="story_ch9_p1">El mercado entero parpadea y se reinicia. Donde ayer había un imperio, hoy hay un garaje. Pero los titulares no hablan del reinicio: hablan de que el heredero de Aurora ha obligado a Magnus Vex a disparar su arma definitiva.\n\nY sigues aquí.</string>
+    <string name="story_ch9_p2">Recuerdo desbloqueado — Aurora Vance, hace 12 años: «Algún día Magnus quemará todo lo que construyas. Déjale. Los imperios son cosas que se incendian, pequeño. Los nombres, no. Construye un nombre.»</string>
+    <string name="story_ch9_p3">Tu Renombre ya está trabajando: produces más que ayer a esta misma hora. En lo alto de la torre, Vex ha dejado de sonreír.\n\nHagámoslo otra vez.</string>
+
+    <string name="story_ch10_title">Guerra Sucia</string>
+    <string name="story_ch10_p1">Los mercados tiemblan sin previo aviso. Una crisis demasiado oportuna, un apagón demasiado preciso. El sello de VexCorp no aparece por ningún sitio — y esa es exactamente su firma.</string>
+    <string name="story_ch10_p2">Vex no puede tocar el Pacto, pero puede inclinar el tablero: sabotajes, auditorías, ciberataques. La buena noticia: los viejos aliados de Aurora también mueven hilos. Bonanzas, festivales, subvenciones… no todo lo inesperado es enemigo.</string>
+    <string name="story_ch10_p3">Cada evento te dará OPCIONES con consecuencias en producción, plantilla o estabilidad. Si no eliges, el destino elegirá por ti — y el destino tiene contrato con VexCorp. Vigila la estabilidad galáctica: mide quién va ganando este pulso.</string>
+
+    <string name="story_ch11_title">El Amuleto</string>
+    <string name="story_ch11_p1">Algo dorado cruza el cielo y, por un instante, todas tus máquinas producen al unísono. Lo has tocado.\n\nY te ha devuelto el saludo.</string>
+    <string name="story_ch11_p2">Análisis… imposible. Eso era el amuleto de la suerte de Aurora. Lo llevaba el día que fundó la empresa y juró que se lo llevaría «más allá del Borde». Por lo visto, sigue en órbita. Y por lo visto… te conoce.</string>
+    <string name="story_ch11_p3">Cuando el cometa dorado cruce tu pantalla, CÁZALO: suelta ecos de la suerte de Aurora — frenesíes de producción, lluvias de monedas, fragmentos estelares. No es ciencia. No me importa.\n\nTú no dejes de mirar al cielo.</string>
 </resources>

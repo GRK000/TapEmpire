@@ -44,6 +44,7 @@ fun MoreScreen(
     val sickPets = uiState.pets.count { it.isOwned && it.isAlive && it.diseases.isNotEmpty() }
 
     val menuItems = mutableListOf(
+        MoreMenuItem(stringResource(R.string.story_chronicle_title), "📖", "story", CoinGold),
         MoreMenuItem(stringResource(R.string.premium_shop_title), "💎", "premium_shop", GemPurple,
             badge = if (uiState.monetizationState.starterPackAvailable) 1 else 0),
         MoreMenuItem(stringResource(R.string.more_shop), "🛒", "shop", NeonPurple),
