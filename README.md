@@ -74,6 +74,8 @@ Actualmente el juego incluye:
 - **hitos de generadores**: cada hito (10, 25, 50, 100…) duplica la producción del negocio
 - **compra masiva** (×1 / ×10 / ×MAX) con cálculo de coste acumulado
 - **prestigio** con multiplicadores permanentes
+- **El Legado de Aurora**: tienda de Renombre con 6 mejoras permanentes que sobreviven al prestigio (tap, producción, críticos, límite offline, capital semilla, frecuencia del cometa)
+- **racha diaria** con recompensas crecientes (hasta ×20) y gemas cada 7 días
 - ganancias **offline**
 
 ### Eventos en vivo
