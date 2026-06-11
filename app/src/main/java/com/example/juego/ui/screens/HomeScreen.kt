@@ -192,7 +192,7 @@ fun HomeScreen(
                 horizontalArrangement = Arrangement.Center,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                PetWidget(pet = uiState.activePet)
+                PetWidget(pet = uiState.activePet, allPets = uiState.pets)
             }
 
             Spacer(modifier = Modifier.height(8.dp))

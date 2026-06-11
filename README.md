@@ -13,6 +13,21 @@ La idea siempre ha sido construir algo que se sienta como **un producto real**, 
 
 ---
 
+# Historia: «El Pacto de los Fundadores»
+
+El juego tiene una capa narrativa completa (ver [LORE.md](LORE.md)): heredas el garaje
+y la primera moneda de **Aurora Vance**, la fundadora traicionada de Vance & Vex, y
+compites contra **Magnus Vex** por recuperar el imperio que él le robó. Cada mecánica
+está atada al lore — el prestigio es la *Cláusula del Fénix*, las mascotas son quimeras
+rescatadas de los laboratorios de VexCorp, los minijuegos son sus desafíos televisados
+y los eventos su guerra sucia.
+
+La historia se cuenta en **11 capítulos interactivos que hacen de tutorial**: cada
+mecánica se presenta desde dentro de la ficción (con LIA, la IA de Aurora, como guía)
+y los capítulos vividos se releen en **La Crónica** (menú Más → 📖).
+
+---
+
 # Gameplay (visión rápida)
 
 El loop principal es el clásico de los idle games, pero con varias capas estratégicas:
@@ -78,7 +93,8 @@ Actualmente el juego incluye:
 - **eventos dinámicos** con decisiones
 
 ### Mascotas
-- sistema de **cría**
+- **avatares vectoriales únicos** por especie (18 diseños con forma, orejas, alas, cola, accesorio y paleta propios)
+- sistema de **cría** — los híbridos **combinan visualmente a ambos padres** (cuerpo del dominante + rasgos del otro)
 - **rasgos genéticos**
 - mutaciones
 - impacto en bienestar del imperio

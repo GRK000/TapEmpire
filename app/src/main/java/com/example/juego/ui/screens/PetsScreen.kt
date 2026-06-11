@@ -21,6 +21,7 @@ import com.example.juego.Pet
 import com.example.juego.R
 import com.example.juego.ui.components.AnimatedBackground
 import com.example.juego.ui.components.GlassCard
+import com.example.juego.ui.components.PetAvatar
 import com.example.juego.ui.theme.*
 import com.example.juego.ui.viewmodel.GameUiState
 import com.example.juego.ui.viewmodel.GameViewModel
@@ -46,7 +47,7 @@ fun PetsScreen(
             // Active pet info
             uiState.activePet?.let { pet ->
                 if (pet.isOwned) {
-                    ActivePetCard(pet = pet, viewModel = viewModel, coins = uiState.coins)
+                    ActivePetCard(pet = pet, allPets = uiState.pets, viewModel = viewModel, coins = uiState.coins)
                 }
             }
 
@@ -59,6 +60,7 @@ fun PetsScreen(
                 itemsIndexed(uiState.pets) { index, pet ->
                     PetCard(
                         pet = pet,
+                        allPets = uiState.pets,
                         isActive = pet == uiState.activePet,
                         coins = uiState.coins,
                         onBuy = { viewModel.buyPet(index) },
@@ -73,6 +75,7 @@ fun PetsScreen(
 @Composable
 fun ActivePetCard(
     pet: Pet,
+    allPets: List<Pet> = emptyList(),
     viewModel: GameViewModel,
     coins: Double
 ) {
@@ -99,11 +102,20 @@ fun ActivePetCard(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text(
-                text = if (pet.isAlive) pet.type.emoji else "💀",
-                fontSize = 40.sp,
-                modifier = Modifier.offset(y = bounce.dp)
-            )
+            if (pet.isAlive || pet.isGhost) {
+                PetAvatar(
+                    pet = pet,
+                    allPets = allPets,
+                    size = 64.dp,
+                    modifier = Modifier.offset(y = bounce.dp)
+                )
+            } else {
+                Text(
+                    text = "💀",
+                    fontSize = 40.sp,
+                    modifier = Modifier.offset(y = bounce.dp)
+                )
+            }
 
             Spacer(modifier = Modifier.width(16.dp))
 
@@ -210,6 +222,7 @@ fun PetActionButton(
 @Composable
 fun PetCard(
     pet: Pet,
+    allPets: List<Pet> = emptyList(),
     isActive: Boolean,
     coins: Double,
     onBuy: () -> Unit,
@@ -229,10 +242,14 @@ fun PetCard(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text(
-                text = if (pet.isOwned) pet.type.emoji else "❓",
-                fontSize = 32.sp
-            )
+            if (pet.isOwned && (pet.isAlive || pet.isGhost)) {
+                PetAvatar(pet = pet, allPets = allPets, size = 48.dp)
+            } else {
+                Text(
+                    text = if (pet.isOwned) "💀" else "❓",
+                    fontSize = 32.sp
+                )
+            }
 
             Spacer(modifier = Modifier.width(12.dp))
 

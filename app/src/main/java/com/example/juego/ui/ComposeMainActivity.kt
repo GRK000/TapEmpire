@@ -190,9 +190,19 @@ fun TapEmpireApp(
         )
     }
 
-    // Tutorial popup system
+    // Sistema de historia + tutorial: cada mecánica se presenta como un
+    // capítulo de «El Pacto de los Fundadores»
     val tutorialKey by gameViewModel.tutorialToShow.collectAsStateWithLifecycle()
     tutorialKey?.let { key ->
+        val chapter = com.example.juego.ui.story.storyChapterFor(key)
+        if (chapter != null) {
+            com.example.juego.ui.story.StoryDialog(
+                chapter = chapter,
+                onFinished = { gameViewModel.dismissTutorial() }
+            )
+            return@let
+        }
+        // Fallback para claves sin capítulo (p. ej. avisos de mutación)
         val (title, body, icon) = getTutorialContent(key)
         AlertDialog(
             onDismissRequest = { gameViewModel.dismissTutorial() },
@@ -388,6 +398,9 @@ fun TapEmpireApp(
             }
             composable("stats") {
                 StatsScreen(uiState = uiState)
+            }
+            composable("story") {
+                StoryScreen(viewModel = gameViewModel, uiState = uiState)
             }
             composable("business_map") {
                 BusinessMapScreen(viewModel = gameViewModel, uiState = uiState)
