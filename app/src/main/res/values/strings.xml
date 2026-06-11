@@ -719,4 +719,29 @@
     <string name="story_ch11_p1">Something golden crosses the sky and, for a heartbeat, every machine you own produces in unison. You touched it.\n\nAnd it greeted you back.</string>
     <string name="story_ch11_p2">Analysis… impossible. That was Aurora\'s lucky amulet. She wore it the day the company was founded and swore she would take it «beyond the Rim». Apparently it is still in orbit. And apparently… it knows you.</string>
     <string name="story_ch11_p3">When the golden comet crosses your screen, CATCH IT: it sheds echoes of Aurora\'s luck — production frenzies, coin showers, star shards. It is not science. I don\'t care.\n\nYou — keep watching the sky.</string>
+
+    <!-- Aurora\'s Legacy (Renown shop) -->
+    <string name="legacy_title">Aurora\'s Legacy</string>
+    <string name="legacy_subtitle">Permanent upgrades bought with Renown — the one thing the Phoenix Clause cannot burn</string>
+    <string name="legacy_renown_balance">Renown available</string>
+    <string name="legacy_level">Lv. %1$d/%2$d</string>
+    <string name="legacy_echo_name">Eternal Echo</string>
+    <string name="legacy_echo_desc">The First Coin resonates louder: +25% tap power per level</string>
+    <string name="legacy_network_name">Sleeping Network</string>
+    <string name="legacy_network_desc">Aurora\'s old contacts wake up: +25% production per level</string>
+    <string name="legacy_luck_name">Founder\'s Luck</string>
+    <string name="legacy_luck_desc">+1% critical chance per level</string>
+    <string name="legacy_pact_name">Ironclad Pact</string>
+    <string name="legacy_pact_desc">+2h offline earnings cap per level</string>
+    <string name="legacy_seed_name">Seed Capital</string>
+    <string name="legacy_seed_desc">Start every rebirth with coins (×10 per level)</string>
+    <string name="legacy_magnet_name">Stellar Magnetism</string>
+    <string name="legacy_magnet_desc">Aurora\'s amulet visits more often: comets appear 10% sooner per level</string>
+
+    <!-- Daily streak (LIA\'s Plan) -->
+    <string name="streak_title">📅 LIA\'s Plan</string>
+    <string name="streak_day">Day %1$d in a row</string>
+    <string name="streak_reward">💰 +%1$s coins</string>
+    <string name="streak_gems">💎 +%1$d gems</string>
+    <string name="streak_hint">«An empire isn\'t built in one day. It is built EVERY day.» Come back tomorrow: the reward keeps growing.</string>
 </resources>

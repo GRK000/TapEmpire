@@ -32,3 +32,4 @@ Thumbs.db
 
 # Gradle wrapper
 !gradle/wrapper/gradle-wrapper.jar
+app/release/

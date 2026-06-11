@@ -161,6 +161,62 @@ fun TapEmpireApp(
         )
     }
 
+    // Racha diaria (El Plan de LIA)
+    val streakReward by gameViewModel.dailyStreakReward.collectAsStateWithLifecycle()
+    streakReward?.let { streak ->
+        AlertDialog(
+            onDismissRequest = { gameViewModel.dismissDailyStreak() },
+            title = {
+                Text(
+                    stringResource(R.string.streak_title),
+                    fontWeight = FontWeight.Bold,
+                    color = NeonCyan
+                )
+            },
+            text = {
+                Column {
+                    Text(
+                        stringResource(R.string.streak_day, streak.streakDays),
+                        fontWeight = FontWeight.Black,
+                        color = TextPrimary,
+                        fontSize = 18.sp
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        stringResource(R.string.streak_reward, GameState.fmt(streak.coins)),
+                        color = CoinGold,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 16.sp
+                    )
+                    if (streak.gems > 0) {
+                        Text(
+                            stringResource(R.string.streak_gems, streak.gems),
+                            color = GemPurple,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp
+                        )
+                    }
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        stringResource(R.string.streak_hint),
+                        color = TextMuted,
+                        fontSize = 12.sp
+                    )
+                }
+            },
+            confirmButton = {
+                Button(
+                    onClick = { gameViewModel.dismissDailyStreak() },
+                    colors = ButtonDefaults.buttonColors(containerColor = NeonCyan)
+                ) {
+                    Text(stringResource(R.string.btn_great), color = DeepSpace)
+                }
+            },
+            containerColor = Onyx,
+            titleContentColor = NeonCyan
+        )
+    }
+
     // Mini-game reward popup
     val miniGameReward by gameViewModel.lastMiniGameReward.collectAsStateWithLifecycle()
     miniGameReward?.let { reward ->
@@ -401,6 +457,9 @@ fun TapEmpireApp(
             }
             composable("story") {
                 StoryScreen(viewModel = gameViewModel, uiState = uiState)
+            }
+            composable("legacy") {
+                LegacyScreen(viewModel = gameViewModel, uiState = uiState)
             }
             composable("business_map") {
                 BusinessMapScreen(viewModel = gameViewModel, uiState = uiState)

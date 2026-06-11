@@ -709,4 +709,29 @@
     <string name="story_ch11_p1">Una cosa daurada creua el cel i, per un instant, totes les teves màquines produeixen a l\'uníson. L\'has tocat.\n\nI t\'ha tornat la salutació.</string>
     <string name="story_ch11_p2">Anàlisi… impossible. Això era l\'amulet de la sort de l\'Aurora. El portava el dia que va fundar l\'empresa i va jurar que se l\'enduria «més enllà de la Vora». Pel que sembla, encara és en òrbita. I pel que sembla… et coneix.</string>
     <string name="story_ch11_p3">Quan el cometa daurat creui la teva pantalla, CAÇA\'L: deixa anar ecos de la sort de l\'Aurora — frenesís de producció, pluges de monedes, fragments estel·lars. No és ciència. No m\'importa.\n\nTu no deixis de mirar el cel.</string>
+
+    <!-- El Llegat de l\'Aurora (botiga de Renom) -->
+    <string name="legacy_title">El Llegat de l\'Aurora</string>
+    <string name="legacy_subtitle">Millores permanents comprades amb Renom — l\'única cosa que la Clàusula del Fènix no pot cremar</string>
+    <string name="legacy_renown_balance">Renom disponible</string>
+    <string name="legacy_level">Nv. %1$d/%2$d</string>
+    <string name="legacy_echo_name">Eco Etern</string>
+    <string name="legacy_echo_desc">La Primera Moneda ressona més fort: +25% de poder de toc per nivell</string>
+    <string name="legacy_network_name">Xarxa Adormida</string>
+    <string name="legacy_network_desc">Els vells contactes de l\'Aurora es desperten: +25% de producció per nivell</string>
+    <string name="legacy_luck_name">Sort Fundadora</string>
+    <string name="legacy_luck_desc">+1% de probabilitat de crític per nivell</string>
+    <string name="legacy_pact_name">Pacte Blindat</string>
+    <string name="legacy_pact_desc">+2h de límit de guanys offline per nivell</string>
+    <string name="legacy_seed_name">Capital Llavor</string>
+    <string name="legacy_seed_desc">Comença cada renaixement amb monedes (×10 per nivell)</string>
+    <string name="legacy_magnet_name">Magnetisme Estel·lar</string>
+    <string name="legacy_magnet_desc">L\'amulet de l\'Aurora et visita més: els cometes apareixen un 10% abans per nivell</string>
+
+    <!-- Ratxa diària (El Pla de LIA) -->
+    <string name="streak_title">📅 El Pla de LIA</string>
+    <string name="streak_day">Dia %1$d seguit</string>
+    <string name="streak_reward">💰 +%1$s monedes</string>
+    <string name="streak_gems">💎 +%1$d gemmes</string>
+    <string name="streak_hint">«Un imperi no es construeix en un dia. Es construeix CADA dia.» Torna demà: la recompensa segueix creixent.</string>
 </resources>

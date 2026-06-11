@@ -709,4 +709,29 @@
     <string name="story_ch11_p1">Quelque chose de doré traverse le ciel et, l\'espace d\'un battement, toutes tes machines produisent à l\'unisson. Tu l\'as touché.\n\nEt il t\'a rendu ton salut.</string>
     <string name="story_ch11_p2">Analyse… impossible. C\'était l\'amulette porte-bonheur d\'Aurora. Elle la portait le jour de la fondation et avait juré de l\'emporter « au-delà du Bord ». Apparemment, elle est toujours en orbite. Et apparemment… elle te connaît.</string>
     <string name="story_ch11_p3">Quand la comète dorée traverse ton écran, ATTRAPE-LA : elle libère des échos de la chance d\'Aurora — frénésies de production, pluies de pièces, fragments stellaires. Ce n\'est pas de la science. Je m\'en moque.\n\nToi — ne cesse jamais de regarder le ciel.</string>
+
+    <!-- L\'Héritage d\'Aurora (boutique de Renom) -->
+    <string name="legacy_title">L\'Héritage d\'Aurora</string>
+    <string name="legacy_subtitle">Améliorations permanentes achetées avec du Renom — la seule chose que la Clause du Phénix ne peut pas brûler</string>
+    <string name="legacy_renown_balance">Renom disponible</string>
+    <string name="legacy_level">Nv. %1$d/%2$d</string>
+    <string name="legacy_echo_name">Écho Éternel</string>
+    <string name="legacy_echo_desc">La Première Pièce résonne plus fort : +25% de puissance de touche par niveau</string>
+    <string name="legacy_network_name">Réseau Dormant</string>
+    <string name="legacy_network_desc">Les vieux contacts d\'Aurora se réveillent : +25% de production par niveau</string>
+    <string name="legacy_luck_name">Chance de Fondatrice</string>
+    <string name="legacy_luck_desc">+1% de chance de critique par niveau</string>
+    <string name="legacy_pact_name">Pacte Blindé</string>
+    <string name="legacy_pact_desc">+2h de plafond de gains hors ligne par niveau</string>
+    <string name="legacy_seed_name">Capital d\'Amorçage</string>
+    <string name="legacy_seed_desc">Commence chaque renaissance avec des pièces (×10 par niveau)</string>
+    <string name="legacy_magnet_name">Magnétisme Stellaire</string>
+    <string name="legacy_magnet_desc">L\'amulette d\'Aurora te visite plus souvent : les comètes apparaissent 10% plus tôt par niveau</string>
+
+    <!-- Série quotidienne (Le Plan de LIA) -->
+    <string name="streak_title">📅 Le Plan de LIA</string>
+    <string name="streak_day">Jour %1$d d\'affilée</string>
+    <string name="streak_reward">💰 +%1$s pièces</string>
+    <string name="streak_gems">💎 +%1$d gemmes</string>
+    <string name="streak_hint">« Un empire ne se construit pas en un jour. Il se construit CHAQUE jour. » Reviens demain : la récompense continue de grandir.</string>
 </resources>

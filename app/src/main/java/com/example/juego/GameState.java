@@ -93,6 +93,18 @@ public class GameState {
     // === MONETIZATION ===
     private MonetizationManager monetization = new MonetizationManager();
 
+    // === EL LEGADO DE AURORA (mejoras permanentes compradas con Renombre) ===
+    private java.util.Map<String, Integer> legacyLevels = new java.util.HashMap<>();
+    public static final String LEGACY_ECHO = "echo";       // +25% tap por nivel
+    public static final String LEGACY_NETWORK = "network"; // +25% producción por nivel
+    public static final String LEGACY_LUCK = "luck";       // +1% crítico por nivel
+    public static final String LEGACY_PACT = "pact";       // +2h límite offline por nivel
+    public static final String LEGACY_SEED = "seed";       // capital inicial tras prestigio
+    public static final String LEGACY_MAGNET = "magnet";   // cometa más frecuente
+    public static final String[] LEGACY_IDS = {
+            LEGACY_ECHO, LEGACY_NETWORK, LEGACY_LUCK, LEGACY_PACT, LEGACY_SEED, LEGACY_MAGNET
+    };
+
     // === GOLDEN COMET (boosts temporales) ===
     private double goldenProductionBoost = 1.0;
     private long goldenProductionBoostEnd = 0;
@@ -418,7 +430,7 @@ public class GameState {
     }
 
     private double getEffectiveCriticalChance() {
-        double chance = criticalChance;
+        double chance = criticalChance + getLegacyCritBonus();
 
         // Bonus de evento
         if (activeEvent != null && activeEvent.isActive()) {
@@ -447,7 +459,7 @@ public class GameState {
                 mult += u.getTotalEffect();
             }
         }
-        return base * mult;
+        return base * mult * getLegacyTapMultiplier();
     }
 
     public double updateProduction(long currentTime) {
@@ -520,7 +532,73 @@ public class GameState {
         // Golden Comet frenzy
         total *= getGoldenProductionBoostNow();
 
+        // Legado de Aurora
+        total *= getLegacyProductionMultiplier();
+
         return total;
+    }
+
+    // ==================== EL LEGADO DE AURORA ====================
+    // El Renombre (puntos de prestigio) se invierte en mejoras permanentes
+    // que sobreviven a la Cláusula del Fénix.
+
+    public int getLegacyLevel(String id) {
+        Integer v = legacyLevels.get(id);
+        return v == null ? 0 : v;
+    }
+
+    public void setLegacyLevel(String id, int level) {
+        legacyLevels.put(id, Math.max(0, level));
+    }
+
+    public static int getLegacyMaxLevel(String id) {
+        switch (id) {
+            case LEGACY_LUCK: return 10;
+            case LEGACY_PACT: return 8;
+            case LEGACY_SEED: return 10;
+            case LEGACY_MAGNET: return 5;
+            default: return 25; // echo, network
+        }
+    }
+
+    /** Coste en Renombre del siguiente nivel */
+    public double getLegacyCost(String id) {
+        double base;
+        switch (id) {
+            case LEGACY_LUCK: base = 5; break;
+            case LEGACY_PACT: base = 4; break;
+            case LEGACY_SEED: base = 3; break;
+            case LEGACY_MAGNET: base = 6; break;
+            default: base = 2; // echo, network
+        }
+        return Math.ceil(base * Math.pow(1.9, getLegacyLevel(id)));
+    }
+
+    public boolean buyLegacyUpgrade(String id) {
+        int lvl = getLegacyLevel(id);
+        if (lvl >= getLegacyMaxLevel(id)) return false;
+        double cost = getLegacyCost(id);
+        if (prestigePoints < cost) return false;
+        prestigePoints -= cost;
+        legacyLevels.put(id, lvl + 1);
+        return true;
+    }
+
+    // Efectos del Legado
+    public double getLegacyTapMultiplier() { return 1 + getLegacyLevel(LEGACY_ECHO) * 0.25; }
+    public double getLegacyProductionMultiplier() { return 1 + getLegacyLevel(LEGACY_NETWORK) * 0.25; }
+    public double getLegacyCritBonus() { return getLegacyLevel(LEGACY_LUCK) * 0.01; }
+    public long getLegacyOfflineCapHours() { return 8 + getLegacyLevel(LEGACY_PACT) * 2L; }
+
+    /** Capital con el que se renace tras el prestigio (0 sin niveles, luego 1K ×10 por nivel) */
+    public double getLegacyStartingCoins() {
+        int lvl = getLegacyLevel(LEGACY_SEED);
+        return lvl == 0 ? 0 : 1000 * Math.pow(10, lvl - 1);
+    }
+
+    /** Multiplicador del intervalo de aparición del cometa (1.0 → 0.5) */
+    public double getLegacyCometIntervalMultiplier() {
+        return 1.0 - getLegacyLevel(LEGACY_MAGNET) * 0.1;
     }
 
     // ==================== GOLDEN COMET ====================
@@ -965,6 +1043,9 @@ public class GameState {
             worlds.get(i).setUnlocked(false);
         }
 
+        // Capital Semilla del Legado: no se renace con las manos vacías
+        coins = getLegacyStartingCoins();
+
         updateMultipliers();
     }
 
@@ -1040,7 +1121,7 @@ public class GameState {
 
     public double calculateOfflineEarnings(long lastSaveTime) {
         long offlineSeconds = (System.currentTimeMillis() - lastSaveTime) / 1000;
-        offlineSeconds = Math.min(offlineSeconds, 8 * 60 * 60);
+        offlineSeconds = Math.min(offlineSeconds, getLegacyOfflineCapHours() * 60 * 60);
         if (offlineSeconds > 60) {
             double offlineEarnings = getProductionPerSecond() * offlineSeconds * offlineMultiplier;
             updateMissionProgress(DailyMission.MissionType.COLLECT_OFFLINE, 1);

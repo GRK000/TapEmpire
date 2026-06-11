@@ -51,6 +51,8 @@ fun MoreScreen(
         MoreMenuItem(stringResource(R.string.more_achievements), "🏆", "achievements", CoinGold,
             badge = uiState.achievements.count { it.isUnlocked }),
         MoreMenuItem(stringResource(R.string.more_prestige), "⭐", "prestige", PrestigeCyan),
+        MoreMenuItem(stringResource(R.string.legacy_title), "🏛️", "legacy", PrestigeCyan,
+            badge = if (uiState.prestigePoints >= (uiState.legacyCosts.values.minOrNull() ?: Double.MAX_VALUE)) 1 else 0),
         MoreMenuItem(stringResource(R.string.more_missions), "📋", "missions", NeonGreen, badge = unclaimedMissions),
         MoreMenuItem(stringResource(R.string.events_title), "⚡", "events", Warning,
             badge = (uiState.activeGameEvents as? List<com.example.juego.GameEvent>)?.count { it.needsChoice() } ?: 0),

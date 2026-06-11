@@ -709,4 +709,29 @@
     <string name="story_ch11_p1">Algo dorado cruza el cielo y, por un instante, todas tus máquinas producen al unísono. Lo has tocado.\n\nY te ha devuelto el saludo.</string>
     <string name="story_ch11_p2">Análisis… imposible. Eso era el amuleto de la suerte de Aurora. Lo llevaba el día que fundó la empresa y juró que se lo llevaría «más allá del Borde». Por lo visto, sigue en órbita. Y por lo visto… te conoce.</string>
     <string name="story_ch11_p3">Cuando el cometa dorado cruce tu pantalla, CÁZALO: suelta ecos de la suerte de Aurora — frenesíes de producción, lluvias de monedas, fragmentos estelares. No es ciencia. No me importa.\n\nTú no dejes de mirar al cielo.</string>
+
+    <!-- El Legado de Aurora (tienda de Renombre) -->
+    <string name="legacy_title">El Legado de Aurora</string>
+    <string name="legacy_subtitle">Mejoras permanentes compradas con Renombre — lo único que la Cláusula del Fénix no puede quemar</string>
+    <string name="legacy_renown_balance">Renombre disponible</string>
+    <string name="legacy_level">Nv. %1$d/%2$d</string>
+    <string name="legacy_echo_name">Eco Eterno</string>
+    <string name="legacy_echo_desc">La Primera Moneda resuena más fuerte: +25% de poder de tap por nivel</string>
+    <string name="legacy_network_name">Red Durmiente</string>
+    <string name="legacy_network_desc">Los viejos contactos de Aurora despiertan: +25% de producción por nivel</string>
+    <string name="legacy_luck_name">Suerte Fundadora</string>
+    <string name="legacy_luck_desc">+1% de probabilidad de crítico por nivel</string>
+    <string name="legacy_pact_name">Pacto Blindado</string>
+    <string name="legacy_pact_desc">+2h de límite de ganancias offline por nivel</string>
+    <string name="legacy_seed_name">Capital Semilla</string>
+    <string name="legacy_seed_desc">Empieza cada renacimiento con monedas (×10 por nivel)</string>
+    <string name="legacy_magnet_name">Magnetismo Estelar</string>
+    <string name="legacy_magnet_desc">El amuleto de Aurora te visita más: los cometas aparecen un 10% antes por nivel</string>
+
+    <!-- Racha diaria (El Plan de LIA) -->
+    <string name="streak_title">📅 El Plan de LIA</string>
+    <string name="streak_day">Día %1$d seguido</string>
+    <string name="streak_reward">💰 +%1$s monedas</string>
+    <string name="streak_gems">💎 +%1$d gemas</string>
+    <string name="streak_hint">«Un imperio no se construye un día. Se construye CADA día.» Vuelve mañana: la recompensa sigue creciendo.</string>
 </resources>
