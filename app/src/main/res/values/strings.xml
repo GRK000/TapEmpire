@@ -638,4 +638,14 @@
     <string name="pack_whale_ultra_desc">5,000 gems + x15 boost for 12 hours</string>
     <string name="pack_whale_omega_title">Omega Pack</string>
     <string name="pack_whale_omega_desc">15,000 gems — The ultimate collection</string>
+
+    <!-- Golden Comet -->
+    <string name="comet_caught_title">GOLDEN COMET!</string>
+    <string name="comet_reward_frenzy">🔥 Frenzy! ×%1$d production for %2$ds</string>
+    <string name="comet_reward_tap">⚡ Tap Rush! ×%1$d per tap for %2$ds</string>
+    <string name="comet_reward_coins">💰 Coin burst! +%1$s</string>
+    <string name="comet_reward_gems">💎 Star gems! +%1$d</string>
+
+    <!-- Generator milestones -->
+    <string name="milestone_label">Milestone %1$d/%2$d → ×2</string>
 </resources>

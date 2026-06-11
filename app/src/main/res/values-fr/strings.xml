@@ -628,4 +628,14 @@
     <string name="pack_whale_ultra_desc">5 000 gemmes + x15 boost pendant 12 heures</string>
     <string name="pack_whale_omega_title">Pack Oméga</string>
     <string name="pack_whale_omega_desc">15 000 gemmes — La collection ultime</string>
+
+    <!-- Comète Dorée -->
+    <string name="comet_caught_title">COMÈTE DORÉE !</string>
+    <string name="comet_reward_frenzy">🔥 Frénésie ! Production ×%1$d pendant %2$ds</string>
+    <string name="comet_reward_tap">⚡ Tap Rush ! ×%1$d par tap pendant %2$ds</string>
+    <string name="comet_reward_coins">💰 Pluie de pièces ! +%1$s</string>
+    <string name="comet_reward_gems">💎 Gemmes stellaires ! +%1$d</string>
+
+    <!-- Paliers de générateurs -->
+    <string name="milestone_label">Palier %1$d/%2$d → ×2</string>
 </resources>
