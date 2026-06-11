@@ -93,6 +93,13 @@ public class GameState {
     // === MONETIZATION ===
     private MonetizationManager monetization = new MonetizationManager();
 
+    // === GOLDEN COMET (boosts temporales) ===
+    private double goldenProductionBoost = 1.0;
+    private long goldenProductionBoostEnd = 0;
+    private double goldenTapBoost = 1.0;
+    private long goldenTapBoostEnd = 0;
+    private int totalGoldenCometsTapped = 0;
+
     // === CONFIGURACIÓN ===
     private static final double PRESTIGE_REQUIREMENT = 1_000_000;
     private static final double PRESTIGE_MULTIPLIER = 0.05;
@@ -367,6 +374,9 @@ public class GameState {
         // Aplicar prestigio
         tapValue *= (1 + prestigeLevel * PRESTIGE_MULTIPLIER);
 
+        // Aplicar Tap Rush del Cometa Dorado
+        tapValue *= getGoldenTapBoostNow();
+
         // Aplicar bonus de mascota activa
         if (activePet != null && activePet.isOwned()) {
             if (activePet.getType().bonusType == Pet.BonusType.TAP_POWER) {
@@ -507,7 +517,52 @@ public class GameState {
         // Monetization multiplier (VIP + boosts + whale)
         total *= monetization.getTotalProductionMultiplier();
 
+        // Golden Comet frenzy
+        total *= getGoldenProductionBoostNow();
+
         return total;
+    }
+
+    // ==================== GOLDEN COMET ====================
+
+    public void activateGoldenProductionBoost(double multiplier, long durationMs) {
+        goldenProductionBoost = multiplier;
+        goldenProductionBoostEnd = System.currentTimeMillis() + durationMs;
+    }
+
+    public void activateGoldenTapBoost(double multiplier, long durationMs) {
+        goldenTapBoost = multiplier;
+        goldenTapBoostEnd = System.currentTimeMillis() + durationMs;
+    }
+
+    /** Multiplicador de producción del cometa (1.0 si no hay boost activo) */
+    public double getGoldenProductionBoostNow() {
+        return System.currentTimeMillis() < goldenProductionBoostEnd ? goldenProductionBoost : 1.0;
+    }
+
+    /** Multiplicador de tap del cometa (1.0 si no hay boost activo) */
+    public double getGoldenTapBoostNow() {
+        return System.currentTimeMillis() < goldenTapBoostEnd ? goldenTapBoost : 1.0;
+    }
+
+    public long getGoldenProductionBoostRemainingMs() {
+        return Math.max(0, goldenProductionBoostEnd - System.currentTimeMillis());
+    }
+
+    public long getGoldenTapBoostRemainingMs() {
+        return Math.max(0, goldenTapBoostEnd - System.currentTimeMillis());
+    }
+
+    public int getTotalGoldenCometsTapped() { return totalGoldenCometsTapped; }
+    public void setTotalGoldenCometsTapped(int value) { totalGoldenCometsTapped = value; }
+    public void incrementGoldenCometsTapped() { totalGoldenCometsTapped++; }
+
+    /** Añade monedas de recompensa (cometa, regalos) contabilizándolas en las estadísticas */
+    public void addBonusCoins(double amount) {
+        if (amount <= 0) return;
+        coins += amount;
+        totalCoinsEarned += amount;
+        globalTotalCoinsEarned += amount;
     }
 
     // ==================== SISTEMA DE MUNDOS ====================
@@ -789,6 +844,30 @@ public class GameState {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Compra hasta {@code amount} unidades de un generador.
+     * @return número de unidades realmente compradas
+     */
+    public int buyGenerators(int index, int amount) {
+        if (index < 0 || index >= generators.size() || amount <= 0) return 0;
+        Generator gen = generators.get(index);
+        if (!gen.isUnlocked()) return 0;
+        int bought = 0;
+        while (bought < amount) {
+            double cost = gen.getCurrentCost();
+            if (coins < cost) break;
+            coins -= cost;
+            gen.setOwned(gen.getOwned() + 1);
+            totalGeneratorsBought++;
+            globalTotalGeneratorsBought++;
+            updateMissionProgress(DailyMission.MissionType.BUY_GENERATORS, 1);
+            updateMissionProgress(DailyMission.MissionType.SPEND_COINS, cost);
+            bought++;
+        }
+        if (bought > 0) checkAchievements();
+        return bought;
     }
 
     public boolean buyUpgrade(int index) {

@@ -72,12 +72,52 @@ public class Generator implements Serializable {
     }
 
     /**
+     * Máximo de unidades comprables con las monedas disponibles
+     */
+    public int getMaxAffordable(double availableCoins) {
+        int amount = 0;
+        double total = 0;
+        while (amount < 1000) {
+            double next = baseCost * Math.pow(costMultiplier, owned + amount);
+            if (total + next > availableCoins) break;
+            total += next;
+            amount++;
+        }
+        return amount;
+    }
+
+    /**
      * Producción total por segundo de este generador
      */
     public double getProductionPerSecond() {
         return baseProduction * owned * productionMultiplier * level
                 * getWorkerBonus() * getSizeBonus() * getLocationBonus()
-                * getBranchBonus();
+                * getBranchBonus() * getMilestoneBonus();
+    }
+
+    // === MILESTONES DE PRODUCCIÓN ===
+    // Cada hito alcanzado duplica la producción del generador
+
+    private static final int[] MILESTONES = {10, 25, 50, 100, 200, 300, 400, 500, 750, 1000};
+
+    public int getMilestonesReached() {
+        int count = 0;
+        for (int m : MILESTONES) {
+            if (owned >= m) count++;
+        }
+        return count;
+    }
+
+    public double getMilestoneBonus() {
+        return Math.pow(2, getMilestonesReached());
+    }
+
+    /** Próximo hito pendiente, o -1 si están todos completados */
+    public int getNextMilestone() {
+        for (int m : MILESTONES) {
+            if (owned < m) return m;
+        }
+        return -1;
     }
 
     // === BUSINESS PROPERTY BONUSES ===

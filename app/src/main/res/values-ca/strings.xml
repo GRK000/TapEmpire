@@ -628,4 +628,14 @@
     <string name="pack_whale_ultra_desc">5.000 gemmes + x15 boost durant 12 hores</string>
     <string name="pack_whale_omega_title">Pack Omega</string>
     <string name="pack_whale_omega_desc">15.000 gemmes — La col·lecció definitiva</string>
+
+    <!-- Cometa Daurat -->
+    <string name="comet_caught_title">COMETA DAURAT!</string>
+    <string name="comet_reward_frenzy">🔥 Frenesí! Producció ×%1$d durant %2$ds</string>
+    <string name="comet_reward_tap">⚡ Tap Rush! ×%1$d per tap durant %2$ds</string>
+    <string name="comet_reward_coins">💰 Pluja de monedes! +%1$s</string>
+    <string name="comet_reward_gems">💎 Gemmes estel·lars! +%1$d</string>
+
+    <!-- Fites de generadors -->
+    <string name="milestone_label">Fita %1$d/%2$d → ×2</string>
 </resources>

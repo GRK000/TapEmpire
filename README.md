@@ -56,8 +56,15 @@ Actualmente el juego incluye:
 ### Economía y progresión
 - sistema de **tap con combos y críticos**
 - **negocios generadores** con upgrades y escalado
+- **hitos de generadores**: cada hito (10, 25, 50, 100…) duplica la producción del negocio
+- **compra masiva** (×1 / ×10 / ×MAX) con cálculo de coste acumulado
 - **prestigio** con multiplicadores permanentes
 - ganancias **offline**
+
+### Eventos en vivo
+- **Cometa Dorado**: aparece aleatoriamente en pantalla; cazarlo otorga Frenesí (×7 producción), Tap Rush (×10 por tap), lluvia de monedas o gemas
+- feedback **háptico** en taps, críticos, compras y cometas
+- **autoguardado** cada 30 segundos (además de onPause)
 
 ### Contenido
 - múltiples **mundos desbloqueables**

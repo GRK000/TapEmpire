@@ -98,7 +98,8 @@ private fun GlobalStatsTab(uiState: GameUiState) {
         "🌍 Worlds unlocked" to "${uiState.worlds.count { it.isUnlocked }}/${uiState.worlds.size}",
         "🏆 Achievements" to "${uiState.achievements.count { it.isUnlocked }}/${uiState.achievements.size}",
         "🐾 Pets owned" to "${uiState.pets.count { it.isOwned }}/${uiState.pets.size}",
-        "🎮 Minigames played" to "${uiState.totalMiniGamesPlayed}"
+        "🎮 Minigames played" to "${uiState.totalMiniGamesPlayed}",
+        "☄️ Golden comets caught" to "${uiState.totalGoldenComets}"
     )
 
     stats.forEach { (label, value) ->

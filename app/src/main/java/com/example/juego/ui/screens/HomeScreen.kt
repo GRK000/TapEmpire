@@ -30,6 +30,9 @@ fun HomeScreen(
     modifier: Modifier = Modifier
 ) {
     val tapFeedbacks = remember { mutableStateListOf<TapFloater>() }
+    val context = LocalContext.current
+    val goldenComet by viewModel.goldenComet.collectAsState()
+    val cometReward by viewModel.cometReward.collectAsState()
 
     val comboEffect = remember(uiState.comboCount) {
         when {
@@ -117,6 +120,19 @@ fun HomeScreen(
                         color = CoinGold
                     )
                 }
+                // Boosts del Cometa Dorado
+                BoostChip(
+                    emoji = "🔥",
+                    multiplier = uiState.goldenBoostMultiplier,
+                    remainingMs = uiState.goldenBoostRemainingMs,
+                    color = CoinGold
+                )
+                BoostChip(
+                    emoji = "⚡",
+                    multiplier = uiState.goldenTapBoostMultiplier,
+                    remainingMs = uiState.goldenTapBoostRemainingMs,
+                    color = NeonCyan
+                )
             }
 
             Spacer(modifier = Modifier.height(8.dp))
@@ -154,6 +170,7 @@ fun HomeScreen(
                     comboEffect = comboEffect,
                     onTap = {
                         val feedback = viewModel.onTap()
+                        if (feedback.isCritical) Haptics.heavy(context) else Haptics.light(context)
                         tapFeedbacks.add(
                             TapFloater(
                                 id = System.nanoTime(),
@@ -180,6 +197,22 @@ fun HomeScreen(
 
             Spacer(modifier = Modifier.height(8.dp))
         }
+
+        // Golden Comet: cázalo antes de que desaparezca
+        GoldenCometOverlay(
+            comet = goldenComet,
+            onTap = {
+                Haptics.heavy(context)
+                viewModel.tapGoldenComet()
+            }
+        )
+
+        // Banner de recompensa del cometa
+        CometRewardBanner(
+            reward = cometReward,
+            onDismiss = { viewModel.dismissCometReward() },
+            modifier = Modifier.align(Alignment.TopCenter)
+        )
     }
 }
 

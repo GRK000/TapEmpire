@@ -2,6 +2,7 @@ package com.example.juego.ui.screens
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -11,11 +12,13 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -26,6 +29,7 @@ import com.example.juego.Generator
 import com.example.juego.R
 import com.example.juego.ui.components.AnimatedBackground
 import com.example.juego.ui.components.GlassCard
+import com.example.juego.ui.components.Haptics
 import com.example.juego.ui.components.RepeatingButton
 import com.example.juego.ui.theme.*
 import com.example.juego.ui.viewmodel.GameUiState
@@ -86,6 +90,29 @@ fun GeneratorsScreen(
                 }
             }
 
+            // Selector de cantidad de compra
+            var buyAmount by rememberSaveable { mutableStateOf(1) }
+            val maxLabel = stringResource(R.string.label_max)
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
+            ) {
+                listOf(1 to "×1", 10 to "×10", GameViewModel.BUY_MAX to "×$maxLabel").forEach { (amount, label) ->
+                    val selected = buyAmount == amount
+                    Text(
+                        text = label,
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Black,
+                        color = if (selected) Color.Black else TextMuted,
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(8.dp))
+                            .background(if (selected) NeonCyan else GlassWhite)
+                            .clickable { buyAmount = amount }
+                            .padding(horizontal = 14.dp, vertical = 6.dp)
+                    )
+                }
+            }
+
             LazyColumn(
                 contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                 verticalArrangement = Arrangement.spacedBy(10.dp)
@@ -99,7 +126,8 @@ fun GeneratorsScreen(
                     GeneratorCard(
                         generator = gen,
                         coins = uiState.coins,
-                        onBuy = { viewModel.buyGenerator(index) }
+                        buyAmount = buyAmount,
+                        onBuy = { viewModel.buyGenerator(index, buyAmount) }
                     )
                 }
             }
@@ -111,10 +139,18 @@ fun GeneratorsScreen(
 fun GeneratorCard(
     generator: Generator,
     coins: Double,
+    buyAmount: Int = 1,
     onBuy: () -> Unit
 ) {
     val isUnlocked = generator.isUnlocked
-    val canAfford = coins >= generator.currentCost
+    // Unidades y coste según la cantidad seleccionada (×1, ×10 o MAX)
+    val unitsToBuy = if (buyAmount == GameViewModel.BUY_MAX) {
+        generator.getMaxAffordable(coins)
+    } else {
+        buyAmount
+    }
+    val displayCost = if (unitsToBuy > 0) generator.getCostForAmount(unitsToBuy) else generator.currentCost
+    val canAfford = unitsToBuy > 0 && coins >= displayCost
     val accentColor = if (isUnlocked && canAfford) NeonGreen else if (isUnlocked) NeonPurple else Disabled
 
     GlassCard(
@@ -171,12 +207,48 @@ fun GeneratorCard(
                 }
 
                 if (isUnlocked) {
-                    Text(
-                        text = stringResource(R.string.label_per_sec, GameState.fmt(generator.productionPerSecond)),
-                        fontSize = 12.sp,
-                        fontFamily = FontFamily.Monospace,
-                        color = NeonCyan
-                    )
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            text = stringResource(R.string.label_per_sec, GameState.fmt(generator.productionPerSecond)),
+                            fontSize = 12.sp,
+                            fontFamily = FontFamily.Monospace,
+                            color = NeonCyan
+                        )
+                        if (generator.milestoneBonus > 1) {
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                text = "⚡×${generator.milestoneBonus.toInt()}",
+                                fontSize = 11.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = CoinGold,
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(4.dp))
+                                    .background(CoinGold.copy(alpha = 0.15f))
+                                    .padding(horizontal = 4.dp, vertical = 1.dp)
+                            )
+                        }
+                    }
+                    // Progreso hacia el próximo hito (duplica la producción)
+                    val nextMilestone = generator.nextMilestone
+                    if (generator.owned > 0 && nextMilestone > 0) {
+                        Spacer(modifier = Modifier.height(3.dp))
+                        Column {
+                            Text(
+                                text = stringResource(R.string.milestone_label, generator.owned, nextMilestone),
+                                fontSize = 10.sp,
+                                color = TextMuted
+                            )
+                            LinearProgressIndicator(
+                                progress = { (generator.owned.toFloat() / nextMilestone).coerceIn(0f, 1f) },
+                                color = CoinGold,
+                                trackColor = GlassWhite,
+                                modifier = Modifier
+                                    .fillMaxWidth(0.7f)
+                                    .height(4.dp)
+                                    .clip(RoundedCornerShape(2.dp))
+                            )
+                        }
+                    }
                 } else {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
@@ -203,8 +275,12 @@ fun GeneratorCard(
             }
 
             if (isUnlocked) {
+                val context = LocalContext.current
                 RepeatingButton(
-                    onClick = onBuy,
+                    onClick = {
+                        Haptics.medium(context)
+                        onBuy()
+                    },
                     enabled = canAfford,
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if (canAfford) NeonGreen else Disabled,
@@ -215,11 +291,20 @@ fun GeneratorCard(
                 ) {
                     Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(16.dp))
                     Spacer(modifier = Modifier.width(2.dp))
-                    Text(
-                        text = GameState.fmt(generator.currentCost),
-                        fontSize = 12.sp,
-                        fontWeight = FontWeight.Bold
-                    )
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        if (unitsToBuy > 1) {
+                            Text(
+                                text = "×$unitsToBuy",
+                                fontSize = 9.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                        Text(
+                            text = GameState.fmt(displayCost),
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
                 }
             }
         }

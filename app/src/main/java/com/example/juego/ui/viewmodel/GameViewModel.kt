@@ -24,6 +24,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.json.JSONArray
 import org.json.JSONObject
+import kotlin.random.Random
 
 class GameViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -81,19 +82,85 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
 
     fun dismissMiniGameReward() { _lastMiniGameReward.value = null }
 
+    // === GOLDEN COMET ===
+    private val _goldenComet = MutableStateFlow<GoldenComet?>(null)
+    val goldenComet: StateFlow<GoldenComet?> = _goldenComet.asStateFlow()
+
+    private val _cometReward = MutableStateFlow<CometReward?>(null)
+    val cometReward: StateFlow<CometReward?> = _cometReward.asStateFlow()
+
+    fun dismissCometReward() { _cometReward.value = null }
+
     init {
         // Load shown tutorials from prefs
         prefs.getStringSet("shown_tutorials", emptySet())?.let { shownTutorials.addAll(it) }
         loadState()
         checkOfflineEarnings()
         startGameLoop()
+        startGoldenCometSpawner()
         // Welcome tutorial on first launch
         showTutorialOnce("welcome")
     }
 
+    private fun startGoldenCometSpawner() {
+        viewModelScope.launch {
+            // Primer cometa pronto para enseñar la mecánica
+            delay(45_000L)
+            while (true) {
+                _goldenComet.value = GoldenComet(
+                    id = System.nanoTime(),
+                    xFraction = 0.12f + Random.nextFloat() * 0.76f,
+                    yFraction = 0.12f + Random.nextFloat() * 0.45f
+                )
+                delay(COMET_VISIBLE_MS)
+                _goldenComet.value = null
+                delay(Random.nextLong(90_000L, 240_000L))
+            }
+        }
+    }
+
+    /** El jugador caza el cometa: recompensa aleatoria */
+    fun tapGoldenComet() {
+        if (_goldenComet.value == null) return
+        _goldenComet.value = null
+        state.incrementGoldenCometsTapped()
+
+        val roll = Random.nextDouble()
+        val reward = when {
+            roll < 0.40 -> {
+                state.activateGoldenProductionBoost(7.0, 30_000L)
+                CometReward(CometRewardType.FRENZY, 7.0, 30)
+            }
+            roll < 0.70 -> {
+                state.activateGoldenTapBoost(10.0, 30_000L)
+                CometReward(CometRewardType.TAP_RUSH, 10.0, 30)
+            }
+            roll < 0.92 -> {
+                val amount = maxOf(state.productionPerSecond * 90, state.perTap * 150)
+                state.addBonusCoins(amount)
+                CometReward(CometRewardType.COIN_BURST, amount, 0)
+            }
+            else -> {
+                val gems = Random.nextInt(5, 16)
+                state.monetization.gems = state.monetization.gems + gems
+                CometReward(CometRewardType.GEM_BONUS, gems.toDouble(), 0)
+            }
+        }
+        _cometReward.value = reward
+        refreshUiState()
+        saveState()
+    }
+
     private fun startGameLoop() {
         viewModelScope.launch {
+            var lastAutoSave = System.currentTimeMillis()
             while (true) {
+                // Autosave: protege el progreso si Android mata el proceso
+                val now = System.currentTimeMillis()
+                if (now - lastAutoSave >= AUTOSAVE_INTERVAL_MS) {
+                    lastAutoSave = now
+                    saveState()
+                }
                 state.updateProduction(System.currentTimeMillis())
                 // Track production-based missions
                 state.updateMissionProgress(DailyMission.MissionType.REACH_PRODUCTION, state.productionPerSecond)
@@ -157,13 +224,21 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
         _tapEvent.value = null
     }
 
-    fun buyGenerator(index: Int): Boolean {
-        val success = state.buyGenerator(index)
-        if (success) {
+    /**
+     * Compra generadores. [amount] = 1, 10, etc.; [BUY_MAX] compra el máximo posible.
+     */
+    fun buyGenerator(index: Int, amount: Int = 1): Boolean {
+        val toBuy = if (amount == BUY_MAX) {
+            state.generators.getOrNull(index)?.getMaxAffordable(state.coins) ?: 0
+        } else {
+            amount
+        }
+        val bought = if (toBuy > 0) state.buyGenerators(index, toBuy) else 0
+        if (bought > 0) {
             if (state.generators.any { it.owned > 0 }) showTutorialOnce("first_generator")
             refreshUiState()
         }
-        return success
+        return bought > 0
     }
 
     fun buyUpgrade(index: Int): Boolean {
@@ -587,6 +662,11 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
             activeGameEvents = state.activeGameEvents.filter { it.isActive }.toList(),
             eventHistory = state.eventHistory.toList(),
             maxComboReached = state.maxComboReached,
+            goldenBoostMultiplier = state.goldenProductionBoostNow,
+            goldenBoostRemainingMs = state.goldenProductionBoostRemainingMs,
+            goldenTapBoostMultiplier = state.goldenTapBoostNow,
+            goldenTapBoostRemainingMs = state.goldenTapBoostRemainingMs,
+            totalGoldenComets = state.totalGoldenCometsTapped,
             monetizationState = run {
                 val m = state.monetization
                 com.example.juego.ui.screens.MonetizationUiState(
@@ -801,6 +881,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
                 put("totalRareMutations", state.totalRareMutations)
                 put("totalStrikesResolved", state.totalStrikesResolved)
                 put("maxComboReached", state.maxComboReached)
+                put("totalGoldenCometsTapped", state.totalGoldenCometsTapped)
 
                 // Events
                 put("galacticStability", state.galacticStability)
@@ -1085,6 +1166,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
             state.totalRareMutations = json.optInt("totalRareMutations", 0)
             state.totalStrikesResolved = json.optInt("totalStrikesResolved", 0)
             state.maxComboReached = json.optInt("maxComboReached", 0)
+            state.totalGoldenCometsTapped = json.optInt("totalGoldenCometsTapped", 0)
 
             // Load events
             state.galacticStability = json.optDouble("galacticStability", 50.0)
@@ -1239,6 +1321,9 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
         private const val PREFS = "tap_empire_prefs"
         private const val K_GAME_DATA = "game_data"
         private const val K_LAST_SAVE = "last_save_time"
+        private const val AUTOSAVE_INTERVAL_MS = 30_000L
+        private const val COMET_VISIBLE_MS = 10_000L
+        const val BUY_MAX = -1
     }
 }
 
@@ -1294,8 +1379,30 @@ data class GameUiState(
     val activeGameEvents: List<GameEvent> = emptyList(),
     val eventHistory: List<GameEvent> = emptyList(),
     val maxComboReached: Int = 0,
+    // Golden Comet boosts
+    val goldenBoostMultiplier: Double = 1.0,
+    val goldenBoostRemainingMs: Long = 0,
+    val goldenTapBoostMultiplier: Double = 1.0,
+    val goldenTapBoostRemainingMs: Long = 0,
+    val totalGoldenComets: Int = 0,
     // Monetization
     val monetizationState: com.example.juego.ui.screens.MonetizationUiState = com.example.juego.ui.screens.MonetizationUiState()
+)
+
+// === GOLDEN COMET ===
+
+data class GoldenComet(
+    val id: Long,
+    val xFraction: Float,
+    val yFraction: Float
+)
+
+enum class CometRewardType { FRENZY, TAP_RUSH, COIN_BURST, GEM_BONUS }
+
+data class CometReward(
+    val type: CometRewardType,
+    val amount: Double,
+    val durationSec: Int
 )
 
 data class MissionSnapshot(
