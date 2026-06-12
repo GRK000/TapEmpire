@@ -93,6 +93,41 @@ public class GameState {
     // === MONETIZATION ===
     private MonetizationManager monetization = new MonetizationManager();
 
+    // === EL CIERRE DEL PACTO (final de juego en Nexus Prime) ===
+    // Para ganar la apuesta, el valor del imperio (monedas ganadas en esta era)
+    // debe superar la valoración de VexCorp.
+    public static final double VEX_VALUATION = 1_000_000_000_000_000.0; // 1 Qa
+    private boolean pactWon = false;
+
+    /** Nexus Prime (mundo 10) desbloqueado: la fase final está activa */
+    public boolean isNexusUnlocked() {
+        return worlds.size() >= 10 && worlds.get(9).isUnlocked();
+    }
+
+    /** Progreso del duelo final (0.0 — 1.0) */
+    public double getPactProgress() {
+        return Math.min(1.0, totalCoinsEarned / VEX_VALUATION);
+    }
+
+    public boolean canClosePact() {
+        return !pactWon && isNexusUnlocked() && totalCoinsEarned >= VEX_VALUATION;
+    }
+
+    /** Gana la apuesta: Sello del Fundador permanente (x2 a todo) */
+    public boolean closePact() {
+        if (!canClosePact()) return false;
+        pactWon = true;
+        return true;
+    }
+
+    public boolean isPactWon() { return pactWon; }
+    public void setPactWon(boolean won) { pactWon = won; }
+
+    /** Sello del Fundador: x2 permanente tras ganar el Pacto */
+    public double getPactSealMultiplier() {
+        return pactWon ? 2.0 : 1.0;
+    }
+
     // === EL LEGADO DE AURORA (mejoras permanentes compradas con Renombre) ===
     private java.util.Map<String, Integer> legacyLevels = new java.util.HashMap<>();
     public static final String LEGACY_ECHO = "echo";       // +25% tap por nivel
@@ -332,8 +367,6 @@ public class GameState {
     private void initializeMiniGames() {
         miniGames = new ArrayList<>();
         miniGames.add(new MiniGame(MiniGame.MiniGameType.FORTUNE_WHEEL, 3, 1000));
-        miniGames.add(new MiniGame(MiniGame.MiniGameType.TAP_FRENZY, 5, 500));
-        miniGames.add(new MiniGame(MiniGame.MiniGameType.LUCKY_BOX, 3, 800));
         miniGames.add(new MiniGame(MiniGame.MiniGameType.COIN_RAIN, 4, 600));
         miniGames.add(new MiniGame(MiniGame.MiniGameType.MEMORY_MATCH, 3, 1200));
         miniGames.add(new MiniGame(MiniGame.MiniGameType.BOSS_BATTLE, 2, 2000));
@@ -388,6 +421,9 @@ public class GameState {
 
         // Aplicar Tap Rush del Cometa Dorado
         tapValue *= getGoldenTapBoostNow();
+
+        // Sello del Fundador (Pacto ganado)
+        tapValue *= getPactSealMultiplier();
 
         // Aplicar bonus de mascota activa
         if (activePet != null && activePet.isOwned()) {
@@ -534,6 +570,9 @@ public class GameState {
 
         // Legado de Aurora
         total *= getLegacyProductionMultiplier();
+
+        // Sello del Fundador (Pacto ganado)
+        total *= getPactSealMultiplier();
 
         return total;
     }

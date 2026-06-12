@@ -116,6 +116,26 @@ val storyChapters: List<StoryChapter> = listOf(
             StoryPage(Speaker.LIA, R.string.story_ch11_p2),
             StoryPage(Speaker.LIA, R.string.story_ch11_p3)
         )
+    ),
+    StoryChapter(
+        key = "nexus_unlocked", number = 12, titleRes = R.string.story_ch12_title,
+        pages = listOf(
+            StoryPage(Speaker.NARRATOR, R.string.story_ch12_p1),
+            StoryPage(Speaker.VEX, R.string.story_ch12_p2),
+            StoryPage(Speaker.LIA, R.string.story_ch12_p3),
+            StoryPage(Speaker.LIA, R.string.story_ch12_p4)
+        )
+    ),
+    StoryChapter(
+        key = "pact_won", number = 13, titleRes = R.string.story_ch13_title,
+        pages = listOf(
+            StoryPage(Speaker.NARRATOR, R.string.story_ch13_p1),
+            StoryPage(Speaker.VEX, R.string.story_ch13_p2),
+            StoryPage(Speaker.LIA, R.string.story_ch13_p3),
+            StoryPage(Speaker.AURORA, R.string.story_ch13_p4),
+            StoryPage(Speaker.VEX, R.string.story_ch13_p5),
+            StoryPage(Speaker.NARRATOR, R.string.story_ch13_p6)
+        )
     )
 )
 

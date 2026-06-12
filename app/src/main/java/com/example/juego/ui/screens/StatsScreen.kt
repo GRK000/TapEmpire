@@ -8,11 +8,13 @@ import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.juego.GameState
+import com.example.juego.R
 import com.example.juego.ui.components.AnimatedBackground
 import com.example.juego.ui.components.GlassCard
 import com.example.juego.ui.theme.*
@@ -24,7 +26,10 @@ fun StatsScreen(
     modifier: Modifier = Modifier
 ) {
     var selectedTab by remember { mutableIntStateOf(0) }
-    val tabTitles = listOf("🌍 Global", "⭐ Prestige")
+    val tabTitles = listOf(
+        "🌍 ${stringResource(R.string.stats_tab_global)}",
+        "⭐ ${stringResource(R.string.stats_tab_prestige)}"
+    )
 
     Box(modifier = modifier.fillMaxSize()) {
         AnimatedBackground(worldTheme = uiState.currentWorld?.theme)
@@ -36,7 +41,7 @@ fun StatsScreen(
                 .padding(horizontal = 24.dp)
         ) {
             Text(
-                text = "📊 Statistics",
+                text = "📊 ${stringResource(R.string.stats_title)}",
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Black,
                 color = TextPrimary,
@@ -89,17 +94,17 @@ fun StatsScreen(
 @Composable
 private fun GlobalStatsTab(uiState: GameUiState) {
     val stats = listOf(
-        "💰 Total earned (all time)" to GameState.fmt(uiState.globalTotalCoinsEarned),
-        "👆 Total taps (all time)" to "${uiState.globalTotalTaps}",
-        "💥 Critical hits (all time)" to "${uiState.globalTotalCriticalHits}",
-        "🏭 Generators bought (all time)" to "${uiState.globalTotalGeneratorsBought}",
-        "⭐ Total prestiges" to "${uiState.totalPrestigesPerformed}",
-        "⭐ Prestige level" to "${uiState.prestigeLevel}",
-        "🌍 Worlds unlocked" to "${uiState.worlds.count { it.isUnlocked }}/${uiState.worlds.size}",
-        "🏆 Achievements" to "${uiState.achievements.count { it.isUnlocked }}/${uiState.achievements.size}",
-        "🐾 Pets owned" to "${uiState.pets.count { it.isOwned }}/${uiState.pets.size}",
-        "🎮 Minigames played" to "${uiState.totalMiniGamesPlayed}",
-        "☄️ Golden comets caught" to "${uiState.totalGoldenComets}"
+        "💰 ${stringResource(R.string.stats_total_earned_all)}" to GameState.fmt(uiState.globalTotalCoinsEarned),
+        "👆 ${stringResource(R.string.stats_total_taps_all)}" to "${uiState.globalTotalTaps}",
+        "💥 ${stringResource(R.string.stats_crits_all)}" to "${uiState.globalTotalCriticalHits}",
+        "🏭 ${stringResource(R.string.stats_generators_all)}" to "${uiState.globalTotalGeneratorsBought}",
+        "⭐ ${stringResource(R.string.stats_total_prestiges)}" to "${uiState.totalPrestigesPerformed}",
+        "⭐ ${stringResource(R.string.stats_prestige_level)}" to "${uiState.prestigeLevel}",
+        "🌍 ${stringResource(R.string.stats_worlds_unlocked)}" to "${uiState.worlds.count { it.isUnlocked }}/${uiState.worlds.size}",
+        "🏆 ${stringResource(R.string.stats_achievements)}" to "${uiState.achievements.count { it.isUnlocked }}/${uiState.achievements.size}",
+        "🐾 ${stringResource(R.string.stats_pets_owned)}" to "${uiState.pets.count { it.isOwned }}/${uiState.pets.size}",
+        "🎮 ${stringResource(R.string.stats_minigames_played)}" to "${uiState.totalMiniGamesPlayed}",
+        "☄️ ${stringResource(R.string.stats_comets_caught)}" to "${uiState.totalGoldenComets}"
     )
 
     stats.forEach { (label, value) ->
@@ -110,17 +115,17 @@ private fun GlobalStatsTab(uiState: GameUiState) {
 @Composable
 private fun PrestigeStatsTab(uiState: GameUiState) {
     val stats = listOf(
-        "💰 Coins earned (this prestige)" to GameState.fmt(uiState.totalCoinsEarned),
-        "💰 Current coins" to GameState.fmt(uiState.coins),
-        "👆 Taps (this prestige)" to "${uiState.totalTaps}",
-        "👆 Per tap" to GameState.fmt(uiState.perTap),
-        "⚙️ Per second" to GameState.fmt(uiState.perSecond),
-        "🏭 Generators bought" to "${uiState.totalGeneratorsBought}",
-        "🌍 Current world" to (uiState.currentWorld?.theme?.let { "${it.emoji} ${it.name}" } ?: "-"),
-        "⭐ Prestige multiplier" to "x${String.format("%.2f", uiState.prestigeMultiplier)}",
-        "🎯 Critical chance" to "${(uiState.criticalChance * 100).toInt()}%",
-        "💥 Critical multiplier" to "x${String.format("%.1f", uiState.criticalMultiplier)}",
-        "🐾 Active pet" to (uiState.activePet?.type?.name ?: "None")
+        "💰 ${stringResource(R.string.stats_coins_this_run)}" to GameState.fmt(uiState.totalCoinsEarned),
+        "💰 ${stringResource(R.string.stats_current_coins)}" to GameState.fmt(uiState.coins),
+        "👆 ${stringResource(R.string.stats_taps_this_run)}" to "${uiState.totalTaps}",
+        "👆 ${stringResource(R.string.stats_per_tap)}" to GameState.fmt(uiState.perTap),
+        "⚙️ ${stringResource(R.string.stats_per_second)}" to GameState.fmt(uiState.perSecond),
+        "🏭 ${stringResource(R.string.stats_generators_bought)}" to "${uiState.totalGeneratorsBought}",
+        "🌍 ${stringResource(R.string.stats_current_world)}" to (uiState.currentWorld?.theme?.let { "${it.emoji} ${it.name}" } ?: "-"),
+        "⭐ ${stringResource(R.string.stats_prestige_multiplier)}" to "x${String.format("%.2f", uiState.prestigeMultiplier)}",
+        "🎯 ${stringResource(R.string.stats_crit_chance)}" to "${(uiState.criticalChance * 100).toInt()}%",
+        "💥 ${stringResource(R.string.stats_crit_multiplier)}" to "x${String.format("%.1f", uiState.criticalMultiplier)}",
+        "🐾 ${stringResource(R.string.stats_active_pet)}" to (uiState.activePet?.type?.name ?: stringResource(R.string.stats_none))
     )
 
     stats.forEach { (label, value) ->

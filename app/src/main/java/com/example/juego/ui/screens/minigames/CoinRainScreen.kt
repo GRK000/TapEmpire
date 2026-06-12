@@ -51,6 +51,10 @@ fun CoinRainScreen(
     var canvasW by remember { mutableFloatStateOf(0f) }
     var canvasH by remember { mutableFloatStateOf(0f) }
     var sparkles by remember { mutableStateOf(listOf<Offset>()) }
+    // Modo FIEBRE: 8 aciertos seguidos sin fallo ni bomba → 5s con todo ×2
+    var streak by remember { mutableIntStateOf(0) }
+    var feverEndTime by remember { mutableLongStateOf(0L) }
+    val feverActive = System.currentTimeMillis() < feverEndTime
 
     LaunchedEffect(Unit) {
         for (i in 3 downTo 1) { countdown = i; delay(800) }
@@ -62,11 +66,12 @@ fun CoinRainScreen(
             if (timeLeft <= 0f) { phase = 2; break }
 
             val diff = (elapsed / 15000f).coerceIn(0f, 1f)
-            // Spawn
-            if (Random.nextFloat() < 0.06f + diff * 0.08f && canvasW > 0) {
+            val fever = System.currentTimeMillis() < feverEndTime
+            // Spawn (en fiebre llueve más y más oro)
+            if (Random.nextFloat() < (0.06f + diff * 0.08f) * (if (fever) 1.6f else 1f) && canvasW > 0) {
                 idCounter++
-                val isGold = Random.nextFloat() < 0.12f
-                val isBomb = !isGold && Random.nextFloat() < 0.08f
+                val isGold = Random.nextFloat() < (if (fever) 0.35f else 0.12f)
+                val isBomb = !isGold && !fever && Random.nextFloat() < 0.08f
                 coins = coins + RainCoin(
                     id = idCounter,
                     x = Random.nextFloat() * (canvasW - 40f) + 20f,
@@ -86,7 +91,10 @@ fun CoinRainScreen(
             coins = coins.filter { it.y < canvasH + 30 || it.caught }.filter { it.alpha > 0f }
             val after = coins.count { !it.caught }
             val lost = before - after
-            if (lost > 0) missed += lost
+            if (lost > 0) {
+                missed += lost
+                streak = 0 // una moneda perdida rompe la racha
+            }
 
             sparkles = sparkles.filter { false } // clear old ones
 
@@ -122,8 +130,19 @@ fun CoinRainScreen(
                                 }
                             if (hit != null) {
                                 coins = coins.map { if (it.id == hit.id) it.copy(caught = true) else it }
-                                score = (score + hit.value).coerceAtLeast(0)
-                                if (hit.value > 0) caught++
+                                val fever = System.currentTimeMillis() < feverEndTime
+                                val value = if (fever && hit.value > 0) hit.value * 2 else hit.value
+                                score = (score + value).coerceAtLeast(0)
+                                if (hit.value > 0) {
+                                    caught++
+                                    streak++
+                                    if (streak >= 8 && !fever) {
+                                        feverEndTime = System.currentTimeMillis() + 5000L
+                                        streak = 0
+                                    }
+                                } else {
+                                    streak = 0 // bomba: racha rota
+                                }
                             }
                         }
                     }
@@ -158,6 +177,12 @@ fun CoinRainScreen(
                 Row(Modifier.fillMaxWidth().systemBarsPadding().padding(16.dp),
                     horizontalArrangement = Arrangement.SpaceBetween) {
                     Text("💰 $score", fontSize = 24.sp, fontWeight = FontWeight.Black, color = CoinGold)
+                    if (feverActive) {
+                        Text(stringResource(R.string.rain_fever), fontSize = 18.sp,
+                            fontWeight = FontWeight.Black, color = CoinGold)
+                    } else if (streak >= 3) {
+                        Text("🔥 $streak/8", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = NeonOrange)
+                    }
                     Text("⏱️ ${timeLeft.toInt()}s", fontSize = 18.sp, fontWeight = FontWeight.Bold,
                         color = if (timeLeft < 4f) NeonRed else TextPrimary)
                 }

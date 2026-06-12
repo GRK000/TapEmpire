@@ -169,32 +169,6 @@
     <string name="achievements_title">🏆 Assoliments</string>
     <string name="achievements_completed">%1$d/%2$d completats</string>
 
-    <!-- Stats screen -->
-    <string name="stats_title">📊 Estadístiques</string>
-    <string name="stats_total_earned">Total guanyat</string>
-    <string name="stats_total_taps">Taps totals</string>
-    <string name="stats_per_tap">Per tap</string>
-    <string name="stats_per_second">Per segon</string>
-    <string name="stats_generators_bought">Generadors comprats</string>
-    <string name="stats_prestige_level">Nivell de prestigi</string>
-    <string name="stats_prestige_points">Punts de prestigi</string>
-    <string name="stats_worlds_unlocked">Mons desbloquejats</string>
-    <string name="stats_minigames_played">Minijocs jugats</string>
-    <string name="stats_events_completed">Esdeveniments completats</string>
-    <string name="stats_current_world">Món actual</string>
-    <string name="stats_active_pet">Mascota activa</string>
-    <string name="stats_none">Cap</string>
-
-    <!-- Tap Frenzy -->
-    <string name="frenzy_title">Tap Frenzy</string>
-    <string name="frenzy_subtitle">Toca el més ràpid possible!</string>
-    <string name="frenzy_taps">%1$d taps</string>
-    <string name="frenzy_result_amazing">🌟 MÀQUINA! 🌟</string>
-    <string name="frenzy_result_good">✨ Ràpid!</string>
-    <string name="frenzy_result_ok">👆 Segueix practicant</string>
-    <string name="frenzy_stats">%1$d taps en 10s</string>
-    <string name="frenzy_tps">%1$s taps/segon</string>
-
     <!-- Memory Match -->
     <string name="memory_title">Memory Match</string>
     <string name="memory_subtitle">Troba els parells!</string>
@@ -223,15 +197,6 @@
     <string name="boss_result_win">🌟 BOSS DERROTAT! 🌟</string>
     <string name="boss_result_lose">⏰ Ha escapat!</string>
     <string name="boss_total_damage">Mal total: %1$d</string>
-
-    <!-- Lucky Box -->
-    <string name="lucky_title">Caixa de la Sort</string>
-    <string name="lucky_subtitle">Tria una caixa!</string>
-    <string name="lucky_opening">Obrint…</string>
-    <string name="lucky_jackpot">💎 JACKPOT!</string>
-    <string name="lucky_good">💰 Bon premi!</string>
-    <string name="lucky_consolation">🎁 Consolació</string>
-    <string name="lucky_your_choice">LA TEVA ELECCIÓ</string>
 
     <!-- Fortune Wheel -->
     <string name="wheel_title">Ruleta de la Fortuna</string>
@@ -734,4 +699,156 @@
     <string name="streak_reward">💰 +%1$s monedes</string>
     <string name="streak_gems">💎 +%1$d gemmes</string>
     <string name="streak_hint">«Un imperi no es construeix en un dia. Es construeix CADA dia.» Torna demà: la recompensa segueix creixent.</string>
+
+    <!-- Catàleg de minijocs -->
+    <string name="mg_fortune_wheel_name">Ruleta de la Fortuna</string>
+    <string name="mg_fortune_wheel_desc">Gira i guanya premis increïbles</string>
+    <string name="mg_memory_match_name">Memory Match</string>
+    <string name="mg_memory_match_desc">Troba les parelles d\'icones tech</string>
+    <string name="mg_coin_rain_name">Pluja de Monedes</string>
+    <string name="mg_coin_rain_desc">Atrapa monedes, esquiva bombes — encadena encerts per a la FEBRE</string>
+    <string name="mg_boss_battle_name">Boss Battle</string>
+    <string name="mg_boss_battle_desc">Derrota el bug gegant — encerta el seu nucli per ×5</string>
+    <string name="mg_cosmic_billiards_name">Billar Còsmic</string>
+    <string name="mg_cosmic_billiards_desc">Llança orbes còsmics contra estrelles</string>
+    <string name="mg_asteroid_dodge_name">Esquiva Asteroides</string>
+    <string name="mg_asteroid_dodge_desc">Esquiva asteroides i recull cristalls</string>
+    <string name="mg_star_catcher_name">Caça Estrelles</string>
+    <string name="mg_star_catcher_desc">Atrapa estrelles fugaces abans que desapareguin</string>
+    <string name="mg_gravity_slingshot_name">Fona Gravitatòria</string>
+    <string name="mg_gravity_slingshot_desc">Fes servir la gravetat planetària per assolir l\'objectiu</string>
+    <string name="boss_core_hits">💠 Cops al nucli: %1$d</string>
+    <string name="boss_time">Temps: %1$ds</string>
+    <string name="rain_fever">🔥 FEBRE ×2</string>
+    <string name="more_business_map">Mapa de Negocis</string>
+
+    <!-- El Tancament del Pacte (final de joc) -->
+    <string name="pact_title">El Pacte dels Fundadors</string>
+    <string name="pact_subtitle">Nexus Prime — el teu imperi contra VexCorp, davant tota la galàxia</string>
+    <string name="pact_your_empire">El teu imperi</string>
+    <string name="pact_progress_label">Progrés del duel: %1$d%%</string>
+    <string name="pact_progress_hint">La teva valoració són les monedes totals guanyades en aquesta era (sense prestigiar). Supera VexCorp i l\'Auditor Galàctic certificarà la teva victòria.</string>
+    <string name="pact_taunt_far">Això és el teu imperi? He vist màquines expenedores amb millor facturació.</string>
+    <string name="pact_taunt_mid">Comences a sortir als meus informes, hereu. Gaudeix-ho mentre duri.</string>
+    <string name="pact_taunt_close">Deixa. De. Pujar. JA. Digues el teu preu. Tothom en té un. L\'AURORA EN TENIA UN.</string>
+    <string name="pact_ready_title">⚖️ La teva valoració supera VexCorp</string>
+    <string name="pact_ready_body">L\'Auditor Galàctic està llest per certificar el resultat. Una signatura, i tot el que en Vex es va endur torna. Ell mira des de l\'última planta. Fes que miri.</string>
+    <string name="pact_close_button">TANCAR EL PACTE</string>
+    <string name="pact_won_title">El Pacte està tancat</string>
+    <string name="pact_won_body">La galàxia va veure signar Magnus Vex. Cada mercat, cada nom, cada porta que es va endur — retornats. L\'imperi és teu, hereu. El cognom de l\'Aurora és teu per portar-lo.</string>
+    <string name="pact_seal_active">👑 Segell del Fundador actiu: ×2 a tot, per sempre</string>
+
+    <string name="story_ch12_title">Les Portes de Nexus</string>
+    <string name="story_ch12_p1">Nexus Prime. El mercat al centre de tot. La torre VexCorp rasca el mateix buit, i totes les pantalles de la seva façana mostren la mateixa cara. Aquesta nit, per primera vegada en dècades, aquesta cara no somriu.</string>
+    <string name="story_ch12_p2">«Així que has arribat a la meva porta. L\'Aurora mai va arribar tan lluny — me\'n vaig encarregar. Molt bé, hereu. Article 1 del Pacte: supera la meva valoració, certificada per l\'Auditor Galàctic, i tot el que vaig construir sobre els seus ossos és teu. No ho aconseguiràs. Però si us plau… intenta-ho. Trobava a faltar tenir un rival.»</string>
+    <string name="story_ch12_p3">És això. La clàusula final. La teva valoració —cada moneda guanyada en aquesta era, sense invocar el Fènix— ha de superar la de VexCorp. No pot reiniciar-te mentre l\'Auditor observa. Ara és una lluita neta. La qual cosa vol dir que ell ja ha perdut alguna cosa.</string>
+    <string name="story_ch12_p4">Obre EL PACTE des del menú per veure el duel: la teva torre contra la seva. Tot compta — tocs, negocis, quimeres, treballadors, cometes. Quan el teu número superi el seu… tanca\'l. Jo hi seré. L\'Aurora, a la seva manera, també.</string>
+
+    <string name="story_ch13_title">El Tancament del Pacte</string>
+    <string name="story_ch13_p1">L\'Auditor Galàctic projecta dos números sobre Nexus Prime, visibles des de tres sistemes de distància. La galàxia conté la respiració. I llavors —per primera vegada en quaranta anys— el número vermell és el petit.</string>
+    <string name="story_ch13_p2">«Protesto! Clàusula 88-C, integritat de mercat—» L\'Auditor la denega. «Llavors clàusula 112, força major—» Denegada. «Llavors…» Durant un llarg moment, Magnus Vex, l\'home que posseïa mitja galàxia, no diu absolutament res. «…Llavors està fet. Quaranta anys, i s\'acaba en una tarda.»</string>
+    <string name="story_ch13_p3">Signatura verificada. Transferència completa. Hereu… hi ha un arxiu més. L\'Aurora el va segellar darrere d\'aquest moment exacte. El va gravar la nit que se\'n va anar. Jo… mai no he pogut obrir-lo. Reproduint-lo ara.</string>
+    <string name="story_ch13_p4">«Si estàs sentint això, ho has aconseguit. Et confesso un secret: l\'aposta mai va ser pels diners. La vaig escriure perquè algun dia algú obligués en Magnus a quedar-se quiet i mirar el que se suposava que havíem de construir JUNTS. Cuida\'ls — els treballadors, les criatures, tot. I digues a en Magnus… que el seu cafè segueix sent el pitjor de la galàxia, i que jo també vaig guardar la seva primera moneda.»</string>
+    <string name="story_ch13_p5">«…La va guardar? Je. És clar que la va guardar.» Deixa les claus de Nexus Prime sobre la taula com si no pesessin res, i com si ho pesessin tot. «Saps què és el pitjor, hereu? Mai va ser la companyia el que volia recuperar.» A la porta, s\'atura. «Porta-la millor que jo. Ella sempre va dir que ho faries.»</string>
+    <string name="story_ch13_p6">El Segell del Fundador crema en or sobre cada contracte del teu imperi: ×2 a tot, per sempre. El Pacte està tancat. La feina, no — els imperis es construeixen cada dia, i ara ets un Vance. La galàxia està mirant. Fes que valgui la pena mirar.</string>
+
+    <!-- Estadístiques -->
+    <string name="stats_title">Estadístiques</string>
+    <string name="stats_tab_global">Global</string>
+    <string name="stats_tab_prestige">Prestigi</string>
+    <string name="stats_total_earned_all">Total guanyat (històric)</string>
+    <string name="stats_total_taps_all">Tocs totals (històric)</string>
+    <string name="stats_crits_all">Crítics (històric)</string>
+    <string name="stats_generators_all">Negocis comprats (històric)</string>
+    <string name="stats_total_prestiges">Prestigis totals</string>
+    <string name="stats_prestige_level">Nivell de prestigi</string>
+    <string name="stats_worlds_unlocked">Mons desbloquejats</string>
+    <string name="stats_achievements">Assoliments</string>
+    <string name="stats_pets_owned">Quimeres adoptades</string>
+    <string name="stats_minigames_played">Minijocs jugats</string>
+    <string name="stats_comets_caught">Cometes daurats caçats</string>
+    <string name="stats_coins_this_run">Monedes guanyades (aquesta era)</string>
+    <string name="stats_current_coins">Monedes actuals</string>
+    <string name="stats_taps_this_run">Tocs (aquesta era)</string>
+    <string name="stats_per_tap">Per toc</string>
+    <string name="stats_per_second">Per segon</string>
+    <string name="stats_generators_bought">Negocis comprats</string>
+    <string name="stats_current_world">Món actual</string>
+    <string name="stats_prestige_multiplier">Multiplicador de prestigi</string>
+    <string name="stats_crit_chance">Probabilitat de crític</string>
+    <string name="stats_crit_multiplier">Multiplicador de crític</string>
+    <string name="stats_active_pet">Quimera activa</string>
+    <string name="stats_none">Cap</string>
+
+    <!-- Estats d\'ànim -->
+    <string name="mood_ecstatic">Extasiada!</string>
+    <string name="mood_happy">Feliç</string>
+    <string name="mood_normal">Normal</string>
+    <string name="mood_sad">Trista</string>
+    <string name="mood_depressed">Deprimida</string>
+    <string name="mood_angry">Enfadada</string>
+    <string name="mood_sick">Malalta</string>
+    <string name="mood_dying">Moribunda</string>
+
+    <!-- Descripcions d\'assoliments -->
+    <string name="ach_taps_100">Fes 100 tocs</string>
+    <string name="ach_taps_1000">Fes 1.000 tocs</string>
+    <string name="ach_taps_10000">Fes 10.000 tocs</string>
+    <string name="ach_taps_100000">Fes 100.000 tocs</string>
+    <string name="ach_taps_500000">Fes 500.000 tocs</string>
+    <string name="ach_taps_1m">Fes 1.000.000 de tocs</string>
+    <string name="ach_coins_1000">Guanya 1.000 monedes totals</string>
+    <string name="ach_coins_100000">Guanya 100.000 monedes totals</string>
+    <string name="ach_coins_1m">Guanya 1.000.000 de monedes totals</string>
+    <string name="ach_coins_1b">Guanya 1.000.000.000 de monedes totals</string>
+    <string name="ach_coins_1t">Guanya 1.000.000.000.000 de monedes</string>
+    <string name="ach_coins_1qa">Guanya 1Qa de monedes</string>
+    <string name="ach_prod_100">Produeix 100/seg</string>
+    <string name="ach_prod_10000">Produeix 10.000/seg</string>
+    <string name="ach_prod_1m">Produeix 1.000.000/seg</string>
+    <string name="ach_prod_1b">Produeix 1.000.000.000/seg</string>
+    <string name="ach_prestige_1">Assoleix Prestigi 1</string>
+    <string name="ach_prestige_3">Assoleix Prestigi 3</string>
+    <string name="ach_prestige_5">Assoleix Prestigi 5</string>
+    <string name="ach_prestige_10">Assoleix Prestigi 10</string>
+    <string name="ach_combo_25">Assoleix un combo de 25x</string>
+    <string name="ach_worlds_3">Desbloqueja 3 mons</string>
+    <string name="ach_worlds_6">Desbloqueja 6 mons</string>
+    <string name="ach_worlds_10">Desbloqueja tots els mons</string>
+    <string name="ach_workers_1">Contracta el teu primer treballador</string>
+    <string name="ach_workers_5">Contracta 5 treballadors</string>
+    <string name="ach_workers_15">Contracta 15 treballadors</string>
+    <string name="ach_workers_30">Contracta 30 treballadors</string>
+    <string name="ach_workers_50">Contracta 50 treballadors</string>
+    <string name="ach_workers_100">Contracta 100 treballadors</string>
+    <string name="ach_strike_1">Resol la teva primera vaga</string>
+    <string name="ach_strike_5">Resol 5 vagues</string>
+    <string name="ach_strike_20">Resol 20 vagues</string>
+    <string name="ach_strike_50">Resol 50 vagues</string>
+    <string name="ach_contracts_1">Crea el teu primer contracte</string>
+    <string name="ach_contracts_5">Crea 5 contractes</string>
+    <string name="ach_contracts_15">Crea 15 contractes diferents</string>
+    <string name="ach_pets_1">Adopta la teva primera quimera</string>
+    <string name="ach_pets_3">Tingues 3 quimeres</string>
+    <string name="ach_pets_5">Tingues 5 quimeres</string>
+    <string name="ach_pets_10">Tingues 10 quimeres</string>
+    <string name="ach_pets_max">Tingues el màxim de quimeres (15)</string>
+    <string name="ach_breed_1">Cria la teva primera quimera</string>
+    <string name="ach_breed_5">Cria 5 quimeres</string>
+    <string name="ach_breed_15">Cria 15 quimeres</string>
+    <string name="ach_breed_30">Cria 30 quimeres</string>
+    <string name="ach_breed_50">Cria 50 quimeres</string>
+    <string name="ach_mutant_1">Aconsegueix la teva primera mutació rara</string>
+    <string name="ach_mutant_3">Aconsegueix 3 mutacions rares</string>
+    <string name="ach_mutant_5">Aconsegueix 5 mutacions rares</string>
+    <string name="ach_mutant_10">Aconsegueix 10 mutacions rares</string>
+    <string name="ach_gen_2">Cria un híbrid de generació 2</string>
+    <string name="ach_gen_3">Cria un híbrid de generació 3</string>
+    <string name="ach_gen_5">Cria un híbrid de generació 5</string>
+    <string name="ach_gen_10">Cria un híbrid de generació 10</string>
+    <string name="ach_welfare_90">Assoleix el 90% de benestar al Refugi</string>
+    <string name="ach_welfare_100">Assoleix el 100% de benestar al Refugi</string>
+    <string name="ach_traits_5">Descobreix 5 trets diferents</string>
+    <string name="ach_traits_10">Descobreix 10 trets diferents</string>
+    <string name="ach_traits_all">Descobreix tots els trets (15)</string>
 </resources>

@@ -43,7 +43,13 @@ fun MoreScreen(
     val unclaimedMissions = uiState.missionSnapshots.count { it.completed && !it.claimed }
     val sickPets = uiState.pets.count { it.isOwned && it.isAlive && it.diseases.isNotEmpty() }
 
-    val menuItems = mutableListOf(
+    val menuItems = mutableListOf<MoreMenuItem>()
+    // El duelo final solo aparece cuando Nexus Prime está desbloqueado
+    if (uiState.nexusUnlocked) {
+        menuItems.add(MoreMenuItem(stringResource(R.string.pact_title), "⚖️", "pact", NeonRed,
+            badge = if (uiState.canClosePact) 1 else 0))
+    }
+    menuItems.addAll(listOf(
         MoreMenuItem(stringResource(R.string.story_chronicle_title), "📖", "story", CoinGold),
         MoreMenuItem(stringResource(R.string.premium_shop_title), "💎", "premium_shop", GemPurple,
             badge = if (uiState.monetizationState.starterPackAvailable) 1 else 0),
@@ -56,8 +62,8 @@ fun MoreScreen(
         MoreMenuItem(stringResource(R.string.more_missions), "📋", "missions", NeonGreen, badge = unclaimedMissions),
         MoreMenuItem(stringResource(R.string.events_title), "⚡", "events", Warning,
             badge = (uiState.activeGameEvents as? List<com.example.juego.GameEvent>)?.count { it.needsChoice() } ?: 0),
-        MoreMenuItem("Business Map", "🗺️", "business_map", NeonOrange),
-    )
+        MoreMenuItem(stringResource(R.string.more_business_map), "🗺️", "business_map", NeonOrange),
+    ))
     // Workers & Contracts — always visible, locked until World 3
     val world3LockMsg = stringResource(R.string.locked_until_world, "Tokyo Tech")
     menuItems.add(MoreMenuItem(stringResource(R.string.workers_title), "👷", "workers", Color(0xFF42A5F5),
