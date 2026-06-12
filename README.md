@@ -13,6 +13,21 @@ La idea siempre ha sido construir algo que se sienta como **un producto real**, 
 
 ---
 
+# Historia: «El Pacto de los Fundadores»
+
+El juego tiene una capa narrativa completa (ver [LORE.md](LORE.md)): heredas el garaje
+y la primera moneda de **Aurora Vance**, la fundadora traicionada de Vance & Vex, y
+compites contra **Magnus Vex** por recuperar el imperio que él le robó. Cada mecánica
+está atada al lore — el prestigio es la *Cláusula del Fénix*, las mascotas son quimeras
+rescatadas de los laboratorios de VexCorp, los minijuegos son sus desafíos televisados
+y los eventos su guerra sucia.
+
+La historia se cuenta en **11 capítulos interactivos que hacen de tutorial**: cada
+mecánica se presenta desde dentro de la ficción (con LIA, la IA de Aurora, como guía)
+y los capítulos vividos se releen en **La Crónica** (menú Más → 📖).
+
+---
+
 # Gameplay (visión rápida)
 
 El loop principal es el clásico de los idle games, pero con varias capas estratégicas:
@@ -59,6 +74,8 @@ Actualmente el juego incluye:
 - **hitos de generadores**: cada hito (10, 25, 50, 100…) duplica la producción del negocio
 - **compra masiva** (×1 / ×10 / ×MAX) con cálculo de coste acumulado
 - **prestigio** con multiplicadores permanentes
+- **El Legado de Aurora**: tienda de Renombre con 6 mejoras permanentes que sobreviven al prestigio (tap, producción, críticos, límite offline, capital semilla, frecuencia del cometa)
+- **racha diaria** con recompensas crecientes (hasta ×20) y gemas cada 7 días
 - ganancias **offline**
 
 ### Eventos en vivo
@@ -71,14 +88,18 @@ Actualmente el juego incluye:
 - **misiones diarias**
 - sistema amplio de **logros**
 
+### Final de juego
+- **El Cierre del Pacto**: al desbloquear Nexus Prime se abre el duelo final de valoraciones contra VexCorp; superarla permite cerrar la apuesta, ver el desenlace de la historia y ganar el **Sello del Fundador** (×2 permanente a todo)
+
 ### Sistemas jugables
-- **minijuegos jugables** (ej. Cosmic Billiards, Gravity Slingshot, Memory Match, Coin Rain)
+- **8 minijuegos** seleccionados por calidad (ej. Cosmic Billiards, Gravity Slingshot, Boss Battle con núcleo débil móvil, Coin Rain con modo Fiebre)
 - **sistema laboral** con trabajadores por rareza, sueldos y huelgas
 - **contratos personalizables**
 - **eventos dinámicos** con decisiones
 
 ### Mascotas
-- sistema de **cría**
+- **avatares vectoriales únicos** por especie (18 diseños con forma, orejas, alas, cola, accesorio y paleta propios)
+- sistema de **cría** — los híbridos **combinan visualmente a ambos padres** (cuerpo del dominante + rasgos del otro)
 - **rasgos genéticos**
 - mutaciones
 - impacto en bienestar del imperio
@@ -230,9 +251,13 @@ Tap Empire ha sido mi forma de explorar todo eso en un proyecto real.
 
 El juego es completamente funcional y sigue evolucionando.
 
+La lógica de dominio tiene **tests unitarios JVM** (`app/src/test/`): economía de
+generadores e hitos, genética de cría, Legado de Aurora, Pacto, prestigio y formato
+de números.
+
 Las próximas áreas de trabajo son:
 
-- balance económico
+- audio (efectos y música por mundo)
 - analytics
-- testing de progresión
-- integración completa de monetización
+- integración completa de monetización (Google Play Billing)
+- cloud save

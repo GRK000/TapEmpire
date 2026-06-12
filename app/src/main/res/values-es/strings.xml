@@ -169,32 +169,6 @@
     <string name="achievements_title">🏆 Logros</string>
     <string name="achievements_completed">%1$d/%2$d completados</string>
 
-    <!-- Stats screen -->
-    <string name="stats_title">📊 Estadísticas</string>
-    <string name="stats_total_earned">Total ganado</string>
-    <string name="stats_total_taps">Taps totales</string>
-    <string name="stats_per_tap">Por tap</string>
-    <string name="stats_per_second">Por segundo</string>
-    <string name="stats_generators_bought">Generadores comprados</string>
-    <string name="stats_prestige_level">Nivel de prestigio</string>
-    <string name="stats_prestige_points">Puntos de prestigio</string>
-    <string name="stats_worlds_unlocked">Mundos desbloqueados</string>
-    <string name="stats_minigames_played">Minijuegos jugados</string>
-    <string name="stats_events_completed">Eventos completados</string>
-    <string name="stats_current_world">Mundo actual</string>
-    <string name="stats_active_pet">Mascota activa</string>
-    <string name="stats_none">Ninguna</string>
-
-    <!-- Tap Frenzy -->
-    <string name="frenzy_title">Tap Frenzy</string>
-    <string name="frenzy_subtitle">¡Toca lo más rápido posible!</string>
-    <string name="frenzy_taps">%1$d taps</string>
-    <string name="frenzy_result_amazing">🌟 ¡MÁQUINA! 🌟</string>
-    <string name="frenzy_result_good">✨ ¡Rápido!</string>
-    <string name="frenzy_result_ok">👆 Sigue practicando</string>
-    <string name="frenzy_stats">%1$d taps en 10s</string>
-    <string name="frenzy_tps">%1$s taps/segundo</string>
-
     <!-- Memory Match -->
     <string name="memory_title">Memory Match</string>
     <string name="memory_subtitle">¡Encuentra los pares!</string>
@@ -223,15 +197,6 @@
     <string name="boss_result_win">🌟 ¡BOSS DERROTADO! 🌟</string>
     <string name="boss_result_lose">⏰ ¡Se escapó!</string>
     <string name="boss_total_damage">Daño total: %1$d</string>
-
-    <!-- Lucky Box -->
-    <string name="lucky_title">Caja de la Suerte</string>
-    <string name="lucky_subtitle">¡Elige una caja!</string>
-    <string name="lucky_opening">Abriendo…</string>
-    <string name="lucky_jackpot">💎 ¡JACKPOT!</string>
-    <string name="lucky_good">💰 ¡Buen premio!</string>
-    <string name="lucky_consolation">🎁 Consolación</string>
-    <string name="lucky_your_choice">TU ELECCIÓN</string>
 
     <!-- Fortune Wheel -->
     <string name="wheel_title">Ruleta de la Fortuna</string>
@@ -638,4 +603,252 @@
 
     <!-- Hitos de generadores -->
     <string name="milestone_label">Hito %1$d/%2$d → ×2</string>
+
+    <!-- ============ HISTORIA: El Pacto de los Fundadores ============ -->
+    <string name="story_speaker_narrator">Narrador</string>
+    <string name="story_speaker_lia">LIA</string>
+    <string name="story_speaker_vex">Magnus Vex</string>
+    <string name="story_speaker_aurora">Aurora Vance</string>
+    <string name="story_chapter_label">Capítulo %1$d</string>
+    <string name="story_continue">Continuar</string>
+    <string name="story_finish">A construir</string>
+    <string name="story_skip">Saltar</string>
+    <string name="story_chronicle_title">La Crónica</string>
+    <string name="story_chronicle_subtitle">El Pacto de los Fundadores — cada capítulo que has vivido</string>
+    <string name="story_chapter_locked">Capítulo sellado</string>
+    <string name="story_chapter_replay">Toca para releerlo</string>
+
+    <string name="story_ch1_title">La Herencia</string>
+    <string name="story_ch1_p1">Un garaje oxidado en el borde de la galaxia. Una llave, una moneda antigua y un chip. Es todo lo que Aurora Vance —la legendaria fundadora de Vance &amp; Vex— dejó a su heredero.\n\nEs todo lo que te dejó a ti.</string>
+    <string name="story_ch1_p2">Conexión establecida. Soy LIA, la inteligencia de Aurora. Antes de desaparecer, mi creadora firmó un pacto con su antiguo socio, Magnus Vex, el hombre que le robó la compañía: si su heredero construye un imperio que supere a VexCorp, él devolverá todo lo que tomó.</string>
+    <string name="story_ch1_p3">Esa moneda que tienes en la mano fue la primera que ganaron juntos. Aurora la encantó con un eco de fortuna: cada vez que la toques, repetirá su primera venta.\n\nTócala. Tócala muchas veces.</string>
+    <string name="story_ch1_p4">Cada toque acuña monedas. Los toques encadenados crean COMBOS, y a veces lograrás un ECO PERFECTO: un crítico. Con lo ganado reconstruiremos la red de negocios de Aurora.\n\nVex cree que esto es una broma. Hagamos que se atragante con ella.</string>
+
+    <string name="story_ch2_title">La Primera Cucaracha</string>
+    <string name="story_ch2_p1">Tu primer negocio vuelve a abrir sus puertas. La señal llega a Nexus Prime en milisegundos. En lo alto de la torre VexCorp, alguien sonríe.</string>
+    <string name="story_ch2_p2">«Vaya, vaya. La cucaracha del garaje se ha comprado un negocio. ¿Sabes a cuántos como tú he aplastado? Disfruta de tu puesto de limonada, heredero. El Pacto expira cuando yo lo diga.»</string>
+    <string name="story_ch2_p3">Ignórale. Cada negocio produce monedas por segundo, incluso mientras duermes — algo que Vex prohíbe hacer a sus propios empleados. Acumula unidades: en cada hito (10, 25, 50…) el mercado recuerda el apellido Vance y la producción SE DUPLICA.</string>
+
+    <string name="story_ch3_title">La Reconquista</string>
+    <string name="story_ch3_p1">Aurora levantó diez mercados, desde este Garaje hasta Nexus Prime. Vex los controla todos. Cada mundo que desbloquees es territorio que le arrancas de las manos delante de toda la galaxia.</string>
+    <string name="story_ch3_p2">«¿Expandiéndonos? Adorable. Esos mercados llevan mi nombre en cada farola. Te dejaré jugar en ellos… hasta que quitártelos duela más.»</string>
+    <string name="story_ch3_p3">Cada mundo multiplica tu producción y desbloquea negocios exclusivos. El último es Nexus Prime: la propia torre de Vex. Ahí se decidirá el Pacto.</string>
+
+    <string name="story_ch4_title">Los Desafíos Vex</string>
+    <string name="story_ch4_p1">Todas las pantallas de la galaxia se encienden a la vez. LOS DESAFÍOS VEX: el espectáculo donde el magnate humilla a sus rivales en directo.\n\nEl invitado de esta noche: tú.</string>
+    <string name="story_ch4_p2">«He pensado que la galaxia merece reírse un rato. Acepta mis desafíos, heredero. Cuando pierdas, te verán billones. Y cuando ganes… bah. No vas a ganar.»</string>
+    <string name="story_ch4_p3">Cada victoria sale directamente de su bolsillo: los premios los paga VexCorp. El regulador galáctico limita los intentos diarios — úsalos todos. Humillarle en su propio circo no tiene precio. Bueno, sí lo tiene: y lo cobras tú.</string>
+
+    <string name="story_ch5_title">Los Desertores</string>
+    <string name="story_ch5_p1">En VexCorp no hay empleados: hay «Unidades de Rendimiento». El descanso se penaliza. Las mascotas están prohibidas. Y esta noche, en un hangar clandestino, decenas de ellos esperan conocer al heredero de Aurora.</string>
+    <string name="story_ch5_p2">Las ferias de empleo clandestinas te permiten contratar desertores de VexCorp. Vienen con su experiencia, su talento… y sus cicatrices. Trátalos mejor que Vex. No es difícil: el listón está bajo tierra.</string>
+    <string name="story_ch5_p3">Asigna trabajadores a tus negocios para multiplicar la producción. Negocia contratos de verdad: sueldo, jornada, derecho a huelga. Págales puntualmente — o te harán lo que la propia Aurora hizo una vez dentro de VexCorp: organizar la primera huelga de su historia.</string>
+
+    <string name="story_ch6_title">El Refugio</string>
+    <string name="story_ch6_p1">Tengo que contarte algo. VexCorp tiene una división llamada Proyecto Quimera: diseñan criaturas cósmicas como productos de lujo… con obsolescencia programada. Aurora robó la primera camada y fundó El Refugio.</string>
+    <string name="story_ch6_p2">La criatura te mira desde su transportín. En el costado, un número de serie de VexCorp tachado con pintura dorada. Debajo, con la letra de Aurora: «Ya no eres un producto.»</string>
+    <string name="story_ch6_p3">Cada quimera que adoptas financia el rescate de la siguiente. Aliméntalas, juega con ellas, cúralas: una quimera feliz potencia tu imperio entero. Y recuerda: tus trabajadores desertaron por cómo Vex trata a los seres vivos. Si descuidas el Refugio, perderán la fe en ti.</string>
+
+    <string name="story_ch7_title">Genoma Libre</string>
+    <string name="story_ch7_p1">Fascinante. En libertad, las quimeras hacen algo que los laboratorios de Vex nunca consiguieron: mezclar sus linajes. Tu nueva cría heredará rasgos de ambos padres — verás el cuerpo de uno y los rasgos del otro.</string>
+    <string name="story_ch7_p2">La incubación lleva tiempo real. Y a veces despierta un gen que VexCorp suprimió: una MUTACIÓN RARA, con dones que ni Aurora llegó a documentar. Cada generación nacida libre es la prueba viviente de que Vex se equivocaba.</string>
+    <string name="story_ch7_p3">«¿Estás CRIANDO mis quimeras? Eso es propiedad intelectual de VexCorp, heredero. Mis abogados ya están redactando la demanda. Mis científicos, en cambio, quieren saber cómo demonios lo has hecho.»</string>
+
+    <string name="story_ch8_title">La Cláusula del Fénix</string>
+    <string name="story_ch8_p1">Tu imperio ya aparece en los índices galácticos. En Nexus Prime ya nadie se ríe. Y entonces llega el documento, con membrete dorado y sello legal: CLÁUSULA DEL FÉNIX — LISTA PARA INVOCAR.</string>
+    <string name="story_ch8_p2">«¿Creías que el Pacto era limpio? Lee la letra pequeña, heredero: cuando tu valoración amenace la mía, puedo reiniciar el mercado entero. Tus negocios, tus monedas, tu progreso: cenizas. Y puedo hacerlo otra vez. Y otra. Aurora lo firmó. ¿Por qué sonreía? Nunca lo entendí.»</string>
+    <string name="story_ch8_p3">Yo sí lo entiendo. Aurora firmó porque la cláusula tiene un defecto: borra los números, pero NO PUEDE BORRAR LA REPUTACIÓN. Cada renacimiento conserva tu Renombre, y el mercado te recibirá produciendo más que antes.</string>
+    <string name="story_ch8_p4">Eso es el PRESTIGIO: dejar que Vex queme tu imperio para renacer más fuerte. Conservas tu Renombre (un multiplicador permanente), tus quimeras y tu plantilla. Cada vez que invoque la cláusula le costará más y te frenará menos. Su arma se desgasta. La tuya se afila.</string>
+
+    <string name="story_ch9_title">Cenizas y Renombre</string>
+    <string name="story_ch9_p1">El mercado entero parpadea y se reinicia. Donde ayer había un imperio, hoy hay un garaje. Pero los titulares no hablan del reinicio: hablan de que el heredero de Aurora ha obligado a Magnus Vex a disparar su arma definitiva.\n\nY sigues aquí.</string>
+    <string name="story_ch9_p2">Recuerdo desbloqueado — Aurora Vance, hace 12 años: «Algún día Magnus quemará todo lo que construyas. Déjale. Los imperios son cosas que se incendian, pequeño. Los nombres, no. Construye un nombre.»</string>
+    <string name="story_ch9_p3">Tu Renombre ya está trabajando: produces más que ayer a esta misma hora. En lo alto de la torre, Vex ha dejado de sonreír.\n\nHagámoslo otra vez.</string>
+
+    <string name="story_ch10_title">Guerra Sucia</string>
+    <string name="story_ch10_p1">Los mercados tiemblan sin previo aviso. Una crisis demasiado oportuna, un apagón demasiado preciso. El sello de VexCorp no aparece por ningún sitio — y esa es exactamente su firma.</string>
+    <string name="story_ch10_p2">Vex no puede tocar el Pacto, pero puede inclinar el tablero: sabotajes, auditorías, ciberataques. La buena noticia: los viejos aliados de Aurora también mueven hilos. Bonanzas, festivales, subvenciones… no todo lo inesperado es enemigo.</string>
+    <string name="story_ch10_p3">Cada evento te dará OPCIONES con consecuencias en producción, plantilla o estabilidad. Si no eliges, el destino elegirá por ti — y el destino tiene contrato con VexCorp. Vigila la estabilidad galáctica: mide quién va ganando este pulso.</string>
+
+    <string name="story_ch11_title">El Amuleto</string>
+    <string name="story_ch11_p1">Algo dorado cruza el cielo y, por un instante, todas tus máquinas producen al unísono. Lo has tocado.\n\nY te ha devuelto el saludo.</string>
+    <string name="story_ch11_p2">Análisis… imposible. Eso era el amuleto de la suerte de Aurora. Lo llevaba el día que fundó la empresa y juró que se lo llevaría «más allá del Borde». Por lo visto, sigue en órbita. Y por lo visto… te conoce.</string>
+    <string name="story_ch11_p3">Cuando el cometa dorado cruce tu pantalla, CÁZALO: suelta ecos de la suerte de Aurora — frenesíes de producción, lluvias de monedas, fragmentos estelares. No es ciencia. No me importa.\n\nTú no dejes de mirar al cielo.</string>
+
+    <!-- El Legado de Aurora (tienda de Renombre) -->
+    <string name="legacy_title">El Legado de Aurora</string>
+    <string name="legacy_subtitle">Mejoras permanentes compradas con Renombre — lo único que la Cláusula del Fénix no puede quemar</string>
+    <string name="legacy_renown_balance">Renombre disponible</string>
+    <string name="legacy_level">Nv. %1$d/%2$d</string>
+    <string name="legacy_echo_name">Eco Eterno</string>
+    <string name="legacy_echo_desc">La Primera Moneda resuena más fuerte: +25% de poder de tap por nivel</string>
+    <string name="legacy_network_name">Red Durmiente</string>
+    <string name="legacy_network_desc">Los viejos contactos de Aurora despiertan: +25% de producción por nivel</string>
+    <string name="legacy_luck_name">Suerte Fundadora</string>
+    <string name="legacy_luck_desc">+1% de probabilidad de crítico por nivel</string>
+    <string name="legacy_pact_name">Pacto Blindado</string>
+    <string name="legacy_pact_desc">+2h de límite de ganancias offline por nivel</string>
+    <string name="legacy_seed_name">Capital Semilla</string>
+    <string name="legacy_seed_desc">Empieza cada renacimiento con monedas (×10 por nivel)</string>
+    <string name="legacy_magnet_name">Magnetismo Estelar</string>
+    <string name="legacy_magnet_desc">El amuleto de Aurora te visita más: los cometas aparecen un 10% antes por nivel</string>
+
+    <!-- Racha diaria (El Plan de LIA) -->
+    <string name="streak_title">📅 El Plan de LIA</string>
+    <string name="streak_day">Día %1$d seguido</string>
+    <string name="streak_reward">💰 +%1$s monedas</string>
+    <string name="streak_gems">💎 +%1$d gemas</string>
+    <string name="streak_hint">«Un imperio no se construye un día. Se construye CADA día.» Vuelve mañana: la recompensa sigue creciendo.</string>
+
+    <!-- Catálogo de minijuegos -->
+    <string name="mg_fortune_wheel_name">Ruleta de la Fortuna</string>
+    <string name="mg_fortune_wheel_desc">Gira y gana premios increíbles</string>
+    <string name="mg_memory_match_name">Memory Match</string>
+    <string name="mg_memory_match_desc">Encuentra las parejas de iconos tech</string>
+    <string name="mg_coin_rain_name">Lluvia de Monedas</string>
+    <string name="mg_coin_rain_desc">Atrapa monedas, esquiva bombas — encadena aciertos para la FIEBRE</string>
+    <string name="mg_boss_battle_name">Boss Battle</string>
+    <string name="mg_boss_battle_desc">Derrota al bug gigante — acierta su núcleo para ×5</string>
+    <string name="mg_cosmic_billiards_name">Billar Cósmico</string>
+    <string name="mg_cosmic_billiards_desc">Lanza orbes cósmicos contra estrellas</string>
+    <string name="mg_asteroid_dodge_name">Esquiva Asteroides</string>
+    <string name="mg_asteroid_dodge_desc">Esquiva asteroides y recoge cristales</string>
+    <string name="mg_star_catcher_name">Caza Estrellas</string>
+    <string name="mg_star_catcher_desc">Atrapa estrellas fugaces antes de que desaparezcan</string>
+    <string name="mg_gravity_slingshot_name">Honda Gravitatoria</string>
+    <string name="mg_gravity_slingshot_desc">Usa la gravedad planetaria para alcanzar el objetivo</string>
+    <string name="boss_core_hits">💠 Golpes al núcleo: %1$d</string>
+    <string name="boss_time">Tiempo: %1$ds</string>
+    <string name="rain_fever">🔥 FIEBRE ×2</string>
+    <string name="more_business_map">Mapa de Negocios</string>
+
+    <!-- El Cierre del Pacto (final de juego) -->
+    <string name="pact_title">El Pacto de los Fundadores</string>
+    <string name="pact_subtitle">Nexus Prime — tu imperio contra VexCorp, ante toda la galaxia</string>
+    <string name="pact_your_empire">Tu imperio</string>
+    <string name="pact_progress_label">Progreso del duelo: %1$d%%</string>
+    <string name="pact_progress_hint">Tu valoración son las monedas totales ganadas en esta era (sin prestigiar). Supera a VexCorp y el Auditor Galáctico certificará tu victoria.</string>
+    <string name="pact_taunt_far">¿Eso es tu imperio? He visto máquinas expendedoras con mejor facturación.</string>
+    <string name="pact_taunt_mid">Empiezas a salir en mis informes, heredero. Disfrútalo mientras dure.</string>
+    <string name="pact_taunt_close">Deja. De. Subir. YA. Di tu precio. Todo el mundo tiene uno. AURORA TENÍA UNO.</string>
+    <string name="pact_ready_title">⚖️ Tu valoración supera a VexCorp</string>
+    <string name="pact_ready_body">El Auditor Galáctico está listo para certificar el resultado. Una firma, y todo lo que Vex se llevó vuelve. Él está mirando desde la última planta. Haz que mire.</string>
+    <string name="pact_close_button">CERRAR EL PACTO</string>
+    <string name="pact_won_title">El Pacto está cerrado</string>
+    <string name="pact_won_body">La galaxia vio firmar a Magnus Vex. Cada mercado, cada nombre, cada puerta que se llevó — devueltos. El imperio es tuyo, heredero. El apellido de Aurora es tuyo para llevarlo.</string>
+    <string name="pact_seal_active">👑 Sello del Fundador activo: ×2 a todo, para siempre</string>
+
+    <string name="story_ch12_title">Las Puertas de Nexus</string>
+    <string name="story_ch12_p1">Nexus Prime. El mercado en el centro de todo. La torre VexCorp rasca el propio vacío, y todas las pantallas de su fachada muestran la misma cara. Esta noche, por primera vez en décadas, esa cara no sonríe.</string>
+    <string name="story_ch12_p2">«Así que has llegado a mi puerta. Aurora nunca llegó tan lejos — me encargué de ello. Muy bien, heredero. Artículo 1 del Pacto: supera mi valoración, certificada por el Auditor Galáctico, y todo lo que construí sobre sus huesos es tuyo. No lo conseguirás. Pero por favor… inténtalo. Echaba de menos tener un rival.»</string>
+    <string name="story_ch12_p3">Es esto. La cláusula final. Tu valoración —cada moneda ganada en esta era, sin invocar el Fénix— debe superar la de VexCorp. No puede reiniciarte mientras el Auditor observa. Ahora es una pelea limpia. Lo que significa que él ya ha perdido algo.</string>
+    <string name="story_ch12_p4">Abre EL PACTO desde el menú para ver el duelo: tu torre contra la suya. Todo cuenta — taps, negocios, quimeras, trabajadores, cometas. Cuando tu número supere el suyo… ciérralo. Yo estaré ahí. Aurora, a su manera, también.</string>
+
+    <string name="story_ch13_title">El Cierre del Pacto</string>
+    <string name="story_ch13_p1">El Auditor Galáctico proyecta dos números sobre Nexus Prime, visibles desde tres sistemas de distancia. La galaxia contiene la respiración. Y entonces —por primera vez en cuarenta años— el número rojo es el pequeño.</string>
+    <string name="story_ch13_p2">«¡Protesto! Cláusula 88-C, integridad de mercado—» El Auditor la deniega. «Entonces cláusula 112, fuerza mayor—» Denegada. «Entonces…» Durante un largo momento, Magnus Vex, el hombre que poseía media galaxia, no dice absolutamente nada. «…Entonces está hecho. Cuarenta años, y se acaba en una tarde.»</string>
+    <string name="story_ch13_p3">Firma verificada. Transferencia completa. Heredero… hay un archivo más. Aurora lo selló detrás de este momento exacto. Lo grabó la noche que se fue. Yo… nunca he podido abrirlo. Reproduciéndolo ahora.</string>
+    <string name="story_ch13_p4">«Si estás oyendo esto, lo has conseguido. Te cuento un secreto: la apuesta nunca fue por el dinero. La escribí para que algún día alguien obligara a Magnus a quedarse quieto y mirar lo que se suponía que íbamos a construir JUNTOS. Cuida de ellos — los trabajadores, las criaturas, todo. Y dile a Magnus… que su café sigue siendo el peor de la galaxia, y que yo también guardé su primera moneda.»</string>
+    <string name="story_ch13_p5">«…¿La guardó? Je. Claro que la guardó.» Deja las llaves de Nexus Prime sobre la mesa como si no pesaran nada, y como si lo pesaran todo. «¿Sabes qué es lo peor, heredero? Nunca fue la compañía lo que quería recuperar.» En la puerta, se detiene. «Llévala mejor que yo. Ella siempre dijo que lo harías.»</string>
+    <string name="story_ch13_p6">El Sello del Fundador arde en oro sobre cada contrato de tu imperio: ×2 a todo, para siempre. El Pacto está cerrado. El trabajo, no — los imperios se construyen cada día, y ahora eres un Vance. La galaxia está mirando. Haz que merezca la pena mirar.</string>
+
+    <!-- Estadísticas -->
+    <string name="stats_title">Estadísticas</string>
+    <string name="stats_tab_global">Global</string>
+    <string name="stats_tab_prestige">Prestigio</string>
+    <string name="stats_total_earned_all">Total ganado (histórico)</string>
+    <string name="stats_total_taps_all">Taps totales (histórico)</string>
+    <string name="stats_crits_all">Críticos (histórico)</string>
+    <string name="stats_generators_all">Negocios comprados (histórico)</string>
+    <string name="stats_total_prestiges">Prestigios totales</string>
+    <string name="stats_prestige_level">Nivel de prestigio</string>
+    <string name="stats_worlds_unlocked">Mundos desbloqueados</string>
+    <string name="stats_achievements">Logros</string>
+    <string name="stats_pets_owned">Quimeras adoptadas</string>
+    <string name="stats_minigames_played">Minijuegos jugados</string>
+    <string name="stats_comets_caught">Cometas dorados cazados</string>
+    <string name="stats_coins_this_run">Monedas ganadas (esta era)</string>
+    <string name="stats_current_coins">Monedas actuales</string>
+    <string name="stats_taps_this_run">Taps (esta era)</string>
+    <string name="stats_per_tap">Por tap</string>
+    <string name="stats_per_second">Por segundo</string>
+    <string name="stats_generators_bought">Negocios comprados</string>
+    <string name="stats_current_world">Mundo actual</string>
+    <string name="stats_prestige_multiplier">Multiplicador de prestigio</string>
+    <string name="stats_crit_chance">Probabilidad de crítico</string>
+    <string name="stats_crit_multiplier">Multiplicador de crítico</string>
+    <string name="stats_active_pet">Quimera activa</string>
+    <string name="stats_none">Ninguna</string>
+
+    <!-- Estados de ánimo -->
+    <string name="mood_ecstatic">¡Extasiada!</string>
+    <string name="mood_happy">Feliz</string>
+    <string name="mood_normal">Normal</string>
+    <string name="mood_sad">Triste</string>
+    <string name="mood_depressed">Deprimida</string>
+    <string name="mood_angry">Enfadada</string>
+    <string name="mood_sick">Enferma</string>
+    <string name="mood_dying">Moribunda</string>
+
+    <!-- Descripciones de logros -->
+    <string name="ach_taps_100">Haz 100 taps</string>
+    <string name="ach_taps_1000">Haz 1.000 taps</string>
+    <string name="ach_taps_10000">Haz 10.000 taps</string>
+    <string name="ach_taps_100000">Haz 100.000 taps</string>
+    <string name="ach_taps_500000">Haz 500.000 taps</string>
+    <string name="ach_taps_1m">Haz 1.000.000 de taps</string>
+    <string name="ach_coins_1000">Gana 1.000 monedas totales</string>
+    <string name="ach_coins_100000">Gana 100.000 monedas totales</string>
+    <string name="ach_coins_1m">Gana 1.000.000 de monedas totales</string>
+    <string name="ach_coins_1b">Gana 1.000.000.000 de monedas totales</string>
+    <string name="ach_coins_1t">Gana 1.000.000.000.000 de monedas</string>
+    <string name="ach_coins_1qa">Gana 1Qa de monedas</string>
+    <string name="ach_prod_100">Produce 100/seg</string>
+    <string name="ach_prod_10000">Produce 10.000/seg</string>
+    <string name="ach_prod_1m">Produce 1.000.000/seg</string>
+    <string name="ach_prod_1b">Produce 1.000.000.000/seg</string>
+    <string name="ach_prestige_1">Alcanza Prestigio 1</string>
+    <string name="ach_prestige_3">Alcanza Prestigio 3</string>
+    <string name="ach_prestige_5">Alcanza Prestigio 5</string>
+    <string name="ach_prestige_10">Alcanza Prestigio 10</string>
+    <string name="ach_combo_25">Alcanza un combo de 25x</string>
+    <string name="ach_worlds_3">Desbloquea 3 mundos</string>
+    <string name="ach_worlds_6">Desbloquea 6 mundos</string>
+    <string name="ach_worlds_10">Desbloquea todos los mundos</string>
+    <string name="ach_workers_1">Contrata tu primer trabajador</string>
+    <string name="ach_workers_5">Contrata 5 trabajadores</string>
+    <string name="ach_workers_15">Contrata 15 trabajadores</string>
+    <string name="ach_workers_30">Contrata 30 trabajadores</string>
+    <string name="ach_workers_50">Contrata 50 trabajadores</string>
+    <string name="ach_workers_100">Contrata 100 trabajadores</string>
+    <string name="ach_strike_1">Resuelve tu primera huelga</string>
+    <string name="ach_strike_5">Resuelve 5 huelgas</string>
+    <string name="ach_strike_20">Resuelve 20 huelgas</string>
+    <string name="ach_strike_50">Resuelve 50 huelgas</string>
+    <string name="ach_contracts_1">Crea tu primer contrato</string>
+    <string name="ach_contracts_5">Crea 5 contratos</string>
+    <string name="ach_contracts_15">Crea 15 contratos diferentes</string>
+    <string name="ach_pets_1">Adopta tu primera quimera</string>
+    <string name="ach_pets_3">Ten 3 quimeras</string>
+    <string name="ach_pets_5">Ten 5 quimeras</string>
+    <string name="ach_pets_10">Ten 10 quimeras</string>
+    <string name="ach_pets_max">Ten el máximo de quimeras (15)</string>
+    <string name="ach_breed_1">Cría tu primera quimera</string>
+    <string name="ach_breed_5">Cría 5 quimeras</string>
+    <string name="ach_breed_15">Cría 15 quimeras</string>
+    <string name="ach_breed_30">Cría 30 quimeras</string>
+    <string name="ach_breed_50">Cría 50 quimeras</string>
+    <string name="ach_mutant_1">Consigue tu primera mutación rara</string>
+    <string name="ach_mutant_3">Consigue 3 mutaciones raras</string>
+    <string name="ach_mutant_5">Consigue 5 mutaciones raras</string>
+    <string name="ach_mutant_10">Consigue 10 mutaciones raras</string>
+    <string name="ach_gen_2">Cría un híbrido de generación 2</string>
+    <string name="ach_gen_3">Cría un híbrido de generación 3</string>
+    <string name="ach_gen_5">Cría un híbrido de generación 5</string>
+    <string name="ach_gen_10">Cría un híbrido de generación 10</string>
+    <string name="ach_welfare_90">Alcanza 90% de bienestar en el Refugio</string>
+    <string name="ach_welfare_100">Alcanza 100% de bienestar en el Refugio</string>
+    <string name="ach_traits_5">Descubre 5 rasgos diferentes</string>
+    <string name="ach_traits_10">Descubre 10 rasgos diferentes</string>
+    <string name="ach_traits_all">Descubre todos los rasgos (15)</string>
 </resources>

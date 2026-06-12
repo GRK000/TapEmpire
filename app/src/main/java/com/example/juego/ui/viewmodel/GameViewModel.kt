@@ -69,12 +69,17 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     // Track which tutorials have been shown
     private val shownTutorials = mutableSetOf<String>()
 
+    // Capítulos de historia desbloqueados (para La Crónica)
+    private val _unlockedStoryKeys = MutableStateFlow<Set<String>>(emptySet())
+    val unlockedStoryKeys: StateFlow<Set<String>> = _unlockedStoryKeys.asStateFlow()
+
     fun dismissTutorial() { _tutorialToShow.value = null }
 
     private fun showTutorialOnce(key: String) {
         if (key !in shownTutorials) {
             shownTutorials.add(key)
             _tutorialToShow.value = key
+            _unlockedStoryKeys.value = shownTutorials.toSet()
             // Persist
             prefs.edit().putStringSet("shown_tutorials", shownTutorials).apply()
         }
@@ -91,15 +96,50 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
 
     fun dismissCometReward() { _cometReward.value = null }
 
+    // === RACHA DIARIA (El Plan de LIA) ===
+    private val _dailyStreakReward = MutableStateFlow<DailyStreakReward?>(null)
+    val dailyStreakReward: StateFlow<DailyStreakReward?> = _dailyStreakReward.asStateFlow()
+
+    fun dismissDailyStreak() { _dailyStreakReward.value = null }
+
     init {
         // Load shown tutorials from prefs
         prefs.getStringSet("shown_tutorials", emptySet())?.let { shownTutorials.addAll(it) }
+        _unlockedStoryKeys.value = shownTutorials.toSet()
         loadState()
         checkOfflineEarnings()
+        checkDailyStreak()
         startGameLoop()
         startGoldenCometSpawner()
         // Welcome tutorial on first launch
         showTutorialOnce("welcome")
+    }
+
+    /**
+     * El Plan de LIA: la disciplina diaria con la que Aurora construyó el
+     * primer imperio. Días consecutivos multiplican la recompensa (hasta ×20);
+     * cada 7 días seguidos caen además gemas.
+     */
+    private fun checkDailyStreak() {
+        val today = System.currentTimeMillis() / 86_400_000L
+        val lastDay = prefs.getLong(K_STREAK_DAY, 0L)
+        if (today == lastDay) return
+
+        val streak = if (lastDay > 0 && today - lastDay == 1L) {
+            prefs.getInt(K_STREAK_COUNT, 0) + 1
+        } else {
+            1
+        }
+        prefs.edit().putLong(K_STREAK_DAY, today).putInt(K_STREAK_COUNT, streak).apply()
+
+        val multipliers = intArrayOf(1, 2, 3, 5, 8, 12, 20)
+        val mult = multipliers[(streak - 1).coerceIn(0, multipliers.lastIndex)]
+        val coins = maxOf(500.0, state.productionPerSecond * 120) * mult
+        val gems = if (streak % 7 == 0) 15 else 0
+
+        state.addBonusCoins(coins)
+        if (gems > 0) state.monetization.gems = state.monetization.gems + gems
+        _dailyStreakReward.value = DailyStreakReward(streak, coins, gems)
     }
 
     private fun startGoldenCometSpawner() {
@@ -114,7 +154,9 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
                 )
                 delay(COMET_VISIBLE_MS)
                 _goldenComet.value = null
-                delay(Random.nextLong(90_000L, 240_000L))
+                // El Magnetismo Estelar del Legado acorta la espera
+                val interval = Random.nextLong(90_000L, 240_000L)
+                delay((interval * state.legacyCometIntervalMultiplier).toLong())
             }
         }
     }
@@ -147,6 +189,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
             }
         }
         _cometReward.value = reward
+        showTutorialOnce("comet_caught")
         refreshUiState()
         saveState()
     }
@@ -154,7 +197,9 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     private fun startGameLoop() {
         viewModelScope.launch {
             var lastAutoSave = System.currentTimeMillis()
+            var tick = 0
             while (true) {
+                tick++
                 // Autosave: protege el progreso si Android mata el proceso
                 val now = System.currentTimeMillis()
                 if (now - lastAutoSave >= AUTOSAVE_INTERVAL_MS) {
@@ -180,6 +225,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
                 val newEvent = state.checkEventTriggers()
                 if (newEvent != null) {
                     _eventNotification.value = newEvent
+                    showTutorialOnce("first_event")
                 }
 
                 // Check for auto-resolved events (player didn't choose)
@@ -196,11 +242,15 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
                 // Progressive tutorial triggers (only check if not already shown)
                 try {
                     if ("prestige_available" !in shownTutorials && state.canPrestige()) showTutorialOnce("prestige_available")
+                    if ("nexus_unlocked" !in shownTutorials && state.isNexusUnlocked) showTutorialOnce("nexus_unlocked")
                     if ("minigames" !in shownTutorials && state.miniGames?.isNotEmpty() == true && state.totalMiniGamesPlayed > 0) showTutorialOnce("minigames")
                     if ("pets" !in shownTutorials && state.pets?.any { it.isOwned } == true) showTutorialOnce("pets")
                 } catch (_: Exception) { /* state not fully initialized yet */ }
 
-                refreshUiState()
+                // La lógica corre a 20 ticks/s, pero reconstruir el estado de UI
+                // completo es caro: con 4 refrescos/s la pantalla sigue fluida
+                // (las acciones del jugador refrescan al instante por su cuenta)
+                if (tick % 5 == 0) refreshUiState()
                 delay(50)
             }
         }
@@ -332,7 +382,10 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
 
     fun breedPets(index1: Int, index2: Int): Pet? {
         val offspring = state.breedPets(index1, index2)
-        if (offspring != null) refreshUiState()
+        if (offspring != null) {
+            showTutorialOnce("first_breeding")
+            refreshUiState()
+        }
         return offspring
     }
 
@@ -376,7 +429,32 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
 
     fun performPrestige() {
         state.performPrestige()
+        showTutorialOnce("first_prestige")
         refreshUiState()
+    }
+
+    /**
+     * Cierra el Pacto de los Fundadores: la victoria final sobre Vex.
+     * Activa el Sello del Fundador (x2 permanente) y el capítulo final.
+     */
+    fun closePact(): Boolean {
+        val success = state.closePact()
+        if (success) {
+            showTutorialOnce("pact_won")
+            refreshUiState()
+            saveState()
+        }
+        return success
+    }
+
+    /** Compra una mejora permanente del Legado de Aurora con Renombre */
+    fun buyLegacyUpgrade(id: String): Boolean {
+        val success = state.buyLegacyUpgrade(id)
+        if (success) {
+            refreshUiState()
+            saveState()
+        }
+        return success
     }
 
     fun canPrestige() = state.canPrestige()
@@ -662,6 +740,12 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
             activeGameEvents = state.activeGameEvents.filter { it.isActive }.toList(),
             eventHistory = state.eventHistory.toList(),
             maxComboReached = state.maxComboReached,
+            nexusUnlocked = state.isNexusUnlocked,
+            pactProgress = state.pactProgress,
+            canClosePact = state.canClosePact(),
+            pactWon = state.isPactWon,
+            legacyLevels = GameState.LEGACY_IDS.associateWith { state.getLegacyLevel(it) },
+            legacyCosts = GameState.LEGACY_IDS.associateWith { state.getLegacyCost(it) },
             goldenBoostMultiplier = state.goldenProductionBoostNow,
             goldenBoostRemainingMs = state.goldenProductionBoostRemainingMs,
             goldenTapBoostMultiplier = state.goldenTapBoostNow,
@@ -756,6 +840,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
                 put("miniGames", JSONArray().apply {
                     for (game in state.miniGames) {
                         put(JSONObject().apply {
+                            put("type", game.type.name)
                             put("timesPlayedToday", game.timesPlayedToday)
                             put("cooldownEndTime", game.cooldownEndTime)
                         })
@@ -882,6 +967,16 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
                 put("totalStrikesResolved", state.totalStrikesResolved)
                 put("maxComboReached", state.maxComboReached)
                 put("totalGoldenCometsTapped", state.totalGoldenCometsTapped)
+
+                // El Pacto
+                put("pactWon", state.isPactWon)
+
+                // Legado de Aurora (mejoras permanentes)
+                put("legacyLevels", JSONObject().apply {
+                    for (id in GameState.LEGACY_IDS) {
+                        put(id, state.getLegacyLevel(id))
+                    }
+                })
 
                 // Events
                 put("galacticStability", state.galacticStability)
@@ -1016,12 +1111,15 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
 
             json.optJSONArray("miniGames")?.let { arr ->
                 val games = state.miniGames
-                for (i in 0 until minOf(arr.length(), games.size)) {
+                val byType = games.associateBy { it.type.name }
+                for (i in 0 until arr.length()) {
                     val obj = arr.getJSONObject(i)
-                    games[i].timesPlayedToday = obj.optInt("timesPlayedToday", 0)
+                    // Saves nuevos llevan el tipo; los antiguos caen al índice
+                    val game = byType[obj.optString("type", "")] ?: games.getOrNull(i) ?: continue
+                    game.timesPlayedToday = obj.optInt("timesPlayedToday", 0)
                     val cooldownEnd = obj.optLong("cooldownEndTime", 0)
                     if (cooldownEnd > System.currentTimeMillis()) {
-                        games[i].cooldownEndTime = cooldownEnd
+                        game.cooldownEndTime = cooldownEnd
                     }
                 }
             }
@@ -1167,6 +1265,16 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
             state.totalStrikesResolved = json.optInt("totalStrikesResolved", 0)
             state.maxComboReached = json.optInt("maxComboReached", 0)
             state.totalGoldenCometsTapped = json.optInt("totalGoldenCometsTapped", 0)
+
+            // El Pacto
+            state.isPactWon = json.optBoolean("pactWon", false)
+
+            // Legado de Aurora
+            json.optJSONObject("legacyLevels")?.let { legacy ->
+                for (id in GameState.LEGACY_IDS) {
+                    state.setLegacyLevel(id, legacy.optInt(id, 0))
+                }
+            }
 
             // Load events
             state.galacticStability = json.optDouble("galacticStability", 50.0)
@@ -1323,6 +1431,8 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
         private const val K_LAST_SAVE = "last_save_time"
         private const val AUTOSAVE_INTERVAL_MS = 30_000L
         private const val COMET_VISIBLE_MS = 10_000L
+        private const val K_STREAK_DAY = "streak_last_day"
+        private const val K_STREAK_COUNT = "streak_count"
         const val BUY_MAX = -1
     }
 }
@@ -1379,6 +1489,14 @@ data class GameUiState(
     val activeGameEvents: List<GameEvent> = emptyList(),
     val eventHistory: List<GameEvent> = emptyList(),
     val maxComboReached: Int = 0,
+    // El Cierre del Pacto (final de juego)
+    val nexusUnlocked: Boolean = false,
+    val pactProgress: Double = 0.0,
+    val canClosePact: Boolean = false,
+    val pactWon: Boolean = false,
+    // Legado de Aurora (id → nivel / coste del siguiente nivel)
+    val legacyLevels: Map<String, Int> = emptyMap(),
+    val legacyCosts: Map<String, Double> = emptyMap(),
     // Golden Comet boosts
     val goldenBoostMultiplier: Double = 1.0,
     val goldenBoostRemainingMs: Long = 0,
@@ -1398,6 +1516,12 @@ data class GoldenComet(
 )
 
 enum class CometRewardType { FRENZY, TAP_RUSH, COIN_BURST, GEM_BONUS }
+
+data class DailyStreakReward(
+    val streakDays: Int,
+    val coins: Double,
+    val gems: Int
+)
 
 data class CometReward(
     val type: CometRewardType,

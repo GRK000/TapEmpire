@@ -169,32 +169,6 @@
     <string name="achievements_title">🏆 Achievements</string>
     <string name="achievements_completed">%1$d/%2$d completed</string>
 
-    <!-- Stats screen -->
-    <string name="stats_title">📊 Statistics</string>
-    <string name="stats_total_earned">Total earned</string>
-    <string name="stats_total_taps">Total taps</string>
-    <string name="stats_per_tap">Per tap</string>
-    <string name="stats_per_second">Per second</string>
-    <string name="stats_generators_bought">Generators bought</string>
-    <string name="stats_prestige_level">Prestige level</string>
-    <string name="stats_prestige_points">Prestige points</string>
-    <string name="stats_worlds_unlocked">Worlds unlocked</string>
-    <string name="stats_minigames_played">Minigames played</string>
-    <string name="stats_events_completed">Events completed</string>
-    <string name="stats_current_world">Current world</string>
-    <string name="stats_active_pet">Active pet</string>
-    <string name="stats_none">None</string>
-
-    <!-- Tap Frenzy -->
-    <string name="frenzy_title">Tap Frenzy</string>
-    <string name="frenzy_subtitle">Tap as fast as you can!</string>
-    <string name="frenzy_taps">%1$d taps</string>
-    <string name="frenzy_result_amazing">🌟 MACHINE! 🌟</string>
-    <string name="frenzy_result_good">✨ Fast!</string>
-    <string name="frenzy_result_ok">👆 Keep practicing</string>
-    <string name="frenzy_stats">%1$d taps in 10s</string>
-    <string name="frenzy_tps">%1$s taps/second</string>
-
     <!-- Memory Match -->
     <string name="memory_title">Memory Match</string>
     <string name="memory_subtitle">Find the matching pairs!</string>
@@ -223,15 +197,6 @@
     <string name="boss_result_win">🌟 BOSS DEFEATED! 🌟</string>
     <string name="boss_result_lose">⏰ It escaped!</string>
     <string name="boss_total_damage">Total damage: %1$d</string>
-
-    <!-- Lucky Box -->
-    <string name="lucky_title">Lucky Box</string>
-    <string name="lucky_subtitle">Pick a box!</string>
-    <string name="lucky_opening">Opening…</string>
-    <string name="lucky_jackpot">💎 JACKPOT!</string>
-    <string name="lucky_good">💰 Nice prize!</string>
-    <string name="lucky_consolation">🎁 Consolation</string>
-    <string name="lucky_your_choice">YOUR CHOICE</string>
 
     <!-- Fortune Wheel -->
     <string name="wheel_title">Fortune Wheel</string>
@@ -648,4 +613,252 @@
 
     <!-- Generator milestones -->
     <string name="milestone_label">Milestone %1$d/%2$d → ×2</string>
+
+    <!-- ============ STORY: The Founders\' Wager ============ -->
+    <string name="story_speaker_narrator">Narrator</string>
+    <string name="story_speaker_lia">LIA</string>
+    <string name="story_speaker_vex">Magnus Vex</string>
+    <string name="story_speaker_aurora">Aurora Vance</string>
+    <string name="story_chapter_label">Chapter %1$d</string>
+    <string name="story_continue">Continue</string>
+    <string name="story_finish">Let\'s build</string>
+    <string name="story_skip">Skip</string>
+    <string name="story_chronicle_title">The Chronicle</string>
+    <string name="story_chronicle_subtitle">The Founders\' Wager — every chapter you\'ve lived</string>
+    <string name="story_chapter_locked">Sealed chapter</string>
+    <string name="story_chapter_replay">Tap to read again</string>
+
+    <string name="story_ch1_title">The Inheritance</string>
+    <string name="story_ch1_p1">A rusty garage on the edge of the galaxy. A key, an old coin and a chip. That is everything Aurora Vance — the legendary founder of Vance &amp; Vex — left to her heir.\n\nThat is everything she left to you.</string>
+    <string name="story_ch1_p2">Connection established. I am LIA, Aurora\'s intelligence. Before disappearing, my creator signed a wager with her old partner, Magnus Vex — the man who stole the company from her: if her heir builds an empire that surpasses VexCorp, he gives back everything he took.</string>
+    <string name="story_ch1_p3">That coin in your hand is the first one they ever earned together. Aurora enchanted it with an echo of fortune: every time you touch it, it replays her very first sale.\n\nTouch it. Touch it many times.</string>
+    <string name="story_ch1_p4">Every tap mints coins. Chained taps build COMBOS, and sometimes you strike a PERFECT ECHO — a critical. With those earnings we will rebuild Aurora\'s business network.\n\nVex thinks this is a joke. Let\'s make him choke on it.</string>
+
+    <string name="story_ch2_title">The First Cockroach</string>
+    <string name="story_ch2_p1">Your first business reopens its doors. The signal reaches Nexus Prime in milliseconds. At the top of the VexCorp tower, someone smiles.</string>
+    <string name="story_ch2_p2">«Well, well. The garage cockroach bought itself a business. Do you know how many like you I have crushed? Enjoy your lemonade stand, heir. The Wager expires when I say it does.»</string>
+    <string name="story_ch2_p3">Ignore him. Every business produces coins per second — even while you sleep, which is something Vex forbids his own employees to do. Stack up units: at each milestone (10, 25, 50…) the market remembers the Vance name and production DOUBLES.</string>
+
+    <string name="story_ch3_title">The Reconquest</string>
+    <string name="story_ch3_p1">Aurora raised ten markets, from this Garage all the way to Nexus Prime. Vex controls every one of them. Each world you unlock is territory you tear from his hands in front of the whole galaxy.</string>
+    <string name="story_ch3_p2">«Expanding, are we? Adorable. Those markets carry my name on every lamppost. I\'ll let you play in them… until taking them from you hurts more.»</string>
+    <string name="story_ch3_p3">Each world multiplies your production and unlocks exclusive businesses. The last one is Nexus Prime — Vex\'s own tower. That is where the Wager will be settled.</string>
+
+    <string name="story_ch4_title">The Vex Challenges</string>
+    <string name="story_ch4_p1">Every screen in the galaxy lights up at once. THE VEX CHALLENGES — the show where the magnate humiliates his rivals live on air.\n\nTonight\'s guest: you.</string>
+    <string name="story_ch4_p2">«I figured the galaxy deserves a laugh. Accept my challenges, heir. When you lose, billions will be watching. And when you win… bah. You won\'t win.»</string>
+    <string name="story_ch4_p3">Every victory comes straight out of his pocket: the prizes are paid by VexCorp. The galactic regulator caps the daily attempts — use them all. Humiliating him in his own circus is priceless. Well, no: it has a price, and you collect it.</string>
+
+    <string name="story_ch5_title">The Defectors</string>
+    <string name="story_ch5_p1">At VexCorp there are no employees, only «Performance Units». Rest is penalised. Pets are forbidden. And tonight, in a clandestine hangar, dozens of them are waiting to meet Aurora\'s heir.</string>
+    <string name="story_ch5_p2">The underground job fairs let you hire VexCorp defectors. They come with their experience, their talent… and their scars. Treat them better than Vex did. It isn\'t hard; the bar is underground.</string>
+    <string name="story_ch5_p3">Assign workers to your businesses to multiply production. Negotiate real contracts: salary, schedule, the right to strike. Pay them on time — or they will do to you what Aurora herself once did inside VexCorp: organise the first strike in its history.</string>
+
+    <string name="story_ch6_title">The Sanctuary</string>
+    <string name="story_ch6_p1">There is something I must tell you. VexCorp runs a division called Project Chimera: they engineer cosmic creatures as luxury products… with planned obsolescence. Aurora stole the first litter and founded The Sanctuary.</string>
+    <string name="story_ch6_p2">The creature watches you from its carrier. On its side, a VexCorp serial number crossed out with golden paint. Below it, in Aurora\'s handwriting: «You are not a product anymore.»</string>
+    <string name="story_ch6_p3">Every chimera you adopt funds the rescue of the next one. Feed them, play with them, heal them: a happy chimera empowers your whole empire. And remember — your workers defected over how Vex treats living beings. Neglect the Sanctuary and they will lose faith in you.</string>
+
+    <string name="story_ch7_title">Free Genome</string>
+    <string name="story_ch7_p1">Fascinating. In freedom, the chimeras do something Vex\'s laboratories never achieved: they blend their bloodlines. Your new hatchling will inherit traits from both parents — you will see one parent\'s body and the other\'s features.</string>
+    <string name="story_ch7_p2">Incubation takes real time. And sometimes a gene VexCorp suppressed wakes up: a RARE MUTATION, with gifts not even Aurora documented. Every free-born generation is living proof that Vex was wrong.</string>
+    <string name="story_ch7_p3">«You are BREEDING my chimeras? That is VexCorp intellectual property, heir. My lawyers are already drafting the lawsuit. My scientists, on the other hand, want to know how on earth you did it.»</string>
+
+    <string name="story_ch8_title">The Phoenix Clause</string>
+    <string name="story_ch8_p1">Your empire now shows up in the galactic indices. Nobody laughs in Nexus Prime anymore. And then the document arrives, with golden letterhead and a legal seal: PHOENIX CLAUSE — READY TO INVOKE.</string>
+    <string name="story_ch8_p2">«Did you think the Wager was clean? Read the fine print, heir: whenever your valuation threatens mine, I may reset the entire market. Your businesses, your coins, your progress: ashes. And I can do it again. And again. Aurora signed it. Why was she smiling? I never understood.»</string>
+    <string name="story_ch8_p3">I understand it. Aurora signed because the clause has a flaw: it erases the numbers, but it CANNOT ERASE REPUTATION. Every rebirth keeps your Renown, and the market will welcome you back producing more than before.</string>
+    <string name="story_ch8_p4">That is PRESTIGE: let Vex burn your empire down, and rise stronger. You keep your Renown (a permanent multiplier), your chimeras and your staff. Every time he invokes the clause it costs him more and slows you less. His weapon wears down. Yours sharpens.</string>
+
+    <string name="story_ch9_title">Ashes and Renown</string>
+    <string name="story_ch9_p1">The whole market flickers and resets. Where yesterday stood an empire, today there is a garage. But the headlines are not about the reset — they are about the heir of Aurora forcing Magnus Vex to fire his ultimate weapon.\n\nAnd you are still here.</string>
+    <string name="story_ch9_p2">Memory unlocked — Aurora Vance, 12 years ago: «One day Magnus will burn everything you build. Let him. Empires are things that catch fire, little one. Names are not. Build a name.»</string>
+    <string name="story_ch9_p3">Your Renown is already working: you produce more than you did yesterday at this hour. Up in the tower, Vex has stopped smiling.\n\nLet\'s do it again.</string>
+
+    <string name="story_ch10_title">Dirty War</string>
+    <string name="story_ch10_p1">The markets tremble without warning. A crisis a little too convenient, a blackout a little too precise. The VexCorp seal appears nowhere — and that is exactly his signature.</string>
+    <string name="story_ch10_p2">Vex cannot touch the Wager, but he can tilt the board: sabotage, audits, cyberattacks. The good news: Aurora\'s old allies pull strings too. Booms, festivals, grants… not everything unexpected is an enemy.</string>
+    <string name="story_ch10_p3">Each event offers you CHOICES with consequences for production, staff or stability. If you don\'t choose, fate will choose for you — and fate has a contract with VexCorp. Watch the galactic stability: it measures who is winning this arm-wrestle.</string>
+
+    <string name="story_ch11_title">The Amulet</string>
+    <string name="story_ch11_p1">Something golden crosses the sky and, for a heartbeat, every machine you own produces in unison. You touched it.\n\nAnd it greeted you back.</string>
+    <string name="story_ch11_p2">Analysis… impossible. That was Aurora\'s lucky amulet. She wore it the day the company was founded and swore she would take it «beyond the Rim». Apparently it is still in orbit. And apparently… it knows you.</string>
+    <string name="story_ch11_p3">When the golden comet crosses your screen, CATCH IT: it sheds echoes of Aurora\'s luck — production frenzies, coin showers, star shards. It is not science. I don\'t care.\n\nYou — keep watching the sky.</string>
+
+    <!-- Aurora\'s Legacy (Renown shop) -->
+    <string name="legacy_title">Aurora\'s Legacy</string>
+    <string name="legacy_subtitle">Permanent upgrades bought with Renown — the one thing the Phoenix Clause cannot burn</string>
+    <string name="legacy_renown_balance">Renown available</string>
+    <string name="legacy_level">Lv. %1$d/%2$d</string>
+    <string name="legacy_echo_name">Eternal Echo</string>
+    <string name="legacy_echo_desc">The First Coin resonates louder: +25% tap power per level</string>
+    <string name="legacy_network_name">Sleeping Network</string>
+    <string name="legacy_network_desc">Aurora\'s old contacts wake up: +25% production per level</string>
+    <string name="legacy_luck_name">Founder\'s Luck</string>
+    <string name="legacy_luck_desc">+1% critical chance per level</string>
+    <string name="legacy_pact_name">Ironclad Pact</string>
+    <string name="legacy_pact_desc">+2h offline earnings cap per level</string>
+    <string name="legacy_seed_name">Seed Capital</string>
+    <string name="legacy_seed_desc">Start every rebirth with coins (×10 per level)</string>
+    <string name="legacy_magnet_name">Stellar Magnetism</string>
+    <string name="legacy_magnet_desc">Aurora\'s amulet visits more often: comets appear 10% sooner per level</string>
+
+    <!-- Daily streak (LIA\'s Plan) -->
+    <string name="streak_title">📅 LIA\'s Plan</string>
+    <string name="streak_day">Day %1$d in a row</string>
+    <string name="streak_reward">💰 +%1$s coins</string>
+    <string name="streak_gems">💎 +%1$d gems</string>
+    <string name="streak_hint">«An empire isn\'t built in one day. It is built EVERY day.» Come back tomorrow: the reward keeps growing.</string>
+
+    <!-- Minigame catalog -->
+    <string name="mg_fortune_wheel_name">Fortune Wheel</string>
+    <string name="mg_fortune_wheel_desc">Spin and win incredible prizes</string>
+    <string name="mg_memory_match_name">Memory Match</string>
+    <string name="mg_memory_match_desc">Find the matching tech icon pairs</string>
+    <string name="mg_coin_rain_name">Coin Rain</string>
+    <string name="mg_coin_rain_desc">Catch coins, dodge bombs — chain catches for FEVER</string>
+    <string name="mg_boss_battle_name">Boss Battle</string>
+    <string name="mg_boss_battle_desc">Defeat the giant bug — strike its core for ×5</string>
+    <string name="mg_cosmic_billiards_name">Cosmic Billiards</string>
+    <string name="mg_cosmic_billiards_desc">Launch cosmic orbs against stars</string>
+    <string name="mg_asteroid_dodge_name">Asteroid Dodge</string>
+    <string name="mg_asteroid_dodge_desc">Dodge asteroids and collect crystals</string>
+    <string name="mg_star_catcher_name">Star Catcher</string>
+    <string name="mg_star_catcher_desc">Catch shooting stars before they vanish</string>
+    <string name="mg_gravity_slingshot_name">Gravity Slingshot</string>
+    <string name="mg_gravity_slingshot_desc">Use planetary gravity to reach the target</string>
+    <string name="boss_core_hits">💠 Core hits: %1$d</string>
+    <string name="boss_time">Time: %1$ds</string>
+    <string name="rain_fever">🔥 FEVER ×2</string>
+    <string name="more_business_map">Business Map</string>
+
+    <!-- The Closing of the Wager (endgame) -->
+    <string name="pact_title">The Founders\' Wager</string>
+    <string name="pact_subtitle">Nexus Prime — your empire against VexCorp, in front of the whole galaxy</string>
+    <string name="pact_your_empire">Your empire</string>
+    <string name="pact_progress_label">Duel progress: %1$d%%</string>
+    <string name="pact_progress_hint">Your valuation is the total coins earned in this era (without prestiging). Surpass VexCorp and the Galactic Auditor will certify your victory.</string>
+    <string name="pact_taunt_far">Is that your empire? I have seen vending machines with better revenue.</string>
+    <string name="pact_taunt_mid">You are starting to show up on my reports, heir. Enjoy it while it lasts.</string>
+    <string name="pact_taunt_close">Stop. Climbing. NOW. Name your price. Everyone has one. AURORA HAD ONE.</string>
+    <string name="pact_ready_title">⚖️ Your valuation surpasses VexCorp</string>
+    <string name="pact_ready_body">The Galactic Auditor is ready to certify the result. One signature, and everything Vex took comes back. He is watching from the top floor. Make him watch.</string>
+    <string name="pact_close_button">CLOSE THE WAGER</string>
+    <string name="pact_won_title">The Wager is settled</string>
+    <string name="pact_won_body">The galaxy watched Magnus Vex sign. Every market, every name, every door he took — returned. The empire is yours, heir. Aurora\'s name is yours to carry.</string>
+    <string name="pact_seal_active">👑 Founder\'s Seal active: ×2 to everything, forever</string>
+
+    <string name="story_ch12_title">The Gates of Nexus</string>
+    <string name="story_ch12_p1">Nexus Prime. The market at the center of everything. The VexCorp tower scrapes the void itself, and every screen on its facade shows the same face. Tonight, for the first time in decades, that face is not smiling.</string>
+    <string name="story_ch12_p2">«So you made it to my doorstep. Aurora never got this far — I made sure of it. Very well, heir. Article 1 of the Wager: surpass my valuation, certified by the Galactic Auditor, and everything I built on her bones is yours. You will not. But please… try. I have missed having an opponent.»</string>
+    <string name="story_ch12_p3">This is it. The final clause. Your valuation — every coin earned in this era, without invoking the Phoenix — must surpass VexCorp\'s. He cannot reset you while the Auditor watches. It is a fair fight now. Which means he has already lost something.</string>
+    <string name="story_ch12_p4">Open THE WAGER from the menu to watch the duel: your tower against his. Everything counts — taps, businesses, chimeras, workers, comets. When your number passes his… close it. I will be there. Aurora, in her way, will be too.</string>
+
+    <string name="story_ch13_title">The Closing of the Wager</string>
+    <string name="story_ch13_p1">The Galactic Auditor projects two numbers above Nexus Prime, visible from three systems away. The galaxy holds its breath. And then — for the first time in forty years — the red number is the smaller one.</string>
+    <string name="story_ch13_p2">«Objection! Clause 88-C, market integrity—» The Auditor denies it. «Then clause 112, force majeure—» Denied. «Then…» For a long moment, Magnus Vex, the man who owned half the galaxy, says nothing at all. «…Then it is done. Forty years, and it is done in an afternoon.»</string>
+    <string name="story_ch13_p3">Signature verified. Transfer complete. Heir… there is one more file. Aurora locked it behind this exact moment. She recorded it the night she left. I have… never been able to open it. Playing it now.</string>
+    <string name="story_ch13_p4">«If you are hearing this, you did it. Let me tell you a secret: the wager was never about the money. I wrote it so that someday, someone would force Magnus to sit still and watch what we were supposed to build TOGETHER. Take care of them — the workers, the creatures, all of it. And tell Magnus… his coffee is still the worst in the galaxy, and I still kept his first coin too.»</string>
+    <string name="story_ch13_p5">«…She kept it? Heh. Of course she kept it.» He sets the keys to Nexus Prime on the table like they weigh nothing, and everything. «You know the worst part, heir? It was never the company I wanted back.» At the door, he stops. «Run it better than I did. She always said you would.»</string>
+    <string name="story_ch13_p6">The Founder\'s Seal burns gold on every contract of your empire: ×2 to everything, forever. The Wager is closed. The work is not — empires are built every day, and you are a Vance now. The galaxy is watching. Make it worth watching.</string>
+
+    <!-- Stats -->
+    <string name="stats_title">Statistics</string>
+    <string name="stats_tab_global">Global</string>
+    <string name="stats_tab_prestige">Prestige</string>
+    <string name="stats_total_earned_all">Total earned (all time)</string>
+    <string name="stats_total_taps_all">Total taps (all time)</string>
+    <string name="stats_crits_all">Critical hits (all time)</string>
+    <string name="stats_generators_all">Businesses bought (all time)</string>
+    <string name="stats_total_prestiges">Total prestiges</string>
+    <string name="stats_prestige_level">Prestige level</string>
+    <string name="stats_worlds_unlocked">Worlds unlocked</string>
+    <string name="stats_achievements">Achievements</string>
+    <string name="stats_pets_owned">Chimeras owned</string>
+    <string name="stats_minigames_played">Minigames played</string>
+    <string name="stats_comets_caught">Golden comets caught</string>
+    <string name="stats_coins_this_run">Coins earned (this era)</string>
+    <string name="stats_current_coins">Current coins</string>
+    <string name="stats_taps_this_run">Taps (this era)</string>
+    <string name="stats_per_tap">Per tap</string>
+    <string name="stats_per_second">Per second</string>
+    <string name="stats_generators_bought">Businesses bought</string>
+    <string name="stats_current_world">Current world</string>
+    <string name="stats_prestige_multiplier">Prestige multiplier</string>
+    <string name="stats_crit_chance">Critical chance</string>
+    <string name="stats_crit_multiplier">Critical multiplier</string>
+    <string name="stats_active_pet">Active chimera</string>
+    <string name="stats_none">None</string>
+
+    <!-- Pet moods -->
+    <string name="mood_ecstatic">Ecstatic!</string>
+    <string name="mood_happy">Happy</string>
+    <string name="mood_normal">Normal</string>
+    <string name="mood_sad">Sad</string>
+    <string name="mood_depressed">Depressed</string>
+    <string name="mood_angry">Angry</string>
+    <string name="mood_sick">Sick</string>
+    <string name="mood_dying">Dying</string>
+
+    <!-- Achievement descriptions -->
+    <string name="ach_taps_100">Tap 100 times</string>
+    <string name="ach_taps_1000">Tap 1,000 times</string>
+    <string name="ach_taps_10000">Tap 10,000 times</string>
+    <string name="ach_taps_100000">Tap 100,000 times</string>
+    <string name="ach_taps_500000">Tap 500,000 times</string>
+    <string name="ach_taps_1m">Tap 1,000,000 times</string>
+    <string name="ach_coins_1000">Earn 1,000 total coins</string>
+    <string name="ach_coins_100000">Earn 100,000 total coins</string>
+    <string name="ach_coins_1m">Earn 1,000,000 total coins</string>
+    <string name="ach_coins_1b">Earn 1,000,000,000 total coins</string>
+    <string name="ach_coins_1t">Earn 1,000,000,000,000 coins</string>
+    <string name="ach_coins_1qa">Earn 1Qa coins</string>
+    <string name="ach_prod_100">Produce 100/sec</string>
+    <string name="ach_prod_10000">Produce 10,000/sec</string>
+    <string name="ach_prod_1m">Produce 1,000,000/sec</string>
+    <string name="ach_prod_1b">Produce 1,000,000,000/sec</string>
+    <string name="ach_prestige_1">Reach Prestige 1</string>
+    <string name="ach_prestige_3">Reach Prestige 3</string>
+    <string name="ach_prestige_5">Reach Prestige 5</string>
+    <string name="ach_prestige_10">Reach Prestige 10</string>
+    <string name="ach_combo_25">Reach a 25x combo</string>
+    <string name="ach_worlds_3">Unlock 3 worlds</string>
+    <string name="ach_worlds_6">Unlock 6 worlds</string>
+    <string name="ach_worlds_10">Unlock every world</string>
+    <string name="ach_workers_1">Hire your first worker</string>
+    <string name="ach_workers_5">Hire 5 workers</string>
+    <string name="ach_workers_15">Hire 15 workers</string>
+    <string name="ach_workers_30">Hire 30 workers</string>
+    <string name="ach_workers_50">Hire 50 workers</string>
+    <string name="ach_workers_100">Hire 100 workers</string>
+    <string name="ach_strike_1">Resolve your first strike</string>
+    <string name="ach_strike_5">Resolve 5 strikes</string>
+    <string name="ach_strike_20">Resolve 20 strikes</string>
+    <string name="ach_strike_50">Resolve 50 strikes</string>
+    <string name="ach_contracts_1">Create your first contract</string>
+    <string name="ach_contracts_5">Create 5 contracts</string>
+    <string name="ach_contracts_15">Create 15 different contracts</string>
+    <string name="ach_pets_1">Adopt your first chimera</string>
+    <string name="ach_pets_3">Own 3 chimeras</string>
+    <string name="ach_pets_5">Own 5 chimeras</string>
+    <string name="ach_pets_10">Own 10 chimeras</string>
+    <string name="ach_pets_max">Own the maximum of chimeras (15)</string>
+    <string name="ach_breed_1">Breed your first chimera</string>
+    <string name="ach_breed_5">Breed 5 chimeras</string>
+    <string name="ach_breed_15">Breed 15 chimeras</string>
+    <string name="ach_breed_30">Breed 30 chimeras</string>
+    <string name="ach_breed_50">Breed 50 chimeras</string>
+    <string name="ach_mutant_1">Get your first rare mutation</string>
+    <string name="ach_mutant_3">Get 3 rare mutations</string>
+    <string name="ach_mutant_5">Get 5 rare mutations</string>
+    <string name="ach_mutant_10">Get 10 rare mutations</string>
+    <string name="ach_gen_2">Breed a generation 2 hybrid</string>
+    <string name="ach_gen_3">Breed a generation 3 hybrid</string>
+    <string name="ach_gen_5">Breed a generation 5 hybrid</string>
+    <string name="ach_gen_10">Breed a generation 10 hybrid</string>
+    <string name="ach_welfare_90">Reach 90% sanctuary welfare</string>
+    <string name="ach_welfare_100">Reach 100% sanctuary welfare</string>
+    <string name="ach_traits_5">Discover 5 different traits</string>
+    <string name="ach_traits_10">Discover 10 different traits</string>
+    <string name="ach_traits_all">Discover every trait (15)</string>
 </resources>

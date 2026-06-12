@@ -110,7 +110,7 @@ fun AchievementCard(
                     color = if (achievement.isUnlocked) CoinGold else TextPrimary
                 )
                 Text(
-                    text = achievement.description,
+                    text = achievementDescription(achievement),
                     fontSize = 11.sp,
                     color = TextMuted
                 )

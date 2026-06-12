@@ -138,7 +138,7 @@ fun TapEmpireApp(
             text = {
                 Column {
                     Text(ach.name, fontWeight = FontWeight.Bold, color = TextPrimary, fontSize = 18.sp)
-                    Text(ach.description, color = TextSecondary)
+                    Text(achievementDescription(ach), color = TextSecondary)
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
                         "💰 +${GameState.fmt(ach.reward)}",
@@ -158,6 +158,62 @@ fun TapEmpireApp(
             },
             containerColor = Onyx,
             titleContentColor = CoinGold
+        )
+    }
+
+    // Racha diaria (El Plan de LIA)
+    val streakReward by gameViewModel.dailyStreakReward.collectAsStateWithLifecycle()
+    streakReward?.let { streak ->
+        AlertDialog(
+            onDismissRequest = { gameViewModel.dismissDailyStreak() },
+            title = {
+                Text(
+                    stringResource(R.string.streak_title),
+                    fontWeight = FontWeight.Bold,
+                    color = NeonCyan
+                )
+            },
+            text = {
+                Column {
+                    Text(
+                        stringResource(R.string.streak_day, streak.streakDays),
+                        fontWeight = FontWeight.Black,
+                        color = TextPrimary,
+                        fontSize = 18.sp
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        stringResource(R.string.streak_reward, GameState.fmt(streak.coins)),
+                        color = CoinGold,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 16.sp
+                    )
+                    if (streak.gems > 0) {
+                        Text(
+                            stringResource(R.string.streak_gems, streak.gems),
+                            color = GemPurple,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp
+                        )
+                    }
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        stringResource(R.string.streak_hint),
+                        color = TextMuted,
+                        fontSize = 12.sp
+                    )
+                }
+            },
+            confirmButton = {
+                Button(
+                    onClick = { gameViewModel.dismissDailyStreak() },
+                    colors = ButtonDefaults.buttonColors(containerColor = NeonCyan)
+                ) {
+                    Text(stringResource(R.string.btn_great), color = DeepSpace)
+                }
+            },
+            containerColor = Onyx,
+            titleContentColor = NeonCyan
         )
     }
 
@@ -190,9 +246,19 @@ fun TapEmpireApp(
         )
     }
 
-    // Tutorial popup system
+    // Sistema de historia + tutorial: cada mecánica se presenta como un
+    // capítulo de «El Pacto de los Fundadores»
     val tutorialKey by gameViewModel.tutorialToShow.collectAsStateWithLifecycle()
     tutorialKey?.let { key ->
+        val chapter = com.example.juego.ui.story.storyChapterFor(key)
+        if (chapter != null) {
+            com.example.juego.ui.story.StoryDialog(
+                chapter = chapter,
+                onFinished = { gameViewModel.dismissTutorial() }
+            )
+            return@let
+        }
+        // Fallback para claves sin capítulo (p. ej. avisos de mutación)
         val (title, body, icon) = getTutorialContent(key)
         AlertDialog(
             onDismissRequest = { gameViewModel.dismissTutorial() },
@@ -389,6 +455,15 @@ fun TapEmpireApp(
             composable("stats") {
                 StatsScreen(uiState = uiState)
             }
+            composable("story") {
+                StoryScreen(viewModel = gameViewModel, uiState = uiState)
+            }
+            composable("legacy") {
+                LegacyScreen(viewModel = gameViewModel, uiState = uiState)
+            }
+            composable("pact") {
+                PactScreen(viewModel = gameViewModel, uiState = uiState)
+            }
             composable("business_map") {
                 BusinessMapScreen(viewModel = gameViewModel, uiState = uiState)
             }
@@ -458,19 +533,6 @@ fun TapEmpireApp(
                     }
                 )
             }
-            composable("minigame_tap_frenzy") {
-                val idx = gameViewModel.activeMiniGameIndex.collectAsStateWithLifecycle()
-                TapFrenzyScreen(
-                    onGameComplete = { perf ->
-                        gameViewModel.collectMiniGameReward(idx.value, perf)
-                        navController.popBackStack()
-                    },
-                    onCancel = {
-                        gameViewModel.cancelMiniGame()
-                        navController.popBackStack()
-                    }
-                )
-            }
             composable("minigame_memory_match") {
                 val idx = gameViewModel.activeMiniGameIndex.collectAsStateWithLifecycle()
                 MemoryMatchScreen(
@@ -500,19 +562,6 @@ fun TapEmpireApp(
             composable("minigame_boss_battle") {
                 val idx = gameViewModel.activeMiniGameIndex.collectAsStateWithLifecycle()
                 BossBattleScreen(
-                    onGameComplete = { perf ->
-                        gameViewModel.collectMiniGameReward(idx.value, perf)
-                        navController.popBackStack()
-                    },
-                    onCancel = {
-                        gameViewModel.cancelMiniGame()
-                        navController.popBackStack()
-                    }
-                )
-            }
-            composable("minigame_lucky_box") {
-                val idx = gameViewModel.activeMiniGameIndex.collectAsStateWithLifecycle()
-                LuckyBoxScreen(
                     onGameComplete = { perf ->
                         gameViewModel.collectMiniGameReward(idx.value, perf)
                         navController.popBackStack()

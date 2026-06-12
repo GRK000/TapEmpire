@@ -70,11 +70,9 @@ fun MiniGamesScreen(
                                     MiniGame.MiniGameType.ASTEROID_DODGE -> "minigame_asteroid_dodge"
                                     MiniGame.MiniGameType.STAR_CATCHER -> "minigame_star_catcher"
                                     MiniGame.MiniGameType.GRAVITY_SLINGSHOT -> "minigame_gravity_slingshot"
-                                    MiniGame.MiniGameType.TAP_FRENZY -> "minigame_tap_frenzy"
                                     MiniGame.MiniGameType.MEMORY_MATCH -> "minigame_memory_match"
                                     MiniGame.MiniGameType.COIN_RAIN -> "minigame_coin_rain"
                                     MiniGame.MiniGameType.BOSS_BATTLE -> "minigame_boss_battle"
-                                    MiniGame.MiniGameType.LUCKY_BOX -> "minigame_lucky_box"
                                     MiniGame.MiniGameType.FORTUNE_WHEEL -> "minigame_fortune_wheel"
                                 }
                                 onNavigateToGame(route)
@@ -112,14 +110,14 @@ fun MiniGameCard(
             Text(text = game.type.emoji, fontSize = 40.sp)
             Spacer(modifier = Modifier.height(8.dp))
             Text(
-                text = game.type.name,
+                text = miniGameName(game.type),
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
                 color = if (isAvailable) TextPrimary else TextMuted,
                 textAlign = TextAlign.Center
             )
             Text(
-                text = game.type.description,
+                text = miniGameDescription(game.type),
                 fontSize = 11.sp,
                 color = TextMuted,
                 textAlign = TextAlign.Center,
@@ -170,3 +168,31 @@ fun MiniGameCard(
         }
     }
 }
+
+@Composable
+fun miniGameName(type: MiniGame.MiniGameType): String = stringResource(
+    when (type) {
+        MiniGame.MiniGameType.FORTUNE_WHEEL -> R.string.mg_fortune_wheel_name
+        MiniGame.MiniGameType.MEMORY_MATCH -> R.string.mg_memory_match_name
+        MiniGame.MiniGameType.COIN_RAIN -> R.string.mg_coin_rain_name
+        MiniGame.MiniGameType.BOSS_BATTLE -> R.string.mg_boss_battle_name
+        MiniGame.MiniGameType.COSMIC_BILLIARDS -> R.string.mg_cosmic_billiards_name
+        MiniGame.MiniGameType.ASTEROID_DODGE -> R.string.mg_asteroid_dodge_name
+        MiniGame.MiniGameType.STAR_CATCHER -> R.string.mg_star_catcher_name
+        MiniGame.MiniGameType.GRAVITY_SLINGSHOT -> R.string.mg_gravity_slingshot_name
+    }
+)
+
+@Composable
+fun miniGameDescription(type: MiniGame.MiniGameType): String = stringResource(
+    when (type) {
+        MiniGame.MiniGameType.FORTUNE_WHEEL -> R.string.mg_fortune_wheel_desc
+        MiniGame.MiniGameType.MEMORY_MATCH -> R.string.mg_memory_match_desc
+        MiniGame.MiniGameType.COIN_RAIN -> R.string.mg_coin_rain_desc
+        MiniGame.MiniGameType.BOSS_BATTLE -> R.string.mg_boss_battle_desc
+        MiniGame.MiniGameType.COSMIC_BILLIARDS -> R.string.mg_cosmic_billiards_desc
+        MiniGame.MiniGameType.ASTEROID_DODGE -> R.string.mg_asteroid_dodge_desc
+        MiniGame.MiniGameType.STAR_CATCHER -> R.string.mg_star_catcher_desc
+        MiniGame.MiniGameType.GRAVITY_SLINGSHOT -> R.string.mg_gravity_slingshot_desc
+    }
+)

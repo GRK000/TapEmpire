@@ -14,6 +14,7 @@ import com.example.juego.ui.theme.*
 @Composable
 fun PetWidget(
     pet: Pet?,
+    allPets: List<Pet> = emptyList(),
     modifier: Modifier = Modifier
 ) {
     if (pet == null || !pet.isOwned) return
@@ -39,12 +40,20 @@ fun PetWidget(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.fillMaxWidth()
         ) {
-            val emoji = if (pet.isAlive) pet.type.emoji else if (pet.isGhost) "👻" else "💀"
-            Text(
-                text = emoji,
-                fontSize = 28.sp,
-                modifier = Modifier.offset(y = bounce.dp)
-            )
+            if (pet.isAlive || pet.isGhost) {
+                PetAvatar(
+                    pet = pet,
+                    allPets = allPets,
+                    size = 44.dp,
+                    modifier = Modifier.offset(y = bounce.dp)
+                )
+            } else {
+                Text(
+                    text = "💀",
+                    fontSize = 28.sp,
+                    modifier = Modifier.offset(y = bounce.dp)
+                )
+            }
             Text(
                 text = pet.statusEmoji,
                 fontSize = 14.sp
